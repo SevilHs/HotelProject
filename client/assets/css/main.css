@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
+* {
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #3d3c3c;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #fff;
+}
+#header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .header .logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .header .logo-img img {
+  width: 160px;
+}
+#header .header nav .menu-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+#header .header nav .menu-btn i {
+  color: #aa8453;
+}
+#header .header nav ul {
+  display: flex;
+  gap: 30px;
+}
+#header .header nav ul li .dropdown {
+  transition: all 0.4s;
+}
+#header .header nav ul li .dropdown .dropdown-toggle::after {
+  display: none;
+}
+#header .header nav ul li .dropdown .dropdown-menu {
+  display: none;
+  border: none;
+  border-radius: 0;
+}
+#header .header nav ul li .dropdown .dropdown-menu li {
+  padding: 7px;
+}
+#header .header nav ul li .dropdown .dropdown-menu li .dropdown-item-border {
+  border-bottom: 1px solid #ddd;
+}
+#header .header nav ul li .dropdown .dropdown-menu li a {
+  color: #000;
+}
+#header .header nav ul li .dropdown .dropdown-menu li:hover a {
+  background-color: transparent;
+  padding-left: 30px;
+}
+#header .header nav ul li .dropdown:hover .dropdown-menu {
+  display: block;
+}
+#header .header nav ul li a {
+  color: #fff;
+}
+@media only screen and (max-width: 992px) {
+  #header .header nav .menu-btn {
+    display: block;
+  }
+  #header .header nav ul {
+    display: none;
+  }
+}
+
+.menu-items {
+  display: none;
+  height: 370px;
+  padding: 30px 0;
+  margin-top: 118px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.menu-items ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.menu-items li .dropdown {
+  transition: all 0.4s;
+}
+.menu-items li .dropdown .dropdown-toggle::after {
+  display: none;
+}
+.menu-items li .dropdown .dropdown-menu {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0;
+  font-weight: 100;
+  display: none;
+  border: none;
+  border-radius: 0;
+}
+.menu-items li .dropdown .dropdown-menu li .dropdown-item-border {
+  border-bottom: 1px solid #ddd;
+}
+.menu-items li .dropdown .dropdown-menu li a {
+  color: gray;
+}
+.menu-items li .dropdown .dropdown-menu li:hover a {
+  background-color: transparent;
+  padding-left: 30px;
+}
+.menu-items li .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.menu-items li a {
+  color: #000;
+}
+
+/*# sourceMappingURL=main.css.map */
