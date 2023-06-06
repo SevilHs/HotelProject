@@ -30,22 +30,32 @@
         display: flex;
         gap: 30px;
         li {
+          @include dFlex();
           .dropdown {
-            transition: all 0.4s;
+            position: relative;
+            overflow:  hidden;
             .dropdown-toggle {
+              padding: 15px 0;
+              transition: all 0.4s;
               &::after {
                 display: none;
               }
+              &:hover {
+                color: $primary-color;
+              }
             }
             .dropdown-menu {
-              display: none;
+              width: 200px;
+              display: block;
               border: none;
               border-radius: 0;
+              position: absolute;
+              transform: translateY(50px);
+              transition: .5s;
+              transition-timing-function: ease-in;
+              padding: 5px 15px ;
               li {
-                padding: 7px;
-                .dropdown-item-border {
-                  border-bottom: 1px solid #ddd;
-                }
+                padding: 10px 0;
                 a {
                   color: #000;
                 }
@@ -56,15 +66,25 @@
                   }
                 }
               }
+              .dropdown-item-border {
+                border-bottom: 1px solid #ddd;
+              }
             }
             &:hover {
+              overflow: visible;
               .dropdown-menu {
-                display: block;
+                transform: translateY(0);
+                transition: .5s;
+                transition-timing-function: ease-out ;
               }
             }
           }
           a {
+            transition: all 0.4s;
             color: #fff;
+            &:hover {
+              color: $primary-color;
+            }
           }
         }
       }
