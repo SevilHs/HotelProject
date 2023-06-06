@@ -3,12 +3,12 @@
   top: 0;
   width: 100%;
   padding: 40px 0;
-  background-color: #3d3c3c;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 3px;
   color: #fff;
+  z-index: 9999;
   .header {
     @include dFlex();
     .logo-img {
