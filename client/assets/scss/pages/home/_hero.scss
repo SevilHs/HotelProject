@@ -1,14 +1,6 @@
-#heroSec {
+#hero{
   height: 100vh;
-  .slide-opacity {
-    // background-color: $black-color;  
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    // opacity: 0.3;
-    z-index: 30;
-  }
-  #carouselExampleFade {
+  .carousel-fade {
     .carousel-indicators {
       z-index: 32;
       display: flex;

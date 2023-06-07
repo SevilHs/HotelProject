@@ -258,7 +258,7 @@ table {
   font-weight: 600;
   letter-spacing: 3px;
   position: absolute;
-  z-index: 15;
+  z-index: 150;
   background-color: #fff;
   width: 100%;
   left: 0;
@@ -299,16 +299,10 @@ table {
   color: #000;
 }
 
-#heroSec {
+#hero {
   height: 100vh;
 }
-#heroSec .slide-opacity {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 30;
-}
-#heroSec #carouselExampleFade .carousel-indicators {
+#hero .carousel-fade .carousel-indicators {
   z-index: 32;
   display: flex;
   flex-direction: column;
@@ -317,7 +311,7 @@ table {
   left: unset;
   margin: 0;
 }
-#heroSec #carouselExampleFade .carousel-indicators::after, #heroSec #carouselExampleFade .carousel-indicators::before {
+#hero .carousel-fade .carousel-indicators::after, #hero .carousel-fade .carousel-indicators::before {
   height: 70px;
   width: 2px;
   content: "";
@@ -325,13 +319,13 @@ table {
   background-color: rgba(255, 255, 255, 0.3);
   right: 7px;
 }
-#heroSec #carouselExampleFade .carousel-indicators::after {
+#hero .carousel-fade .carousel-indicators::after {
   top: 250px;
 }
-#heroSec #carouselExampleFade .carousel-indicators::before {
+#hero .carousel-fade .carousel-indicators::before {
   bottom: 250px;
 }
-#heroSec #carouselExampleFade .carousel-indicators button {
+#hero .carousel-fade .carousel-indicators button {
   background-color: transparent;
   color: #fff;
   opacity: 1;
@@ -339,15 +333,15 @@ table {
   height: unset;
   text-indent: unset;
 }
-#heroSec #carouselExampleFade .carousel-indicators button.active {
+#hero .carousel-fade .carousel-indicators button.active {
   color: #aa8453;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item img {
+#hero .carousel-fade .carousel-inner .carousel-item img {
   height: 100vh;
   width: 100%;
   object-fit: cover;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption {
   z-index: 32;
   visibility: hidden;
   height: 100%;
@@ -363,19 +357,19 @@ table {
   transition-timing-function: ease-in;
   opacity: 0.5;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption i {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption i {
   color: #e4a853;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption h4 {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption h4 {
   font-size: 24px;
   transition-delay: 0.2s;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption h1 {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption h1 {
   font-size: 72px;
   letter-spacing: 0.1em;
   transition-delay: 0.4s;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption a {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
   padding: 10px 30px;
   border: 1px solid #ddd;
   color: #fff;
@@ -384,7 +378,7 @@ table {
   position: relative;
   overflow: hidden;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption a::after {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -397,24 +391,24 @@ table {
   transition-timing-function: ease-in;
   z-index: -1;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption a:hover {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
   color: gray;
   transition-delay: 0s;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item .carousel-caption a:hover::after {
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
   transition: 0.5s;
   transform: translateX(0);
   transition-timing-function: ease-out;
 }
-#heroSec #carouselExampleFade .carousel-inner .carousel-item.active .carousel-caption {
+#hero .carousel-fade .carousel-inner .carousel-item.active .carousel-caption {
   visibility: visible;
   opacity: 1;
   transition: 1s;
   transform: translateY(0);
   transition-timing-function: ease-out;
 }
-#heroSec #carouselExampleFade .carousel-control-prev,
-#heroSec #carouselExampleFade .carousel-control-next {
+#hero .carousel-fade .carousel-control-prev,
+#hero .carousel-fade .carousel-control-next {
   display: inline-block;
   width: unset;
   height: 50px;
@@ -424,11 +418,11 @@ table {
   top: unset;
   z-index: 32;
 }
-#heroSec #carouselExampleFade .carousel-control-prev {
+#hero .carousel-fade .carousel-control-prev {
   right: 230px;
 }
-#heroSec #carouselExampleFade .carousel-control-prev-icon,
-#heroSec #carouselExampleFade .carousel-control-next-icon {
+#hero .carousel-fade .carousel-control-prev-icon,
+#hero .carousel-fade .carousel-control-next-icon {
   z-index: 32;
   padding: 20px;
   background-size: 20px;
@@ -437,13 +431,13 @@ table {
   border: 1px solid #fff;
   transition: all 0.4s;
 }
-#heroSec #carouselExampleFade .carousel-control-prev-icon:hover,
-#heroSec #carouselExampleFade .carousel-control-next-icon:hover {
+#hero .carousel-fade .carousel-control-prev-icon:hover,
+#hero .carousel-fade .carousel-control-next-icon:hover {
   border-color: #aa8453;
   transition: all 0.4s;
   transform: scale(0.8);
 }
-#heroSec #carouselExampleFade .slide-phone {
+#hero .carousel-fade .slide-phone {
   position: absolute;
   height: 100%;
   top: 0;
@@ -454,7 +448,7 @@ table {
   flex-direction: column-reverse;
   left: 50px;
 }
-#heroSec #carouselExampleFade .slide-phone div {
+#hero .carousel-fade .slide-phone div {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   color: #fff;
@@ -462,11 +456,11 @@ table {
   line-height: 1.5em;
   letter-spacing: 0.2em;
 }
-#heroSec #carouselExampleFade .slide-phone div span {
+#hero .carousel-fade .slide-phone div span {
   color: #aa8453;
   font-size: 24px;
 }
-#heroSec #carouselExampleFade .slide-phone i {
+#hero .carousel-fade .slide-phone i {
   color: #fff;
   border-radius: 100%;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -475,55 +469,56 @@ table {
   margin-top: 10px;
 }
 
-#aboutSec {
+#about {
   padding: 5%;
 }
-#aboutSec .about-sec .about-sec-left {
+#about .about .about-left {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   gap: 30px;
 }
-#aboutSec .about-sec .about-sec-left span i {
+#about .about .about-left span i {
   color: #e4a853;
 }
-#aboutSec .about-sec .about-sec-left p {
+#about .about .about-left p {
   font-size: 17px;
   color: #666;
   line-height: 25px;
 }
-#aboutSec .about-sec .about-sec-left h1 {
+#about .about .about-left h1 {
   font-size: 50px;
 }
-#aboutSec .about-sec .about-sec-left .slide-phone {
+#about .about .about-left .slide-phone {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#aboutSec .about-sec .about-sec-left .slide-phone div {
+#about .about .about-left .slide-phone div {
   color: #fff;
   font-size: 20px;
   line-height: 1.5em;
   letter-spacing: 0.2em;
 }
-#aboutSec .about-sec .about-sec-left .slide-phone div span {
+#about .about .about-left .slide-phone div span {
   color: #aa8453;
   font-size: 24px;
 }
-#aboutSec .about-sec .about-sec-left .slide-phone i {
+#about .about .about-left .slide-phone i {
   color: #aa8453;
   padding: 15px;
   font-size: 36px;
   margin-top: 10px;
 }
-#aboutSec .about-sec .about-sec-right img {
+#about .about .about-right img {
   max-width: 261px;
 }
-#aboutSec .about-sec .about-sec-right .about-img-1 {
+#about .about .about-right .about-img-1 {
   margin-top: 170px;
+  transform: translateY(130px);
 }
-#aboutSec .about-sec .about-sec-right .about-img-2 {
+#about .about .about-right .about-img-2 {
   margin-top: 0;
 }
 

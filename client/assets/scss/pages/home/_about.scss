@@ -1,7 +1,7 @@
-#aboutSec {
+#about {
   padding: 5%;
-  .about-sec {
-    .about-sec-left {
+  .about {
+    .about-left {
       @include dFlex(center, start);
       flex-direction: column;
       gap: 30px;
@@ -38,14 +38,13 @@
         }
       }
     }
-    .about-sec-right {
-      // vertical-align:middle !important;
-
+    .about-right {
       img {
         max-width: 261px;
       }
       .about-img-1 {
         margin-top: 170px;
+        transform: translateY(130px);
       }
       .about-img-2 {
         margin-top: 0;
