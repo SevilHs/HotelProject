@@ -475,4 +475,56 @@ table {
   margin-top: 10px;
 }
 
+#aboutSec {
+  padding: 5%;
+}
+#aboutSec .about-sec .about-sec-left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+}
+#aboutSec .about-sec .about-sec-left span i {
+  color: #e4a853;
+}
+#aboutSec .about-sec .about-sec-left p {
+  font-size: 17px;
+  color: #666;
+  line-height: 25px;
+}
+#aboutSec .about-sec .about-sec-left h1 {
+  font-size: 50px;
+}
+#aboutSec .about-sec .about-sec-left .slide-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aboutSec .about-sec .about-sec-left .slide-phone div {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 0.2em;
+}
+#aboutSec .about-sec .about-sec-left .slide-phone div span {
+  color: #aa8453;
+  font-size: 24px;
+}
+#aboutSec .about-sec .about-sec-left .slide-phone i {
+  color: #aa8453;
+  padding: 15px;
+  font-size: 36px;
+  margin-top: 10px;
+}
+#aboutSec .about-sec .about-sec-right img {
+  max-width: 261px;
+}
+#aboutSec .about-sec .about-sec-right .about-img-1 {
+  margin-top: 170px;
+}
+#aboutSec .about-sec .about-sec-right .about-img-2 {
+  margin-top: 0;
+}
+
 /*# sourceMappingURL=main.css.map */

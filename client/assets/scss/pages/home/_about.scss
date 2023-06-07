@@ -1,0 +1,55 @@
+#aboutSec {
+  padding: 5%;
+  .about-sec {
+    .about-sec-left {
+      @include dFlex(center, start);
+      flex-direction: column;
+      gap: 30px;
+      span {
+        i {
+          color: #e4a853;
+        }
+      }
+      p {
+        font-size: 17px;
+        color: $gray-color;
+        line-height: 25px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      .slide-phone {
+        @include dFlex(center);
+        div {
+          color: $white-color;
+          font-size: 20px;
+          line-height: 1.5em;
+          letter-spacing: 0.2em;
+          span {
+            color: $primary-color;
+            font-size: 24px;
+          }
+        }
+        i {
+          color: $primary-color;
+          padding: 15px;
+          font-size: 36px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .about-sec-right {
+      // vertical-align:middle !important;
+
+      img {
+        max-width: 261px;
+      }
+      .about-img-1 {
+        margin-top: 170px;
+      }
+      .about-img-2 {
+        margin-top: 0;
+      }
+    }
+  }
+}
