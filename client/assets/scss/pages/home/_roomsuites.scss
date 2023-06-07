@@ -1,0 +1,162 @@
+#rooms-suites {
+  padding: 5% 0;
+  background-color: #f8f5f0;
+  .rooms-suites {
+    span {
+      font-size: 18px;
+      font-family: "Barlow Condensed", sans-serif;
+      color: $gray-color;
+    }
+    h1 {
+      font-family: "Gilda Display", serif;
+      font-size: 50px;
+      margin-top: 20px;
+    }
+    .rooms-suites-top,
+    .rooms-suites-bottom {
+      @include dFlex();
+      --bs-gutter-x: 0;
+      margin: 20px 0;
+      .rooms-suites-top-card,
+      .rooms-suites-bottom-card {
+        max-width: 370px;
+        margin-bottom: 30px;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        .img-div {
+          img {
+            width: 100%;
+            height: 100%;
+            transition: 1s;
+          }
+        }
+        .text-div {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          a {
+            color: $white-color;
+          }
+          .book {
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            padding: 5px 10px;
+            border: 1px solid $white-color;
+            font-family: "Barlow Condensed", sans-serif;
+            letter-spacing: 3px;
+            transform: rotate(270deg);
+          }
+          .text-div-bottom {
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            line-height: 40px;
+            transition: 0.7s;
+            transform: translateY(40%);
+            transition-timing-function: ease-in;
+            p {
+              color: $white-color;
+              font-weight: 700;
+              letter-spacing: 3px;
+              font-family: $primary-font;
+            }
+            h3 {
+              font-size: 32px;
+              position: relative;
+              &::after {
+                content: "";
+                background-color: $white-color;
+                width: 50px;
+                height: 1px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                transition: 1s;
+              }
+            }
+            .icons-details {
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+              img {
+                width: 20px;
+              }
+              .details {
+                position: absolute;
+                right: 50px;
+                font-family: $primary-font;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+        &:hover {
+          .img-div {
+            img {
+              transition: 1s;
+              transform: scale(1.1);
+            }
+          }
+          .text-div {
+            transition: 1.5s;
+            background-color: rgb(0, 0, 0, 0.5);
+            .text-div-bottom {
+              transition: 1s;
+              transform: translateY(0);
+              transition-timing-function: ease-in-out;
+              h3 {
+                &::after {
+                  transition: 0.7s;
+                  width: 85%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .rooms-suites-bottom {
+      .rooms-suites-bottom-card {
+        max-width: 48%;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .rooms-suites {
+      .rooms-suites-top {
+        @include dFlex(center);
+        .rooms-suites-top-card {
+          max-width: 520px;
+          .text-div {
+            .text-div-bottom {
+              .icons-details {
+                .icons {
+                  display: none;
+                }
+                .details {
+                  margin-top: 20px;
+                }
+              }
+            }
+          }
+          &:hover {
+            .text-div {
+              .text-div-bottom {
+                transition: 1s;
+                transform: translateY(-30%);
+                transition-timing-function: ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
