@@ -755,6 +755,14 @@ table {
   font-size: 24px;
   font-family: "Gilda Display", serif;
 }
+#extra-services .extra-services .extra-services-right {
+  margin-top: 30px;
+}
+#extra-services .extra-services .extra-services-right .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #extra-services .extra-services .extra-services-right .owl-nav {
   display: none;
 }
