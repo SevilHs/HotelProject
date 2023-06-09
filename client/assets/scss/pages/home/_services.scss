@@ -1,0 +1,110 @@
+#services {
+  background-color: $white-color;
+  padding: 7%;
+  .services {
+    .services-row-div {
+      padding: 0;
+      display: flex;
+      margin-bottom: 20px;
+      .services-card-img {
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        img {
+          max-width: 100%;
+          height: 100%;
+          transition: all 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+          position: relative;
+        }
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: -webkit-linear-gradient(
+            90deg,
+            rgba(9, 12, 15, 0.96863) 0%,
+            rgba(13, 17, 21, 0.48) 70%,
+            rgba(14, 19, 23, 0) 100%
+          );
+          transition: all 5s cubic-bezier(0.3, 0, 0.3, 1);
+          z-index: 2;
+        }
+        &:hover::before {
+          background: -webkit-linear-gradient(
+            90deg,
+            rgba(9, 12, 15, 0.641) 0%,
+            rgba(13, 17, 21, 0.38) 70%,
+            rgba(14, 19, 23, 0.004) 100%
+          );
+        }
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+      .services-card-text {
+        background-color: #f8f5f0;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        .service-title {
+          font-family: $primary-font;
+          font-size: 18px;
+          letter-spacing: 3px;
+          font-weight: 500;
+          color: $gray-color;
+        }
+        .service-name {
+          font-family: $secondary-font;
+          font-size: 36px;
+        }
+        .service-description {
+          color: $gray-color;
+          line-height: 25px;
+          font-family: $barlow-font;
+        }
+        a {
+            position: relative;
+          text-align: center;
+          width: 180px;
+          border: none;
+          background-color: #ab8a62;
+          letter-spacing: 2px;
+          color: $white-color;
+          padding: 15px;
+          font-family: $barlow-font;
+          font-size: 14px;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .services {
+      .services-row-div:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .services {
+      .services-row-div {
+        flex-direction: column;
+        .services-card-text {
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+      .services-row-div:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

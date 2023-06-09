@@ -1044,4 +1044,95 @@ body {
   }
 }
 
+#services {
+  background-color: #fff;
+  padding: 7%;
+}
+#services .services .services-row-div {
+  padding: 0;
+  display: flex;
+  margin-bottom: 20px;
+}
+#services .services .services-row-div .services-card-img {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+#services .services .services-row-div .services-card-img img {
+  max-width: 100%;
+  height: 100%;
+  transition: all 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+  position: relative;
+}
+#services .services .services-row-div .services-card-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(90deg, rgba(9, 12, 15, 0.96863) 0%, rgba(13, 17, 21, 0.48) 70%, rgba(14, 19, 23, 0) 100%);
+  transition: all 5s cubic-bezier(0.3, 0, 0.3, 1);
+  z-index: 2;
+}
+#services .services .services-row-div .services-card-img:hover::before {
+  background: -webkit-linear-gradient(90deg, rgba(9, 12, 15, 0.641) 0%, rgba(13, 17, 21, 0.38) 70%, rgba(14, 19, 23, 0.004) 100%);
+}
+#services .services .services-row-div .services-card-img:hover img {
+  transform: scale(1.2);
+}
+#services .services .services-row-div .services-card-text {
+  background-color: #f8f5f0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+#services .services .services-row-div .services-card-text .service-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: #666;
+}
+#services .services .services-row-div .services-card-text .service-name {
+  font-family: "Gilda Display", serif;
+  font-size: 36px;
+}
+#services .services .services-row-div .services-card-text .service-description {
+  color: #666;
+  line-height: 25px;
+  font-family: "Barlow", sans-serif;
+}
+#services .services .services-row-div .services-card-text a {
+  position: relative;
+  text-align: center;
+  width: 180px;
+  border: none;
+  background-color: #ab8a62;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 15px;
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 992px) {
+  #services .services .services-row-div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #services .services .services-row-div {
+    flex-direction: column;
+  }
+  #services .services .services-row-div .services-card-text a {
+    margin: 0 auto;
+  }
+  #services .services .services-row-div:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
