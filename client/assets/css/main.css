@@ -147,6 +147,12 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-image: url(../images/home-images/hero/slide1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 #header {
   position: absolute;
   top: 0;
@@ -473,6 +479,7 @@ table {
 
 #about {
   padding: 5%;
+  background-color: #fff;
 }
 #about .about .about-left {
   display: flex;
@@ -816,9 +823,6 @@ table {
 
 #pro-video {
   padding: 5%;
-  background-image: url(../images/home-images/hero/slide1.jpg);
-  background-attachment: fixed;
-  background-size: cover;
   color: #fff;
   position: relative;
   height: 70vh;
@@ -956,6 +960,88 @@ table {
   transition-timing-function: ease-out;
   transform: translateX(370%);
   color: #fff;
+}
+
+#testimonials {
+  position: relative;
+  height: 70vh;
+}
+#testimonials .testimonials {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.511);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#testimonials .testimonials .testimonial-text {
+  font-family: "Barlow Condensed", sans-serif;
+  width: 50%;
+  letter-spacing: 3px;
+  margin: 30px auto;
+}
+#testimonials .testimonials h1 {
+  margin: 30px auto;
+  width: 50%;
+  font-family: "Gilda Display", serif;
+  font-size: 36px;
+  position: relative;
+}
+#testimonials .testimonials h1::after {
+  content: "";
+  background-color: #adadad;
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+#testimonials .testimonials .owl-carousel2 {
+  margin: 0 auto;
+  max-width: 50%;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .client-comment {
+  font-family: "Barlow", sans-serif;
+  line-height: 25px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text {
+  display: flex;
+  align-items: center;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text .client-img {
+  width: 80px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text div span {
+  display: flex;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text div span img {
+  width: 16px;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text div h3 {
+  font-family: "Barlow Condensed", sans-serif;
+}
+#testimonials .testimonials .owl-carousel2 .owl-item .item .img-text div p {
+  font-size: 14px;
+  font-family: "Barlow", sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  #testimonials .testimonials .owl-carousel2 {
+    max-width: 90%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

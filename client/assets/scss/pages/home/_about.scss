@@ -1,5 +1,6 @@
 #about {
   padding: 5%;
+  background-color: $white-color ;     
   .about {
     .about-left {
       @include dFlex(center, start);

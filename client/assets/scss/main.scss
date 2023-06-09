@@ -5,6 +5,7 @@
 @import "./base/reset";
 @import "./utils/variables";
 @import "./utils/mixin";
+@import "./utils/global";
 @import "./layout/header";
 @import "./pages/home/hero";
 @import "./pages/home/about";
@@ -12,3 +13,4 @@
 @import "./pages/home/extraservices";
 @import "./pages/home/provideo";
 @import "./pages/home/facilities";
+@import "./pages/home/testimonials";
