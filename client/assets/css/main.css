@@ -879,4 +879,83 @@ table {
   border: 3px solid #aa8453;
 }
 
+#facilities {
+  padding: 5%;
+  background-color: #222;
+}
+#facilities .facilities span {
+  font-size: 24px;
+  color: #adadad;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
+}
+#facilities .facilities h2 {
+  margin-top: 30px;
+  font-family: "Gilda Display", serif;
+  font-size: 50px;
+  color: #fff;
+}
+#facilities .facilities .facilities-cards {
+  margin: 40px 0;
+}
+#facilities .facilities .facilities-cards .facilities-card {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div {
+  padding: 20px;
+  background-color: #ececec;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  transition: 1s;
+  transition-timing-function: ease-in;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div img {
+  width: 38px;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div h1 {
+  font-family: "Gilda Display", serif;
+  font-size: 36px;
+  position: relative;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div h1:after {
+  transition: 1s;
+  transition-timing-function: ease-in;
+  content: "";
+  background-color: #fff;
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: #222;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: #fff;
+  transform: translateY(160%);
+  transition: 1s;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div:hover {
+  transition: 1s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(-45deg, #685136 0%, #706d7c 100%);
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div:hover p {
+  transform: translateY(-20%);
+  transition: 1s;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-div:hover h1::after {
+  transition: 1s;
+  transition-timing-function: ease-out;
+  transform: translateX(370%);
+  color: #fff;
+}
+
 /*# sourceMappingURL=main.css.map */

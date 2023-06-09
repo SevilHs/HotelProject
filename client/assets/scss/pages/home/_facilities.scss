@@ -1,0 +1,81 @@
+#facilities {
+  padding: 5%;
+  background-color: $dark-bg-color;
+  .facilities {
+    span {
+      font-size: 24px;
+      color: $light-gray;
+      font-family: $primary-font;
+      letter-spacing: 3px;
+    }
+    h2 {
+      margin-top: 30px;
+      font-family: $secondary-font;
+      font-size: 50px;
+      color: $white-color;
+    }
+    .facilities-cards {
+      margin: 40px 0;
+      .facilities-card {
+        padding: 10px;
+        margin-bottom: 20px;
+        .facilities-card-div {
+          padding: 20px;
+          background-color: #ececec;
+          height: 220px;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          overflow: hidden;
+          transition: 1s;
+          transition-timing-function: ease-in;
+          img {
+            width: 38px;
+          }
+          h1 {
+            font-family: $secondary-font;
+            font-size: 36px;
+            position: relative;
+            &:after{
+                transition: 1s;
+                transition-timing-function: ease-in;
+                content: '';
+                background-color: $white-color;
+                width: 70px;
+                height: 3px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background-color: $dark-bg-color;
+            }
+          }
+          p {
+            font-family: $primary-font;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height: 20px;
+            color: $white-color;
+            transform: translateY(160%);
+            transition: 1s;
+          }
+          &:hover {
+            transition: 1s;
+            transition-timing-function: ease-out;
+            background: linear-gradient(-45deg, #685136 0%, #706d7c 100%);
+            p {
+              transform: translateY(-20%);
+              transition: 1s;
+            }
+            h1::after{
+                transition: 1s;
+                transition-timing-function: ease-out;
+                transform: translateX(370%);
+                color: $white-color;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
