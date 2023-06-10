@@ -19,13 +19,15 @@
       .owl-stage-outer {
         overflow-x: hidden;
         overflow-y: visible;
-        height: 670px;
+        height: 450px;
       }
       .item {
         position: relative;
         .item-image {
-          width: 100%;
+          max-width: 370px;
+          height: 340px;
           overflow: hidden;
+          margin: 0 auto;
           img {
             transition: all 0.8s ease-in-out;
           }
@@ -39,6 +41,7 @@
           padding: 30px;
           @include dFlex(space-between, start);
           flex-direction: column;
+          margin: 0 auto;
           span {
             border: 1px solid $white-color;
             padding: 15px 5px;
@@ -58,7 +61,7 @@
             height: 150px;
             @include dFlex(center, start);
             flex-direction: column;
-            transform: translateY(80%);
+            transform: translateY(70%);
             transition: all 0.4s ease-in;
             p {
               font-family: $barlow-font;
@@ -73,7 +76,7 @@
               line-height: 30px;
               margin-top: 15px;
               color: $black-color;
-              &:hover{
+              &:hover {
                 color: $primary-color;
               }
             }
@@ -86,15 +89,16 @@
               transition: all 0.7s ease-in-out;
             }
           }
-          .item-all-text{
-            .bottom-text{
-                transform: translateY(0);
-            transition: all 0.7s ease-out;
+          .item-all-text {
+            .bottom-text {
+              transform: translateY(0);
+              transition: all 0.7s ease-out;
             }
           }
         }
       }
-      .owl-prev,.owl-next{
+      .owl-prev,
+      .owl-next {
         position: absolute;
         top: 35%;
         font: unset;
@@ -102,22 +106,32 @@
         padding: 10px 15px !important;
         border-radius: 100%;
         border: 1px solid $white-color;
-        span{
-            color: $white-color;
+        span {
+          color: $white-color;
         }
-        &:hover{
-            background-color: $primary-color;
-            border: none;
+        &:hover {
+          background-color: $primary-color;
+          border: none;
         }
       }
-      .owl-next{
+      .owl-next {
         right: 20px;
       }
-      .owl-prev{
+      .owl-prev {
         left: 20px;
       }
-      .owl-dots{
+      .owl-dots {
         display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .news {
+      .owl-carousel3 {
+        .owl-next,
+        .owl-prev {
+          display: none;
+        }
       }
     }
   }

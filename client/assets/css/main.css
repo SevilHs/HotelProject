@@ -1157,14 +1157,16 @@ body {
 #news .news .owl-carousel3 .owl-stage-outer {
   overflow-x: hidden;
   overflow-y: visible;
-  height: 670px;
+  height: 450px;
 }
 #news .news .owl-carousel3 .item {
   position: relative;
 }
 #news .news .owl-carousel3 .item .item-image {
-  width: 100%;
+  max-width: 370px;
+  height: 340px;
   overflow: hidden;
+  margin: 0 auto;
 }
 #news .news .owl-carousel3 .item .item-image img {
   transition: all 0.8s ease-in-out;
@@ -1180,6 +1182,7 @@ body {
   justify-content: space-between;
   align-items: start;
   flex-direction: column;
+  margin: 0 auto;
 }
 #news .news .owl-carousel3 .item .item-all-text span {
   border: 1px solid #fff;
@@ -1202,7 +1205,7 @@ body {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  transform: translateY(80%);
+  transform: translateY(70%);
   transition: all 0.4s ease-in;
 }
 #news .news .owl-carousel3 .item .item-all-text .bottom-text p {
@@ -1230,7 +1233,8 @@ body {
   transform: translateY(0);
   transition: all 0.7s ease-out;
 }
-#news .news .owl-carousel3 .owl-prev, #news .news .owl-carousel3 .owl-next {
+#news .news .owl-carousel3 .owl-prev,
+#news .news .owl-carousel3 .owl-next {
   position: absolute;
   top: 35%;
   font: unset;
@@ -1239,10 +1243,12 @@ body {
   border-radius: 100%;
   border: 1px solid #fff;
 }
-#news .news .owl-carousel3 .owl-prev span, #news .news .owl-carousel3 .owl-next span {
+#news .news .owl-carousel3 .owl-prev span,
+#news .news .owl-carousel3 .owl-next span {
   color: #fff;
 }
-#news .news .owl-carousel3 .owl-prev:hover, #news .news .owl-carousel3 .owl-next:hover {
+#news .news .owl-carousel3 .owl-prev:hover,
+#news .news .owl-carousel3 .owl-next:hover {
   background-color: #aa8453;
   border: none;
 }
@@ -1254,6 +1260,118 @@ body {
 }
 #news .news .owl-carousel3 .owl-dots {
   display: none;
+}
+@media only screen and (max-width: 768px) {
+  #news .news .owl-carousel3 .owl-next,
+  #news .news .owl-carousel3 .owl-prev {
+    display: none;
+  }
+}
+
+#booking {
+  padding: 5%;
+}
+#booking .booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#booking .booking .booking-left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  color: #fff;
+}
+#booking .booking .booking-left span img {
+  width: 16px;
+}
+#booking .booking .booking-left p {
+  font-size: 24px;
+  font-family: "Gilda Display", serif;
+  line-height: 40px;
+}
+#booking .booking .booking-left .slide-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#booking .booking .booking-left .slide-phone .booking-call {
+  color: #fff;
+  margin-left: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  line-height: 25px;
+}
+#booking .booking .booking-left .slide-phone .booking-call p {
+  font-size: 16px;
+}
+#booking .booking .booking-left .slide-phone .booking-call span {
+  font-size: 24px;
+}
+#booking .booking .booking-left .call-info {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+}
+#booking .booking .booking-left .call-info i {
+  margin-right: 10px;
+}
+#booking .booking .booking-right {
+  margin-top: 30px;
+  background-color: #f8f5f0;
+  padding: 4%;
+}
+#booking .booking .booking-right p {
+  color: #666;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#booking .booking .booking-right h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+#booking .booking .booking-right hr {
+  opacity: 0.3;
+  color: #b2b0b0;
+  height: 0.5px;
+}
+#booking .booking .booking-right form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+}
+#booking .booking .booking-right form .selects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#booking .booking .booking-right form .selects select {
+  width: 49%;
+  border: none;
+  padding: 30px;
+  outline: none;
+}
+#booking .booking .booking-right form button {
+  background-color: #aa8453;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+}
+#booking .booking .booking-right #notification {
+  margin-top: 20px;
+  background-color: #f1eeee;
+  padding: 20px;
+  border: 1px solid #aa8453;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
