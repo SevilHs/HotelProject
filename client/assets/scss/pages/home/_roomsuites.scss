@@ -10,16 +10,14 @@
     h1 {
       font-family: "Gilda Display", serif;
       font-size: 50px;
-      margin-top: 20px;
+      margin: 30px 0;
     }
     .rooms-suites-top,
     .rooms-suites-bottom {
       @include dFlex();
       --bs-gutter-x: 0;
-      margin: 20px 0;
       .rooms-suites-top-card,
       .rooms-suites-bottom-card {
-        max-width: 370px;
         margin-bottom: 30px;
         padding: 0;
         position: relative;
@@ -124,7 +122,11 @@
     }
     .rooms-suites-bottom {
       .rooms-suites-bottom-card {
-        max-width: 48%;
+        .text-div {
+          .text-div-bottom {
+            transform: translateY(52%);
+          }
+        }
       }
     }
   }
@@ -155,6 +157,26 @@
               }
             }
           }
+        }
+      }
+      .rooms-suites-bottom {
+        .rooms-suites-bottom-card {
+          max-width: 520px;
+          margin: 0 auto 30px auto;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .rooms-suites {
+      .rooms-suites-top {
+        .col-md-4 {
+          width: 30%;
+        }
+      }
+      .rooms-suites-bottom {
+        .col-md-6 {
+          width: 48%;
         }
       }
     }

@@ -542,7 +542,7 @@ body {
 #rooms-suites .rooms-suites h1 {
   font-family: "Gilda Display", serif;
   font-size: 50px;
-  margin-top: 20px;
+  margin: 30px 0;
 }
 #rooms-suites .rooms-suites .rooms-suites-top,
 #rooms-suites .rooms-suites .rooms-suites-bottom {
@@ -550,13 +550,11 @@ body {
   justify-content: space-between;
   align-items: center;
   --bs-gutter-x: 0;
-  margin: 20px 0;
 }
 #rooms-suites .rooms-suites .rooms-suites-top .rooms-suites-top-card,
 #rooms-suites .rooms-suites .rooms-suites-top .rooms-suites-bottom-card,
 #rooms-suites .rooms-suites .rooms-suites-bottom .rooms-suites-top-card,
 #rooms-suites .rooms-suites .rooms-suites-bottom .rooms-suites-bottom-card {
-  max-width: 370px;
   margin-bottom: 30px;
   padding: 0;
   position: relative;
@@ -695,8 +693,8 @@ body {
   transition: 0.7s;
   width: 85%;
 }
-#rooms-suites .rooms-suites .rooms-suites-bottom .rooms-suites-bottom-card {
-  max-width: 48%;
+#rooms-suites .rooms-suites .rooms-suites-bottom .rooms-suites-bottom-card .text-div .text-div-bottom {
+  transform: translateY(52%);
 }
 @media only screen and (max-width: 768px) {
   #rooms-suites .rooms-suites .rooms-suites-top {
@@ -717,6 +715,18 @@ body {
     transition: 1s;
     transform: translateY(-30%);
     transition-timing-function: ease-in-out;
+  }
+  #rooms-suites .rooms-suites .rooms-suites-bottom .rooms-suites-bottom-card {
+    max-width: 520px;
+    margin: 0 auto 30px auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #rooms-suites .rooms-suites .rooms-suites-top .col-md-4 {
+    width: 30%;
+  }
+  #rooms-suites .rooms-suites .rooms-suites-bottom .col-md-6 {
+    width: 48%;
   }
 }
 
