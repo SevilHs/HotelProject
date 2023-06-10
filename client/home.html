@@ -1345,6 +1345,14 @@
             <h2>Hotel Booking Form</h2>
             <hr />
             <form id="booking-form" action="">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date"/>
+                <span class="input-group-append">
+                  <span class="input-group-text bg-light d-block">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                </span>
+              </div>
               <div class="selects">
                 <select name="" id="adults">
                   <option value="" hidden>Adults</option>
@@ -1418,7 +1426,7 @@
     <footer>
       <div id="footer-top">
         <div class="container">
-          <div class="footer-top row ">
+          <div class="footer-top row">
             <div class="col col-12 col-md-6 col-lg-3 footer-logo">
               <img src="./assets/images/home-images/logo.png" alt="" />
             </div>
@@ -1445,7 +1453,10 @@
               <h3>Contact</h3>
               <p>1616 Broadway NY, New York 10001 United States of America</p>
               <a href="tel:+12345678" class="contact-tel">
-                <img src="./assets/images/home-images/call (2).png" alt="phone-img">
+                <img
+                  src="./assets/images/home-images/call (2).png"
+                  alt="phone-img"
+                />
                 <p>855 100 4444</p>
               </a>
               <a href="mailto:" class="contact-mail">info@luxuryhotel.com</a>
