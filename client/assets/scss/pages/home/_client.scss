@@ -1,0 +1,15 @@
+#clients{
+    background-color: $white-color;
+    padding: 1% 0;
+    .owl-carousel4{
+        .owl-item{
+            img{
+                margin: 0 auto;
+                max-width: 200px;
+            }
+        }
+        .owl-dots,.owl-nav{
+            display: none;
+        }
+    }
+}

@@ -80,10 +80,10 @@ $(".owl-carousel4").owlCarousel({
   autoplay: true,
   responsive: {
     0: {
-      items: 1,
+      items: 2,
     },
     600: {
-      items: 2,
+      items: 3,
     },
     1000: {
       items: 3,

@@ -1410,4 +1410,16 @@ body {
   font-weight: 600;
 }
 
+#clients {
+  background-color: #fff;
+  padding: 1% 0;
+}
+#clients .owl-carousel4 .owl-item img {
+  margin: 0 auto;
+  max-width: 200px;
+}
+#clients .owl-carousel4 .owl-dots, #clients .owl-carousel4 .owl-nav {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
