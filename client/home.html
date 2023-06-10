@@ -1297,7 +1297,7 @@
     <section id="booking">
       <div class="container">
         <div class="booking row">
-          <div class="col col-12 col-md-6">
+          <div class="col col-12 col-md-6 booking-left">
             <span>
               <img
                 src="./assets/images/home-images/star.png"
@@ -1325,41 +1325,40 @@
               television and include full breakfast.
             </p>
             <a class="slide-phone" href="tel:+123456789">
-              <img
-                src="./assets/images/home-images/extra-services/call.png"
-                alt=""
-              />
-              <div>
-                <p class="text-information">For information</p>
+              <img src="./assets/images/home-images/call (2).png" alt="">
+              <div class="booking-call">
+                <p class="text-information">Reservation</p>
                 <span class="text-phone">855 100 4444</span>
               </div>
             </a>
-            <p><i class="fa-solid fa-check"></i>Call us, it's toll-free.</p>
+            <p class="call-info"><i class="fa-solid fa-check"></i>Call us, it's toll-free.</p>
           </div>
-          <div class="col col-12 col-md-6">
+          <div class="col col-12 col-md-6 booking-right">
             <p>ROOMS & SUITES</p>
             <h2>Hotel Booking Form</h2>
             <hr />
             <form id="booking-form" action="">
-              <select name="" id="adults">
-                <option value="" hidden >Adults</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select name="" id="children">
-                <option value="" hidden>Children</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
+              <div class="selects">
+                <select name="" id="adults">
+                  <option value="" hidden >Adults</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <select name="" id="children">
+                  <option value="" hidden>Children</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
               <button type="submit">CHECK AVAILABILITY</button>
             </form>
             <div id="notification" role="alert" hidden>
-              A simple dark alert—check it out!
+              One or more fields have an error. Please check and try again.
             </div>
           </div>
         </div>

@@ -1,0 +1,106 @@
+#booking {
+  padding: 5%;
+  .booking {
+    @include dFlex();
+    .booking-left {
+      @include dFlex(center, start);
+      flex-direction: column;
+      gap: 30px;
+      color: $white-color;
+      span {
+        img {
+          width: 16px;
+        }
+      }
+      p {
+        font-size: 24px;
+        font-family: $secondary-font;
+        line-height: 40px
+      }
+      .slide-phone {
+        @include dFlex(center);
+        .booking-call {
+          color: $white-color;
+          margin-left: 20px;
+          font-family: $primary-font;
+          line-height: 25px;
+          p {
+            font-size: 16px;
+          }
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+      .call-info {
+        font-family: $primary-font;
+        font-size: 16px;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+    .booking-right {
+      margin-top: 30px;
+      background-color: #f8f5f0;
+      padding: 4%;
+      p {
+        color: $gray-color;
+        font-family: $primary-font;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-family: $secondary-font;
+        font-size: 24px;
+      }
+      hr {
+        opacity: 0.3;
+        color: #b2b0b0;
+        height: 0.5px;
+      }
+      form {
+        @include dFlex(center, start);
+        flex-direction: column;
+        gap: 30px;
+        .selects {
+          @include dFlex();
+          width: 100%;
+          select {
+            width: 49%;
+            border: none;
+            padding: 30px;
+            outline: none;
+            // option{
+            //     border: none;
+            //     box-shadow: none;
+            //     outline: none;
+            //     border-radius: 0%;
+            //     &:hover{
+            //         background-color: #b2b0b0;
+            //     }
+            // }
+          }
+        }
+        button {
+          background-color: $primary-color;
+          color: $white-color;
+          font-family: $primary-font;
+          padding: 20px;
+          border: none;
+          outline: none;
+          font-size: 20px;
+          width: 100%;
+        }
+      }
+      #notification {
+        margin-top: 20px;
+        background-color: #f1eeee;
+        padding: 20px;
+        border: 1px solid $primary-color;
+        font-family: $primary-font;
+        font-weight: 600;
+      }
+    }
+  }
+}
