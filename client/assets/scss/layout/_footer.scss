@@ -1,0 +1,118 @@
+footer {
+  #footer-top {
+    padding: 5%;
+    background-color: $dark-bg-color;
+    .footer-top {
+      display: flex;
+      align-items: start;
+      row-gap: 30px;
+      h3 {
+        color: $white-color;
+        font-size: 24px;
+        font-family: $secondary-font;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+      p,
+      a {
+        color: $gray-color;
+        font-family: $barlow-font;
+        line-height: 25px;
+      }
+      .footer-logo {
+        img {
+          max-width: 200px;
+        }
+      }
+      .footer-about {
+        font-family: $barlow-font;
+        line-height: 25px;
+      }
+      .footer-explore {
+        padding: 0 50px;
+        h3 {
+          display: inline-block;
+        }
+        li {
+          position: relative;
+          a {
+            transition: all 0.5s ease-in-out;
+          }
+          &:after {
+            display: none;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $primary-color;
+          }
+          &:hover::after {
+            display: block;
+          }
+          &:hover {
+            a {
+              transition: all 0.5s ease-in-out;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+      .footer-contact {
+        .contact-tel {
+          margin: 15px 0;
+          @include dFlex(start);
+          p {
+            margin-left: 10px;
+            font-size: 20px;
+            color: $white-color;
+          }
+        }
+        .contact-mail {
+          color: $white-color;
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $primary-color;
+            bottom: -7px;
+            left: 0;
+          }
+        }
+        .sosial-icons {
+          margin-top: 15px;
+          display: flex;
+          gap: 20px;
+          i {
+            color: $white-color;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+              transition: all 0.5s ease-in-out;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      .footer-top {
+        .footer-explore {
+          padding: 0 12px;
+        }
+      }
+    }
+  }
+  #footer-bottom{
+    background-color: #1E1E1E;
+    text-align: center;
+    padding: 2%;
+    color: $white-color;
+    font-family: $primary-font;
+    letter-spacing: 3px;
+  }
+}
