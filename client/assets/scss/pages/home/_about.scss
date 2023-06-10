@@ -1,6 +1,6 @@
 #about {
   padding: 5%;
-  background-color: $white-color ;     
+  background-color: $white-color;
   .about {
     .about-left {
       @include dFlex(center, start);
@@ -40,14 +40,19 @@
       }
     }
     .about-right {
-      img {
-        max-width: 261px;
-      }
-      .about-img-1 {
-        transform: translateY(120px);
-      }
-      .about-img-2 {
-        margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      .images-1,
+      .images-2 {
+        max-width: 270px;
+        img {
+          width: 100%;
+        }
+        .about-img-1 {
+          margin-top: 120px;
+        }
       }
     }
   }

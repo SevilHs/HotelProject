@@ -520,14 +520,23 @@ body {
   font-size: 36px;
   margin-top: 10px;
 }
-#about .about .about-right img {
-  max-width: 261px;
+#about .about .about-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
-#about .about .about-right .about-img-1 {
-  transform: translateY(120px);
+#about .about .about-right .images-1,
+#about .about .about-right .images-2 {
+  max-width: 270px;
 }
-#about .about .about-right .about-img-2 {
-  margin-top: 0;
+#about .about .about-right .images-1 img,
+#about .about .about-right .images-2 img {
+  width: 100%;
+}
+#about .about .about-right .images-1 .about-img-1,
+#about .about .about-right .images-2 .about-img-1 {
+  margin-top: 120px;
 }
 
 #rooms-suites {
