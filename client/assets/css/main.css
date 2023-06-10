@@ -153,9 +153,16 @@ h1 {
 }
 
 body {
-  background-image: url(../images/home-images/hero/slide1.jpg);
   background-attachment: fixed;
   background-size: cover;
+}
+
+.body-home-page {
+  background-image: url(../images/home-images/hero/slide1.jpg);
+}
+
+.body-about-page {
+  background-image: url(../images/home-images/hero/slide3.jpg);
 }
 
 #header {
@@ -1525,6 +1532,25 @@ footer #footer-bottom {
 }
 #clients .owl-carousel4 .owl-dots, #clients .owl-carousel4 .owl-nav {
   display: none;
+}
+
+#hero-about .hero-about {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+#hero-about .hero-about p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+#hero-about .hero-about h1 {
+  letter-spacing: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
