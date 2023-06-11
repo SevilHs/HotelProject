@@ -1,0 +1,21 @@
+#counter{
+    background-color: $dark-bg-color;
+    padding: 5% 0;
+    text-align: center;
+    .counter{
+        .col{
+            color: $white-color;
+            margin-bottom: 20px;
+            h1{
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+            span{
+                font-family: $primary-font;
+                letter-spacing: 2px;
+                font-size: 30px;
+                color: $gray-color;
+            }
+        }
+    }
+}
