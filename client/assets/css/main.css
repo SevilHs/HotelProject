@@ -1639,4 +1639,96 @@ footer #footer-bottom {
   transform: translateY(0);
 }
 
+#facilities-about {
+  background: url(../images/aboutpage/grey-color.jpg) no-repeat center;
+  background-size: cover;
+  padding: 5% 0;
+}
+#facilities-about .facilities-about .row {
+  margin-bottom: 50px;
+}
+#facilities-about .facilities-about p {
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+#facilities-about .facilities-about h1 {
+  margin: 30px 0 50px 0;
+}
+#facilities-about .facilities-about .facilities-img {
+  transition: 0.9 ease-in-out;
+}
+#facilities-about .facilities-about .facilities-img img {
+  max-width: 100%;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+#facilities-about .facilities-about .facilities-text {
+  padding: 30px;
+}
+#facilities-about .facilities-about .facilities-text .facilities-text-div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+#facilities-about .facilities-about .facilities-text .facilities-text-div h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 36px;
+  width: 100%;
+}
+#facilities-about .facilities-about .facilities-text .facilities-text-div div {
+  width: 100%;
+  position: relative;
+  padding: 20px;
+}
+#facilities-about .facilities-about .facilities-text .facilities-text-div div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #aa8453;
+  width: 55px;
+  height: 100%;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+#facilities-about .facilities-about .facilities-text .facilities-text-div div a {
+  color: #000;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+  position: relative;
+}
+#facilities-about .facilities-about .facilities-text .facilities-text-div div a i {
+  color: #000;
+  transition: 0.5s ease-in-out;
+}
+#facilities-about .facilities-about .facilities-text:hover div::before {
+  width: 130px;
+}
+#facilities-about .facilities-about .facilities-text:hover div a {
+  transition: 0.5s ease-in-out;
+}
+#facilities-about .facilities-about .facilities-text:hover div a i {
+  color: #aa8453;
+  margin-left: 10px;
+  transition: 0.5s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+  #facilities-about {
+    background-image: none;
+    background-color: #fff;
+  }
+  #facilities-about .facilities-about .row2 {
+    flex-direction: column-reverse;
+  }
+  #facilities-about .facilities-about .facilities-text .facilities-text-div h3 {
+    font-size: 30px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
