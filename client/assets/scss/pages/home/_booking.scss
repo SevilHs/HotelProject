@@ -63,6 +63,31 @@
         @include dFlex(center, start);
         flex-direction: column;
         gap: 30px;
+        .input-group{
+          @include dFlex();
+          .fa-calendar{
+            font-size: 30px;
+            height: 100%;
+            position: absolute;
+            z-index: 3;
+            right: 15px;
+            top: 10px;
+          }
+          .datepicker_input{
+            width: 100%;
+            padding: 15px 10px;
+            border: none;
+            box-shadow: none;
+            outline: none;
+          }
+        
+          .datepicker-input.in-edit:active, .datepicker-input.in-edit:focus{
+            box-shadow: none;
+          }
+          .datepicker-cell.selected, .datepicker-cell.selected:hover{
+            background-color: $primary-color;
+          }
+        }
         .selects {
           @include dFlex();
           width: 100%;
