@@ -1555,4 +1555,88 @@ footer #footer-bottom {
   letter-spacing: 5px;
 }
 
+#team {
+  background-color: #F8F5F0;
+  padding: 5%;
+}
+#team .team p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+#team .team .owl-carousel1-about {
+  margin: 30px 0;
+}
+#team .team .owl-carousel1-about .owl-nav {
+  display: none;
+}
+#team .team .owl-carousel1-about .owl-dots {
+  margin-top: 20px;
+}
+#team .team .owl-carousel1-about .owl-dots .owl-dot span {
+  border: 1px solid #aa8453;
+  background-color: transparent;
+}
+#team .team .owl-carousel1-about .owl-dots .active span {
+  border: none;
+  background-color: #aa8453;
+}
+#team .team .owl-carousel1-about .item .carousel-text {
+  position: relative;
+  text-align: center;
+  height: 90px;
+  overflow: hidden;
+}
+#team .team .owl-carousel1-about .item .carousel-text .carousel-text-visible {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+#team .team .owl-carousel1-about .item .carousel-text .carousel-text-visible h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+#team .team .owl-carousel1-about .item .carousel-text .carousel-text-visible span {
+  font-family: "Barlow", sans-serif;
+  color: #666;
+  text-transform: none;
+}
+#team .team .owl-carousel1-about .item .carousel-text .carousel-text-hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  transition: 0.5s ease-in;
+  transform: translateY(130%);
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+#team .team .owl-carousel1-about .item .carousel-text .carousel-text-hidden .sosial-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #aa8453;
+  margin-bottom: 10px;
+}
+#team .team .owl-carousel1-about .item .carousel-text .carousel-text-hidden a {
+  color: #666;
+  font-family: "Barlow", sans-serif;
+}
+#team .team .owl-carousel1-about .item:hover .carousel-text .carousel-text-hidden {
+  transition: 0.5s ease-out;
+  transform: translateY(0);
+}
+
 /*# sourceMappingURL=main.css.map */

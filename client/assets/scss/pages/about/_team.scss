@@ -1,0 +1,87 @@
+#team {
+  background-color: $primary-bg-color;
+  padding: 5%;
+  .team {
+    p {
+      font-family: $primary-font;
+      font-size: 17px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .owl-carousel1-about {
+      margin: 30px 0;
+      .owl-nav {
+        display: none;
+      }
+      .owl-dots {
+        margin-top: 20px;
+        .owl-dot span {
+          border: 1px solid $primary-color;
+          background-color: transparent;
+        }
+        .active {
+          span {
+            border: none;
+            background-color: $primary-color;
+          }
+        }
+      }
+      .item {
+        .carousel-text {
+          position: relative;
+          text-align: center;
+          height: 90px;
+          overflow: hidden;
+          .carousel-text-visible {
+            background-color: $white-color;
+            @include dFlex(center);
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            h3 {
+              font-family: $secondary-font;
+              font-size: 24px;
+            }
+            span {
+              font-family: $barlow-font;
+              color: $gray-color;
+              text-transform: none;
+            }
+          }
+          .carousel-text-hidden {
+            @include dFlex(center);
+            flex-direction: column;
+            position: absolute;
+            transition: 0.5s ease-in;
+            transform: translateY(130%);
+            background-color: $white-color;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            .sosial-icons {
+              @include dFlex(center);
+              gap: 20px;
+              color: $primary-color;
+              margin-bottom: 10px;
+            }
+            a {
+              color: $gray-color;
+              font-family: $barlow-font;
+            }
+          }
+        }
+        &:hover {
+          .carousel-text {
+            .carousel-text-hidden {
+              transition: 0.5s ease-out;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
