@@ -1534,6 +1534,9 @@ footer #footer-bottom {
   display: none;
 }
 
+#hero-about {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 #hero-about .hero-about {
   height: 60vh;
   display: flex;
@@ -1541,7 +1544,6 @@ footer #footer-bottom {
   align-items: start;
   flex-direction: column;
   row-gap: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 #hero-about .hero-about p {

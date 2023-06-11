@@ -1,10 +1,10 @@
 #hero-about{
+    background-color: rgb(0, 0, 0,0.5);
     .hero-about{
         height: 60vh;
         @include dFlex(center,start);
         flex-direction: column;
         row-gap: 20px;
-        background-color: rgb(0, 0, 0,0.5);
         color: $white-color;
         p{
             font-family: $primary-font;
