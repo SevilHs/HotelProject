@@ -1,0 +1,43 @@
+#aboutrest {
+  padding: 5%;
+  background-color: $white-color;
+  .aboutrest {
+    .about-left {
+      @include dFlex(center, start);
+      flex-direction: column;
+      gap: 20px;
+      p {
+        color: $gray-color;
+        line-height: 30px;
+        font-family: $barlow-font;
+        i {
+          margin-right: 10px;
+        }
+        span{
+            color: $black-color;
+            font-family: $secondary-font;
+        }
+      }
+      h3 {
+        font-family: $secondary-font;
+        font-size: 24px;
+      }
+    }
+    .about-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        .images-1,
+        .images-2 {
+          max-width: 280px;
+          img {
+            width: 100%;
+          }
+          .about-img-2 {
+            margin-top: 120px;
+          }
+        }
+      }
+  }
+}
