@@ -2096,4 +2096,15 @@ footer #footer-bottom {
   transform: translateY(40%);
 }
 
+#images {
+  width: 100%;
+}
+#images .col {
+  padding: 0;
+}
+#images .col img {
+  max-width: 100%;
+  height: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */
