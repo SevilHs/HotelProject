@@ -165,6 +165,38 @@ body {
   background-image: url(../images/home-images/hero/slide3.jpg);
 }
 
+#hero-rest .carousel .carousel-item .carousel-caption a, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
+  padding: 10px 30px;
+  border: 1px solid #ddd;
+  color: #fff;
+  font-size: 20px;
+  transition-delay: 0.6s;
+  position: relative;
+  overflow: hidden;
+}
+#hero-rest .carousel .carousel-item .carousel-caption a::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  transform: translateX(-100%);
+  transition-timing-function: ease-in;
+  z-index: -1;
+}
+#hero-rest .carousel .carousel-item .carousel-caption a:hover, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
+  color: gray;
+  transition-delay: 0s;
+}
+#hero-rest .carousel .carousel-item .carousel-caption a:hover::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
+  transition: 0.5s;
+  transform: translateX(0);
+  transition-timing-function: ease-out;
+}
+
 #header {
   position: absolute;
   top: 0;
@@ -503,37 +535,6 @@ footer #footer-bottom {
   font-size: 72px;
   letter-spacing: 0.1em;
   transition-delay: 0.4s;
-}
-#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
-  padding: 10px 30px;
-  border: 1px solid #ddd;
-  color: #fff;
-  font-size: 20px;
-  transition-delay: 0.6s;
-  position: relative;
-  overflow: hidden;
-}
-#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  content: "";
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-  transform: translateX(-100%);
-  transition-timing-function: ease-in;
-  z-index: -1;
-}
-#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
-  color: gray;
-  transition-delay: 0s;
-}
-#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
-  transition: 0.5s;
-  transform: translateX(0);
-  transition-timing-function: ease-out;
 }
 #hero .carousel-fade .carousel-inner .carousel-item.active .carousel-caption {
   visibility: visible;
@@ -1491,6 +1492,32 @@ footer #footer-bottom {
   flex-direction: column;
   gap: 30px;
 }
+#booking .booking .booking-right form .input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#booking .booking .booking-right form .input-group .fa-calendar {
+  font-size: 30px;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  right: 15px;
+  top: 10px;
+}
+#booking .booking .booking-right form .input-group .datepicker_input {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+#booking .booking .booking-right form .input-group .datepicker-input.in-edit:active, #booking .booking .booking-right form .input-group .datepicker-input.in-edit:focus {
+  box-shadow: none;
+}
+#booking .booking .booking-right form .input-group .datepicker-cell.selected, #booking .booking .booking-right form .input-group .datepicker-cell.selected:hover {
+  background-color: #aa8453;
+}
 #booking .booking .booking-right form .selects {
   display: flex;
   justify-content: space-between;
@@ -1876,6 +1903,197 @@ footer #footer-bottom {
   #testimonials-about .testimonials-about .testimonials-body .cards .card .card-img-text .card-top p {
     font-size: 16px;
   }
+}
+
+#hero-rest {
+  height: 90vh;
+}
+#hero-rest .carousel img {
+  height: 90vh;
+}
+#hero-rest .carousel .carousel-indicators {
+  left: unset;
+}
+#hero-rest .carousel .carousel-indicators button {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+#hero-rest .carousel .carousel-indicators button.active {
+  border: 1px solid transparent;
+  background-color: #aa8453;
+}
+#hero-rest .carousel .arrow-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  padding: 15px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  animation-name: arrowDown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes arrowDown {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 60px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+#hero-rest .carousel .carousel-item .carousel-caption {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  transition: 0.8s;
+  transform: translateY(170px);
+  transition-timing-function: ease-in;
+  opacity: 0.5;
+}
+#hero-rest .carousel .carousel-item .carousel-caption h5 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+#hero-rest .carousel .carousel-item.active .carousel-caption {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+  transform: translateY(0);
+  transition-timing-function: ease-out;
+}
+
+#about-rest {
+  padding: 5%;
+  background-color: #F8F5F0;
+}
+#about-rest .about-rest .about-left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+#about-rest .about-rest .about-left p {
+  color: #666;
+  line-height: 30px;
+  font-family: "Barlow", sans-serif;
+}
+#about-rest .about-rest .about-left p i {
+  margin-right: 10px;
+}
+#about-rest .about-rest .about-left p span {
+  color: #000;
+  font-family: "Gilda Display", serif;
+}
+#about-rest .about-rest .about-left h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+#about-rest .about-rest .about-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#about-rest .about-rest .about-right .images-1,
+#about-rest .about-rest .about-right .images-2 {
+  max-width: 280px;
+}
+#about-rest .about-rest .about-right .images-1 img,
+#about-rest .about-rest .about-right .images-2 img {
+  width: 100%;
+}
+#about-rest .about-rest .about-right .images-1 .about-img-2,
+#about-rest .about-rest .about-right .images-2 .about-img-2 {
+  margin-top: 120px;
+}
+
+#menu-selection {
+  background-color: #0a0b0a;
+  padding: 5% 0;
+  color: #fff;
+}
+#menu-selection h4 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+#menu-selection h1 {
+  margin: 30px 0;
+}
+#menu-selection p {
+  font-family: "Barlow", sans-serif;
+  color: #9b9999;
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 35px;
+}
+#menu-selection .menu-selection {
+  color: #fff;
+}
+#menu-selection .menu-selection:hover .menu-selection-card {
+  filter: blur(5px);
+}
+#menu-selection .menu-selection .menu-selection-card {
+  margin: 0;
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+#menu-selection .menu-selection .menu-selection-card img {
+  max-width: 100%;
+  transition: 1s ease-in-out;
+  object-fit: cover;
+}
+#menu-selection .menu-selection .menu-selection-card .menu-selection-text-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+#menu-selection .menu-selection .menu-selection-card .menu-selection-text-bg .menu-selection-text {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 20px;
+  transition: all 1s;
+  transform: translateY(70%);
+  transition-timing-function: 1s ease-in;
+}
+#menu-selection .menu-selection .menu-selection-card .menu-selection-text-bg .menu-selection-text h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+#menu-selection .menu-selection .menu-selection-card:hover {
+  filter: blur(0);
+}
+#menu-selection .menu-selection .menu-selection-card:hover img {
+  transition: 1s ease-in-out;
+  max-width: 120%;
+}
+#menu-selection .menu-selection .menu-selection-card:hover .menu-selection-text-bg {
+  background-color: rgba(42, 41, 41, 0.5);
+}
+#menu-selection .menu-selection .menu-selection-card:hover .menu-selection-text-bg .menu-selection-text {
+  transition: 1s ease-in-out;
+  transition-timing-function: 1s ease-in;
+  transform: translateY(40%);
 }
 
 /*# sourceMappingURL=main.css.map */
