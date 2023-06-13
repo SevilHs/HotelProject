@@ -2277,99 +2277,99 @@ footer #footer-bottom {
   padding: 5%;
   background-color: #F8F5F0;
 }
-#extra-services .extra-services .extra-services-left {
+#extra-services .extra-services .extra-services-top {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-#extra-services .extra-services .extra-services-left .text-prices {
+#extra-services .extra-services .extra-services-top .text-prices {
   color: #aa8453;
   font-size: 18px;
   font-family: "Barlow Condensed", sans-serif;
 }
-#extra-services .extra-services .extra-services-left .text-services {
+#extra-services .extra-services .extra-services-top .text-services {
   font-size: 48px;
   color: #000;
   font-family: "Gilda Display", serif;
 }
-#extra-services .extra-services .extra-services-left .text-description {
+#extra-services .extra-services .extra-services-top .text-description {
   color: #adadad;
   font-size: 17px;
   line-height: 25px;
 }
-#extra-services .extra-services .extra-services-left a {
+#extra-services .extra-services .extra-services-top a {
   display: flex;
 }
-#extra-services .extra-services .extra-services-left a img {
+#extra-services .extra-services .extra-services-top a img {
   margin-right: 20px;
   width: 40px;
 }
-#extra-services .extra-services .extra-services-left a .text-information {
+#extra-services .extra-services .extra-services-top a .text-information {
   color: #adadad;
   font-size: 18px;
   margin-bottom: 7px;
   font-family: "Barlow", sans-serif;
 }
-#extra-services .extra-services .extra-services-left a .text-phone {
+#extra-services .extra-services .extra-services-top a .text-phone {
   color: #aa8453;
   font-size: 24px;
   font-family: "Gilda Display", serif;
 }
-#extra-services .extra-services .extra-services-right {
+#extra-services .extra-services .extra-services-bottom {
   margin-top: 30px;
 }
-#extra-services .extra-services .extra-services-right .owl-item {
+#extra-services .extra-services .extra-services-bottom .owl-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#extra-services .extra-services .extra-services-right .owl-nav {
+#extra-services .extra-services .extra-services-bottom .owl-nav {
   display: none;
 }
-#extra-services .extra-services .extra-services-right .owl-dots {
+#extra-services .extra-services .extra-services-bottom .owl-dots {
   margin-top: 20px;
 }
-#extra-services .extra-services .extra-services-right .owl-dots .owl-dot span {
+#extra-services .extra-services .extra-services-bottom .owl-dots .owl-dot span {
   border: 1px solid #fff;
   background-color: transparent;
 }
-#extra-services .extra-services .extra-services-right .owl-dots .active span {
+#extra-services .extra-services .extra-services-bottom .owl-dots .active span {
   border: none;
   background-color: #aa8453;
 }
-#extra-services .extra-services .extra-services-right .item {
+#extra-services .extra-services .extra-services-bottom .item {
   background-color: #fff;
   max-width: 350px;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text {
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-height: 400px;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text h2 {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text h2 {
   font-family: "Gilda Display", serif;
   font-weight: 500;
   font-size: 24px;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text p {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text p {
   color: #aa8453;
   font-size: 48px;
   font-family: "Gilda Display", serif;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text p sub {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text p sub {
   font-size: 16px;
   color: #666;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text ul {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text ul {
   line-height: 40px;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text ul li {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text ul li {
   color: #666;
   font-family: "Barlow", sans-serif;
 }
-#extra-services .extra-services .extra-services-right .item .carousel-text ul li i {
+#extra-services .extra-services .extra-services-bottom .item .carousel-text ul li i {
   color: #aa8453;
   font-size: 20px;
   margin-right: 10px;
