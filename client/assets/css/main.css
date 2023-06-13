@@ -2402,4 +2402,138 @@ footer #footer-bottom {
   font-size: 50px;
 }
 
+#products {
+  padding: 5% 0;
+}
+#products .search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#products .search-sort input, #products .search-sort select {
+  text-indent: 20px;
+  border: 1px solid #ddd;
+  padding: 0.5rem 0;
+  outline: none;
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0%;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1.5px;
+}
+#products .search-sort input {
+  display: inline-block;
+  max-width: 700px;
+}
+#products .search-sort select {
+  display: inline-block;
+  max-width: 100px;
+}
+#products .search-sort select option {
+  display: inline-block;
+  padding: 30px;
+}
+#products .products-cards {
+  margin: 50px 0;
+}
+#products .products-cards .product-card {
+  padding: 10px;
+  height: 370px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+#products .products-cards .product-card .product-card-div .img-product {
+  position: relative;
+  object-fit: cover;
+}
+#products .products-cards .product-card .product-card-div .img-product img {
+  object-fit: cover;
+  max-width: 100%;
+}
+#products .products-cards .product-card .product-card-div .sale-not,
+#products .products-cards .product-card .product-card-div .new-not {
+  position: absolute;
+  top: 10px;
+  padding: 7px;
+  background-color: #e5dbd4;
+  border-radius: 3px;
+  font-family: "Gilda Display", serif;
+  font-size: 14px;
+  color: #aa8453;
+}
+#products .products-cards .product-card .product-card-div .new-not {
+  right: 10px;
+}
+#products .products-cards .product-card .product-card-div .sale-not {
+  left: 10px;
+}
+#products .products-cards .product-card .product-card-div .about-product {
+  transition: all 1s;
+  transition-timing-function: 1s ease-in;
+  transform: translateY(-30px);
+  background-color: #fff;
+  padding: 20px;
+}
+#products .products-cards .product-card .product-card-div .about-product h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+#products .products-cards .product-card .product-card-div .about-product .prev-curr-price {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  margin: 15px 0;
+}
+#products .products-cards .product-card .product-card-div .about-product .prev-curr-price span {
+  margin-right: 30px;
+  position: relative;
+}
+#products .products-cards .product-card .product-card-div .about-product .prev-curr-price span:after {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+}
+#products .products-cards .product-card .product-card-div .about-product .add-fav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+#products .products-cards .product-card .product-card-div .about-product .add-fav button {
+  background-color: transparent;
+  border: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  background-color: #e5dbd4;
+  color: #aa8453;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+#products .products-cards .product-card .product-card-div .about-product .add-fav button:hover {
+  color: #aa8453;
+  background-color: #fff;
+}
+#products .products-cards .product-card .product-card-div:hover .about-product {
+  transition: all 1s;
+  transition-timing-function: 1s ease-in;
+  transform: translateY(-60%);
+}
+#products .products-cards .product-card .product-card-div:hover .about-product .add-fav {
+  display: flex;
+}
+#products .load-more {
+  border-radius: 3px;
+  font-family: "Gilda Display", serif;
+  font-size: 14px;
+  color: #aa8453;
+  border: 1px solid #e5dbd4;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
