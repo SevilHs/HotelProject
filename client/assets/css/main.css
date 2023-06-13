@@ -2375,4 +2375,31 @@ footer #footer-bottom {
   margin-right: 10px;
 }
 
+#hero-shop {
+  background: url(../images/home-images/hero/slide3.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#hero-shop .for-dark-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#hero-shop .for-dark-bg .hero-shop {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #fff;
+}
+#hero-shop .for-dark-bg .hero-shop p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+#hero-shop .for-dark-bg .hero-shop h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+
 /*# sourceMappingURL=main.css.map */
