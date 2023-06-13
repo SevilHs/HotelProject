@@ -2273,4 +2273,106 @@ footer #footer-bottom {
   }
 }
 
+#extra-services {
+  padding: 5%;
+  background-color: #F8F5F0;
+}
+#extra-services .extra-services .extra-services-left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#extra-services .extra-services .extra-services-left .text-prices {
+  color: #aa8453;
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+#extra-services .extra-services .extra-services-left .text-services {
+  font-size: 48px;
+  color: #000;
+  font-family: "Gilda Display", serif;
+}
+#extra-services .extra-services .extra-services-left .text-description {
+  color: #adadad;
+  font-size: 17px;
+  line-height: 25px;
+}
+#extra-services .extra-services .extra-services-left a {
+  display: flex;
+}
+#extra-services .extra-services .extra-services-left a img {
+  margin-right: 20px;
+  width: 40px;
+}
+#extra-services .extra-services .extra-services-left a .text-information {
+  color: #adadad;
+  font-size: 18px;
+  margin-bottom: 7px;
+  font-family: "Barlow", sans-serif;
+}
+#extra-services .extra-services .extra-services-left a .text-phone {
+  color: #aa8453;
+  font-size: 24px;
+  font-family: "Gilda Display", serif;
+}
+#extra-services .extra-services .extra-services-right {
+  margin-top: 30px;
+}
+#extra-services .extra-services .extra-services-right .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#extra-services .extra-services .extra-services-right .owl-nav {
+  display: none;
+}
+#extra-services .extra-services .extra-services-right .owl-dots {
+  margin-top: 20px;
+}
+#extra-services .extra-services .extra-services-right .owl-dots .owl-dot span {
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+#extra-services .extra-services .extra-services-right .owl-dots .active span {
+  border: none;
+  background-color: #aa8453;
+}
+#extra-services .extra-services .extra-services-right .item {
+  background-color: #fff;
+  max-width: 350px;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 400px;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text h2 {
+  font-family: "Gilda Display", serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text p {
+  color: #aa8453;
+  font-size: 48px;
+  font-family: "Gilda Display", serif;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text p sub {
+  font-size: 16px;
+  color: #666;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text ul {
+  line-height: 40px;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text ul li {
+  color: #666;
+  font-family: "Barlow", sans-serif;
+}
+#extra-services .extra-services .extra-services-right .item .carousel-text ul li i {
+  color: #aa8453;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=main.css.map */

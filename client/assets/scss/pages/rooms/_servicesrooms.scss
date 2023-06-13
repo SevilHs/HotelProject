@@ -1,0 +1,105 @@
+#extra-services {
+    padding: 5%;
+    background-color: #F8F5F0;
+    .extra-services {
+      .extra-services-left {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .text-prices {
+          color: $primary-color;
+          font-size: 18px;
+          font-family: $primary-font;
+        }
+        .text-services {
+          font-size: 48px;
+          color: $black-color;
+          font-family: $secondary-font;
+        }
+        .text-description {
+          color: $light-gray;
+          font-size: 17px;
+          line-height: 25px;
+        }
+        a {
+          display: flex;
+          img {
+            margin-right: 20px;
+            width: 40px;
+          }
+          .text-information {
+            color: $light-gray;
+            font-size: 18px;
+            margin-bottom: 7px;
+            font-family: $barlow-font;
+          }
+          .text-phone {
+            color: $primary-color;
+            font-size: 24px;
+            font-family: $secondary-font;
+          }
+        }
+      }
+      .extra-services-right {
+        margin-top: 30px;
+      .owl-item{
+        @include dFlex(center);
+      }
+      .owl-nav{
+          display: none;
+      }
+        .owl-dots {
+          margin-top: 20px;
+          .owl-dot span {
+            border: 1px solid $white-color;
+            background-color: transparent;
+          }
+          .active {
+            span {
+              border: none;
+              background-color: $primary-color;
+            }
+          }
+        }
+        .item {
+          background-color: $white-color;
+          max-width: 350px;
+          .carousel-text {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 400px;
+            h2 {
+              font-family: $secondary-font;
+              font-weight: 500;
+              font-size: 24px;
+            }
+            p {
+              color: $primary-color;
+              font-size: 48px;
+              font-family: $secondary-font;
+              sub {
+                font-size: 16px;
+                color: $gray-color;
+              }
+            }
+            ul {
+              line-height: 40px;
+              li {
+                color: $gray-color;
+                font-family: "Barlow", sans-serif;
+  
+                i {
+                  color: $primary-color;
+                  font-size: 20px;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
