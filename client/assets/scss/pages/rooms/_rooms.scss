@@ -1,0 +1,75 @@
+#rooms {
+  padding: 5% 0;
+  .rooms {
+    .col {
+      margin-bottom: 20px;
+      .img-text {
+        position: relative;
+        img {
+          max-width: 100%;
+        }
+        .price-room,
+        .price-sale {
+          position: absolute;
+        }
+        .price-room {
+          bottom: -15px;
+          left: 37%;
+          color: $white-color;
+          background-color: $black-color;
+          padding: 15px;
+          font-family: $secondary-font;
+          font-size: 18px;
+        }
+        .price-sale {
+            display: none;
+          padding: 15px;
+          top: 30px;
+          right: 20px;
+          color: $primary-color;
+          background-color: $white-color;
+        }
+      }
+      .rooms-text {
+        text-align: center;
+        padding: 30px;
+        @include dFlex();
+        flex-direction: column;
+        gap: 20px;
+        font-family: $secondary-font;
+        h3 {
+          font-size: 28px;
+        }
+        span {
+          font-family: $barlow-font;
+        }
+        a {
+          color: $black-color;
+          font-size: 18px;
+          i{
+            position: relative;
+            left: 10px;
+          }
+          &:hover{
+            i {
+                animation-name: arrowDown;
+                animation-duration: 1.2s;
+                animation-iteration-count: infinite;
+                @keyframes arrowDown {
+                  0% {
+                    left: 10px;
+                  }
+                  50% {
+                    left: 20px;
+                  }
+                  100% {
+                    left: 10px;
+                  }
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+}
