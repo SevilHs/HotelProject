@@ -1,0 +1,19 @@
+#hero-rooms{
+    background: url(../images/home-images/rooms/rooms-suites4.jpg) no-repeat center;
+    background-size: cover;
+    .hero-rooms{
+        height: 60vh;
+        @include dFlex(center,start);
+        flex-direction: column;
+        row-gap: 20px;
+        color: $white-color;
+        p{
+            font-family: $primary-font;
+            font-size: 17px;
+            letter-spacing: 3px;
+        }
+        h1{
+            letter-spacing: 5px;
+        }
+    }
+}

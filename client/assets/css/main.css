@@ -2177,4 +2177,26 @@ footer #footer-bottom {
   font-family: "Gilda Display", serif;
 }
 
+#hero-rooms {
+  background: url(../images/home-images/rooms/rooms-suites4.jpg) no-repeat center;
+  background-size: cover;
+}
+#hero-rooms .hero-rooms {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #fff;
+}
+#hero-rooms .hero-rooms p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+#hero-rooms .hero-rooms h1 {
+  letter-spacing: 5px;
+}
+
 /*# sourceMappingURL=main.css.map */
