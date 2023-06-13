@@ -3,11 +3,11 @@
   padding: 5% 0;
   .menu-selection {
     color: $white-color;
-    // &:hover{
-    //     .menu-selection-card{
-    //         filter: blur(5px);
-    //     }
-    // }
+    &:hover{
+        .menu-selection-card{
+            filter: blur(5px);
+        }
+    }
     h4 {
       font-family: $primary-font;
       font-size: 18px;
@@ -57,7 +57,7 @@
         }
       }
       &:hover {
-        // filter: blur(0);
+        filter: blur(0);
         img {
           transition: 1s ease-in-out;
           max-width: 120%;
