@@ -1,0 +1,74 @@
+#restaurant-menu{
+    background-color: $white-color;
+    padding: 5% 0;
+    .restaurant-menu{
+        p{
+            font-family: $barlow-font;
+            margin-bottom: 30px;
+            color: $primary-color;
+        }
+        .restaurant-menu-text{
+            display: none;
+            .food-name{
+                padding: 15px 0;
+                @include dFlex();
+                border-bottom: 1px dashed $primary-color;
+                font-family: $secondary-font;
+                font-size: 20px;
+                margin-top: 20px;
+                h3{
+                    color: $primary-color;
+                }
+                span{
+                    color: $gray-color;
+                }
+            }
+            p{
+                font-family: $barlow-font;
+                font-size: 17px;
+                color: $gray-color;
+            }
+        }
+        .default-menu{
+            display: flex;
+        }
+        .owl-carousel{
+            margin: 30px 0;
+            position: relative;
+            .owl-dots{
+                display: none;
+            }
+            .owl-nav{
+                .owl-prev, .owl-next{
+                    position: absolute;
+                    top: 0 ;
+                    padding: 30px;
+                    font-size: 30px;
+                    color: $primary-color;
+                    &:hover {
+                      background-color: transparent;
+                    }
+                }
+                .owl-prev{
+                    left: 0;
+                }
+                .owl-next{
+                    right: 0;
+                }
+            }
+            .owl-item{
+                text-align: center;
+                .item{
+                    border: 1px solid transparent;
+                    padding: 10px;
+                    background-color: transparent;
+                    font-size: 24px;
+                    font-family: $secondary-font;
+                    // &:active{
+                    //     border: 1px solid $primary-color;
+                    // }
+                }
+            }
+        }
+    }
+}
