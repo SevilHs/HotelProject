@@ -1,17 +1,18 @@
 let arrowDown = document.querySelector(".arrow-down");
 let aboutRestSec = document.querySelector("#about-rest");
+let menu = document.querySelectorAll(".restaurant-menu-text");
+let menuName = document.querySelectorAll(".item");
 let { top: position } = aboutRestSec.getBoundingClientRect();
-console.log(position);
+
+// console.log(position);
 arrowDown.addEventListener("click", () => {
   document.documentElement.scrollTop = position;
 });
 
-let menu = document.querySelectorAll(".restaurant-menu-text");
-let menuName = document.querySelectorAll(".item");
 
 menuName.forEach((item) => {
-    item.addEventListener('click',()=>{
-        console.log(item.id);
+  item.addEventListener('click',()=>{
+        // console.log(item.id);
         if (item.id==1) {
           menu[0].style.display="flex"
           menu.forEach(item=>{item.id!="menu1" ? item.style.display="none" : null})

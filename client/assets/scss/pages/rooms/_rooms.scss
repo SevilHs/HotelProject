@@ -52,10 +52,10 @@
           }
           &:hover{
             i {
-                animation-name: arrowDown;
+                animation-name: arrowLeft;
                 animation-duration: 1.2s;
                 animation-iteration-count: infinite;
-                @keyframes arrowDown {
+                @keyframes arrowLeft {
                   0% {
                     left: 10px;
                   }
