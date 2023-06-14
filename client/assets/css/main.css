@@ -165,7 +165,7 @@ body {
   background-image: url(../images/home-images/hero/slide3.jpg);
 }
 
-#hero-rest .carousel .carousel-item .carousel-caption a, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
+#new-product .new-product .new-product-right a, #hero-rest .carousel .carousel-item .carousel-caption a, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
   padding: 10px 30px;
   border: 1px solid #ddd;
   color: #fff;
@@ -174,7 +174,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-#hero-rest .carousel .carousel-item .carousel-caption a::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
+#new-product .new-product .new-product-right a::after, #hero-rest .carousel .carousel-item .carousel-caption a::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -187,11 +187,11 @@ body {
   transition-timing-function: ease-in;
   z-index: -1;
 }
-#hero-rest .carousel .carousel-item .carousel-caption a:hover, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
+#new-product .new-product .new-product-right a:hover, #hero-rest .carousel .carousel-item .carousel-caption a:hover, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
   color: gray;
   transition-delay: 0s;
 }
-#hero-rest .carousel .carousel-item .carousel-caption a:hover::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
+#new-product .new-product .new-product-right a:hover::after, #hero-rest .carousel .carousel-item .carousel-caption a:hover::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
   transition: 0.5s;
   transform: translateX(0);
   transition-timing-function: ease-out;
@@ -2534,6 +2534,39 @@ footer #footer-bottom {
   border: 1px solid #e5dbd4;
   border: none;
   padding: 0.5rem 1rem;
+}
+
+#new-product {
+  padding: 5% 0;
+  background-color: #222;
+}
+#new-product .new-product .new-product-left {
+  margin-bottom: 30px;
+}
+#new-product .new-product .new-product-left img {
+  max-width: 100%;
+}
+#new-product .new-product .new-product-right {
+  color: #fff;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+#new-product .new-product .new-product-right h3, #new-product .new-product .new-product-right span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+#new-product .new-product .new-product-right p {
+  font-family: "Barlow", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+}
+#new-product .new-product .new-product-right a {
+  transition: none;
 }
 
 /*# sourceMappingURL=main.css.map */

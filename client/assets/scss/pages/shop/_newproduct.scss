@@ -1,0 +1,34 @@
+#new-product{
+    padding: 5% 0;
+    background-color: $dark-bg-color;
+    .new-product{
+        .new-product-left{
+            margin-bottom: 30px;
+            // background-image: url(../images/shop-images/newp.jpg);
+            img{
+                max-width: 100%;
+            }
+        }
+        .new-product-right{
+            color: $white-color;
+            padding:  0 30px ;
+            @include dFlex(center,start);
+            flex-direction: column;
+            gap: 20px;
+            h3, span{
+                font-family: $primary-font;
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+            p{
+                font-family: $barlow-font;
+                font-size: 17px;
+                line-height:25px;
+            }
+            a{
+                @extend %primary-btn;
+                transition: none;
+            }
+        }
+    }
+}
