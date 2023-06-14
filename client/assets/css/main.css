@@ -2725,5 +2725,73 @@ footer #footer-bottom {
   background-color: #aa8453;
   font-family: "Barlow Condensed", sans-serif;
 }
+#news-cards .news-cards .news-right {
+  padding: 20px;
+}
+#news-cards .news-cards .news-right .input-div,
+#news-cards .news-cards .news-right .recent-post,
+#news-cards .news-cards .news-right .categories,
+#news-cards .news-cards .news-right .tags {
+  background-color: #F8F5F0;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+#news-cards .news-cards .news-right .input-div h3,
+#news-cards .news-cards .news-right .recent-post h3,
+#news-cards .news-cards .news-right .categories h3,
+#news-cards .news-cards .news-right .tags h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+#news-cards .news-cards .news-right .input-div hr,
+#news-cards .news-cards .news-right .recent-post hr,
+#news-cards .news-cards .news-right .categories hr,
+#news-cards .news-cards .news-right .tags hr {
+  background-color: #aa8453;
+}
+#news-cards .news-cards .news-right .input-div a,
+#news-cards .news-cards .news-right .recent-post a,
+#news-cards .news-cards .news-right .categories a,
+#news-cards .news-cards .news-right .tags a {
+  color: #666;
+  font-family: "Barlow", sans-serif;
+}
+#news-cards .news-cards .news-right .input-div .img-text,
+#news-cards .news-cards .news-right .input-div .tags-link,
+#news-cards .news-cards .news-right .recent-post .img-text,
+#news-cards .news-cards .news-right .recent-post .tags-link,
+#news-cards .news-cards .news-right .categories .img-text,
+#news-cards .news-cards .news-right .categories .tags-link,
+#news-cards .news-cards .news-right .tags .img-text,
+#news-cards .news-cards .news-right .tags .tags-link {
+  display: flex;
+  gap: 15px;
+}
+#news-cards .news-cards .news-right .input-div input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: "Barlow", sans-serif;
+}
+#news-cards .news-cards .news-right .recent-post .img-text {
+  margin-bottom: 20px;
+  align-items: center;
+}
+#news-cards .news-cards .news-right .recent-post .img-text img {
+  max-width: 100px;
+}
+#news-cards .news-cards .news-right .categories {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#news-cards .news-cards .news-right .tags .tags-link {
+  flex-wrap: wrap;
+}
+#news-cards .news-cards .news-right .tags a {
+  background-color: #fff;
+  padding: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */
