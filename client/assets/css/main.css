@@ -2569,4 +2569,54 @@ footer #footer-bottom {
   transition: none;
 }
 
+#per-counter {
+  padding: 5%;
+}
+#per-counter .per-counter p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+#per-counter .per-counter h1 {
+  margin-top: 20px;
+}
+#per-counter .per-counter .col {
+  padding: 10px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+#per-counter .per-counter .col .text-per {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+#per-counter .per-counter .col .text-per p {
+  font-family: "Gilda Display", serif;
+}
+#per-counter .per-counter .col .underline {
+  height: 3px;
+  background-color: #aa8453;
+}
+#per-counter .per-counter .col .underline1 {
+  width: 78%;
+}
+#per-counter .per-counter .col .underline2 {
+  width: 42%;
+}
+#per-counter .per-counter .col .underline3 {
+  width: 94%;
+}
+#per-counter .per-counter .col .underline4 {
+  width: 97%;
+}
+#per-counter .per-counter .col .underline5 {
+  width: 65%;
+}
+#per-counter .per-counter .col .underline6 {
+  width: 79%;
+}
+
 /*# sourceMappingURL=main.css.map */
