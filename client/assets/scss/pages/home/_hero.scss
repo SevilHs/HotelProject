@@ -1,4 +1,4 @@
-#hero{
+#hero {
   height: 100vh;
   .carousel-fade {
     .carousel-indicators {
@@ -9,7 +9,7 @@
       right: 50px;
       left: unset;
       margin: 0;
-      .hero-btn-line{
+      .hero-btn-line {
         position: relative;
         &::after,
         &::before {
@@ -18,7 +18,7 @@
           content: "";
           position: absolute;
           background-color: rgba(255, 255, 255, 0.3);
-          right: 4px; 
+          right: 4px;
         }
         &::after {
           bottom: 70px;
@@ -73,7 +73,33 @@
             transition-delay: 0.4s;
           }
           a {
-              @extend %primary-btn;
+            padding: 0.5rem 1rem;
+            border: 1px solid $primary-color;
+            background-color: #8e75504f;
+            color: $white-color;
+            font-size: 20px;
+            font-family: $primary-font;
+            transition: all 0.5s;
+            letter-spacing: 2px;
+            &:hover {
+              background-image: linear-gradient(
+                90deg,
+                #d3b17f 0%,
+                #725536 50%,
+                #a5744c 75%,
+                #574838 100%
+              );
+              animation: slide 4s linear infinite;
+              transform: scale(1.1);
+              text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+              box-shadow: 0 0 5px #312216, 0 0 20px #8b6238, 0 0 50px #7d5e3a,
+                0 0 100px #443924;
+            }
+            @keyframes slide {
+              100% {
+                background-position: 50rem;
+              }
+            }
           }
         }
         &.active {
@@ -146,22 +172,22 @@
       }
     }
   }
-  @media only screen and (max-width:992px){
-    .carousel-fade{
-      .carousel-indicators{
+  @media only screen and (max-width: 992px) {
+    .carousel-fade {
+      .carousel-indicators {
         display: none;
       }
-      .slide-phone{
+      .slide-phone {
         display: none;
       }
     }
   }
-  @media only screen and (max-width:768px){
-    .carousel-fade{
-      .carousel-inner{
-        .carousel-item{
-          .carousel-caption{
-            h1{
+  @media only screen and (max-width: 768px) {
+    .carousel-fade {
+      .carousel-inner {
+        .carousel-item {
+          .carousel-caption {
+            h1 {
               font-size: 36px;
             }
           }

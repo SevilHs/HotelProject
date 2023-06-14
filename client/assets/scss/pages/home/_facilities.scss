@@ -51,7 +51,6 @@
           }
           p {
             font-family: $primary-font;
-            font-weight: 600;
             letter-spacing: 2px;
             line-height: 20px;
             color: $white-color;
@@ -61,7 +60,7 @@
           &:hover {
             transition: 1s;
             transition-timing-function: ease-out;
-            background: linear-gradient(-45deg, #685136 0%, #706d7c 100%);
+            background: linear-gradient(-45deg, #382d20 0%, #bfa67e 100%);
             p {
               transform: translateY(-20%);
               transition: 1s;

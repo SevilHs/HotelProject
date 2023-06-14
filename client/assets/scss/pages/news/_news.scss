@@ -10,7 +10,7 @@
         .img-with-link {
           position: relative;
           width: 100%;
-          height: 450px;
+          height: 400px;
           overflow: hidden;
           .hidden-text {
             position: absolute;
@@ -63,7 +63,7 @@
       }
     }
     .news-right {
-      padding: 20px;
+      padding: 0 20px;
       .input-div,
       .recent-post,
       .categories,
@@ -118,6 +118,18 @@
         a {
           background-color: $white-color;
           padding: 10px;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .news-cards {
+      .news-right {
+        .recent-post {
+          .img-text {
+            flex-direction: column;
+            align-items: start;
+          }
         }
       }
     }

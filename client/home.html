@@ -850,8 +850,24 @@
         </span>
         <p>THE CAPPA LUXURY HOTEL</p>
         <h1>Promotional Video</h1>
-        <div class="play-btn">
+        <div type="button" class=" play-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <img src="./assets/images/home-images/play-button.png" alt="" />
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+              </div>
+              <div class="modal-body">
+                  <source src="https://www.youtube.com/watch?v=SDIU8yxAr50" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
