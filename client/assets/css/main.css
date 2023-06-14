@@ -165,7 +165,7 @@ body {
   background-image: url(../images/home-images/hero/slide3.jpg);
 }
 
-#new-product .new-product .new-product-right a, #hero-rest .carousel .carousel-item .carousel-caption a, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
+#news-cards .news-cards .news-left .col .read-more-btn, #new-product .new-product .new-product-right a, #hero-rest .carousel .carousel-item .carousel-caption a, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
   padding: 10px 30px;
   border: 1px solid #ddd;
   color: #fff;
@@ -174,7 +174,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-#new-product .new-product .new-product-right a::after, #hero-rest .carousel .carousel-item .carousel-caption a::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
+#news-cards .news-cards .news-left .col .read-more-btn::after, #new-product .new-product .new-product-right a::after, #hero-rest .carousel .carousel-item .carousel-caption a::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a::after {
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -187,11 +187,11 @@ body {
   transition-timing-function: ease-in;
   z-index: -1;
 }
-#new-product .new-product .new-product-right a:hover, #hero-rest .carousel .carousel-item .carousel-caption a:hover, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
+#news-cards .news-cards .news-left .col .read-more-btn:hover, #new-product .new-product .new-product-right a:hover, #hero-rest .carousel .carousel-item .carousel-caption a:hover, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover {
   color: gray;
   transition-delay: 0s;
 }
-#new-product .new-product .new-product-right a:hover::after, #hero-rest .carousel .carousel-item .carousel-caption a:hover::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
+#news-cards .news-cards .news-left .col .read-more-btn:hover::after, #new-product .new-product .new-product-right a:hover::after, #hero-rest .carousel .carousel-item .carousel-caption a:hover::after, #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a:hover::after {
   transition: 0.5s;
   transform: translateX(0);
   transition-timing-function: ease-out;
@@ -2660,6 +2660,70 @@ footer #footer-bottom {
 #hero-news .for-dark-bg .hero-news h1 {
   letter-spacing: 5px;
   font-size: 50px;
+}
+
+#news-cards {
+  padding: 5%;
+}
+#news-cards .news-cards .news-left .col {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+#news-cards .news-cards .news-left .col .img-with-link {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+#news-cards .news-cards .news-left .col .img-with-link .hidden-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.297);
+  display: none;
+  color: #fff;
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+  transition: all 1s;
+}
+#news-cards .news-cards .news-left .col .img-with-link img {
+  max-width: 100%;
+  object-fit: cover;
+  transition: all 1s;
+}
+#news-cards .news-cards .news-left .col .img-with-link:hover img {
+  max-width: 120%;
+  transition: all 1s;
+}
+#news-cards .news-cards .news-left .col .img-with-link:hover .hidden-text {
+  display: flex;
+  transition: all 1s;
+}
+#news-cards .news-cards .news-left .col span {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  color: #aa8453;
+}
+#news-cards .news-cards .news-left .col .news-title {
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+  color: #000;
+}
+#news-cards .news-cards .news-left .col p {
+  font-family: "Barlow", sans-serif;
+  font-size: 17px;
+  color: #666;
+}
+#news-cards .news-cards .news-left .col .read-more-btn {
+  background-color: #aa8453;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

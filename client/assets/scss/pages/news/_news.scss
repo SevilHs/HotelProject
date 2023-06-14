@@ -1,0 +1,66 @@
+#news-cards {
+  padding: 5%;
+  .news-cards {
+    .news-left {
+      .col {
+        @include dFlex(center, start);
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+        .img-with-link {
+          position: relative;
+          width: 100%;
+          height: 450px;
+          overflow: hidden;
+          .hidden-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include dFlex(center);
+            background-color: rgba(0, 0, 0, 0.297);
+            display: none;
+            color: $white-color;
+            font-family: $secondary-font;
+            font-size: 32px;
+            transition: all 1s;
+          }
+          img {
+            max-width: 100%;
+            object-fit: cover;
+            transition: all 1s;
+          }
+          &:hover {
+            img {
+              max-width: 120%;
+              transition: all 1s;
+            }
+            .hidden-text {
+              display: flex;
+              transition: all 1s;
+            }
+          }
+        }
+        span {
+          font-family: $barlow-font;
+          font-size: 15px;
+          color: $primary-color;
+        }
+        .news-title {
+          font-family: $secondary-font;
+          font-size: 32px;
+          color: $black-color;
+        }
+        p {
+          font-family: $barlow-font;
+          font-size: 17px;
+          color: $gray-color;
+        }
+        .read-more-btn {
+          @extend %primary-btn;
+          background-color: $primary-color;
+          font-family: $primary-font;
+        }
+      }
+    }
+  }
+}
