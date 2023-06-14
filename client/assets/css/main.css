@@ -301,6 +301,7 @@ body {
   }
 }
 #header.about-header {
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -1579,7 +1580,7 @@ footer #footer-bottom {
 }
 #hero-about .hero-about {
   position: absolute;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: start;

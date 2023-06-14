@@ -12,7 +12,7 @@
   }
   .hero-about {
     position: absolute;
-    height: 100vh;
+    height: 100%;
     @include dFlex(center, start);
     flex-direction: column;
     row-gap: 20px;
