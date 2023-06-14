@@ -2635,4 +2635,31 @@ footer #footer-bottom {
   width: 79%;
 }
 
+#hero-news {
+  background: url(../images/news/news-bg.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#hero-news .for-dark-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#hero-news .for-dark-bg .hero-news {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #fff;
+}
+#hero-news .for-dark-bg .hero-news p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+#hero-news .for-dark-bg .hero-news h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+
 /*# sourceMappingURL=main.css.map */

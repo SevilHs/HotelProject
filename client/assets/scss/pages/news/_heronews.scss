@@ -1,0 +1,25 @@
+#hero-news {
+    background: url(../images/news/news-bg.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    .for-dark-bg {
+      background-color: rgb(0, 0, 0, 0.4);
+      .hero-news {
+        height: 80vh;
+        @include dFlex(center, start);
+        flex-direction: column;
+        row-gap: 20px;
+        color: $white-color;
+        p {
+          font-family: $primary-font;
+          font-size: 19px;
+          letter-spacing: 3px;
+        }
+        h1 {
+          letter-spacing: 5px;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  
