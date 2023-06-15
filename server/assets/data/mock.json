@@ -54,5 +54,64 @@
       "guests": "3",
       "id": 7
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Decor",
+      "currPrice": 17,
+      "prevPrice": 21
+    },
+    {
+      "id": 2,
+      "name": "Chair",
+      "currPrice": 13,
+      "prevPrice": 17
+    },
+    {
+      "id": 3,
+      "name": "Sofa",
+      "currPrice": 17
+    },
+    {
+      "id": 4,
+      "name": "Table",
+      "currPrice": 32,
+      "prevPrice": 45.95
+    },
+    {
+      "id": 5,
+      "name": "Art Decor",
+      "currPrice": 24.32,
+      "prevPrice": 30
+    },
+    {
+      "id": 6,
+      "name": "White Sofa",
+      "currPrice": 60
+    },
+    {
+      "id": 7,
+      "name": "Modern Clock",
+      "currPrice": 37,
+      "prevPrice": 45
+    },
+    {
+      "id": 8,
+      "name": "Comfort 08",
+      "currPrice": 7,
+      "prevPrice": 15.3
+    },
+    {
+      "id": 9,
+      "name": "Beigie Chair 09",
+      "currPrice": 32
+    },
+    {
+      "id": 10,
+      "name": "Table 10",
+      "currPrice": 72,
+      "prevPrice": 93
+    }
   ]
 }
