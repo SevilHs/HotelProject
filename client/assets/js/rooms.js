@@ -1,3 +1,36 @@
+const BASE_URL="http://localhost:8000"
+
+let row=document.querySelector('.row')
+
+async function getAlldata(){
+  let res=await axios(`${BASE_URL}/rooms`)
+  let data= res.data
+  // console.log(data);
+  data.forEach(room => {
+    row.innerHTML+=`
+    <div class="col col-12 col-md-6 col-lg-4">
+    <div class="img-text">
+      <img
+        src="./assets/images/home-images/rooms/rooms-suites1.jpg"
+        alt=""
+      />
+      <div class="price-room">From ${room.price}</div>
+      <div class="price-sale">${room.sale}% off</div>
+    </div>
+    <div class="rooms-text">
+      <h3>${room.roomName}</h3>
+      <span>${room.bed}</span>
+      <span>${room.guests} Guests</span>
+      <a href="">BOOK NOW <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+    `
+  });
+}
+getAlldata()
+
+
+
 $(".owl-carousel1").owlCarousel({
     loop: true,
     margin: 10,
