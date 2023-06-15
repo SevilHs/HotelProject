@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000/rooms";
+const BASE_URL = "http://localhost:8000";
 
 let row = document.querySelector(".row");
 let form = document.querySelector("form");
@@ -16,7 +16,7 @@ let check = false;
 
 async function getAllData() {
   row.innerHTML = "";
-  let res = await axios(BASE_URL);
+  let res = await axios(`${BASE_URL}/rooms`);
   let data = res.data;
   alldata = data;
   filtered = data;
@@ -37,7 +37,7 @@ async function getAllData() {
       <span>${room.guests} Guests</span>
       <div class="edit-delete">
         <i class="fa-regular fa-pen-to-square edit" onclick=editRoom(${room.id})></i>
-        <i class="fa-solid fa-trash delete" onclick=deleteRoom(${room.id},this) ></i>
+        <i class="fa-solid fa-trash delete" onclick=deleteRoom(${room.id}) ></i>
       </div>
     </div>
   </div>
@@ -55,10 +55,10 @@ function emptyForm() {
   roomGuests.value = "";
 }
 
-async function deleteRoom(id, btn) {
-  confirm("Press a button!")
+async function deleteRoom(id) {
+  // confirm("Press a button!")
   // console.log(confirm());
-  await axios.delete(`${BASE_URL}/${id}`);
+  await axios.delete(`${BASE_URL}/rooms/${id}`);
   filtered.filter((item) => item.id != id);
   getAllData();
 }
@@ -72,10 +72,10 @@ async function addEditRoom() {
     guests: roomGuests.value,
   };
   if (check) {
-    await axios.patch(`${BASE_URL}/${editId}`, obj);
+    await axios.patch(`${BASE_URL}/rooms/${editId}`, obj);
     check = false;
   } else {
-    await axios.post(BASE_URL, obj);
+    await axios.post(`${BASE_URL}/rooms`, obj);
   }
   getAllData();
 }
