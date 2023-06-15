@@ -19,7 +19,7 @@ async function getAllData() {
   let res = await axios(`${BASE_URL}/rooms`);
   let data = res.data;
   alldata = data;
-  filtered = data;
+  filtered = filtered.length? filtered : data;
   filtered.forEach((room) => {
     row.innerHTML += `
     <div class="col col-12 col-md-6 col-lg-4">
