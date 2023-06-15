@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body class="rooms-content">
+    <!-- HEADER -->
+    <section id="admin-header">
+      <div class="container">
+        <div class="admin-header">
+          <img
+            class="logo"
+            src="../client/assets/images/home-images/logo-dark.png"
+            alt="logo"
+          />
+          <nav>
+            <ul>
+              <li>
+                <img
+                  class="dark-mode"
+                  src="./assets/images/moon.png"
+                  alt="dark-mode"
+                />
+              </li>
+              <li>
+                <img
+                  class="screen-size"
+                  src="./assets/images/square.png"
+                  alt="square"
+                />
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    class="log-out"
+                    src="./assets/images/logout.png"
+                    alt="log-out"
+                /></a>
+              </li>
+              <li>
+                <img class="admin-img" src="./assets/images/admin.jpg" alt="" />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- MAIN SIDE MENU -->
+    <section id="main-side-menu">
+      <div class="container">
+        <div class="main-side-menu">
+          <nav>
+            <ul>
+              <li><a href="">ROOMS</a></li>
+              <li><a href="">PRODUCTS</a></li>
+              <li><a href="">MENU</a></li>
+              <li><a href="">BOOKING</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- MAIN CONTENT -->
+    <section id="main-content-rooms">
+      <div class="container">
+        <div class="main-content-rooms">
+          <div class="rooms row">
+            <!-- <div class="col col-12 col-md-6 col-lg-4">
+              <div class="img-text">
+                <img
+                  src="../client/assets/images/home-images/rooms/rooms-suites1.jpg"
+                  alt=""
+                />
+                <div class="price-room">From $90</div>
+                <div class="price-sale">20% off</div>
+              </div>
+              <div class="rooms-text">
+                <h3>Luxury Suite</h3>
+                <span>1 King Bed</span>
+                <span>4 Guests</span>
+                <div class="edit-delete">
+                  <i class="fa-regular fa-pen-to-square edit"></i>
+                  <i class="fa-solid fa-trash delete"></i>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ADD ROOM -->
+    <div id="add-room">
+      <div class="container">
+        <div class="add-room">
+          <form>
+            <div class="mb-3 form-check">
+              <label for="" class="form-label">Room Name</label>
+              <input type="text" name="" id="room-name" class="form-control">
+            </div>
+            <div class="mb-3 form-check">
+              <label for="" class="form-label">Bed</label>
+              <input type="text" name="" id="room-bed" class="form-control">
+            </div>
+            <div class="mb-3 form-check">
+              <label for="" class="form-label">Price</label>
+              <input type="number" name="" id="room-price" class="form-control">
+            </div>
+            <div class="mb-3 form-check">
+              <label for="" class="form-label">Guests</label>
+              <input type="number" name="" id="room-guests" class="form-control">
+            </div>
+            <div class="mb-3 form-check">
+              <label for="" class="form-label">Sale</label>
+              <input type="number" name="" id="room-sale" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/rooms-admin.js"></script>
+  </body>
+</html>
