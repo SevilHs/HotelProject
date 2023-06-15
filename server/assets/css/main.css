@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap");
+* {
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#admin-header {
+  padding: 1%;
+  background-color: rgb(159, 160, 160);
+}
+#admin-header .admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#admin-header .admin-header .logo {
+  max-width: 150px;
+}
+#admin-header .admin-header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+#admin-header .admin-header nav ul .dark-mode, #admin-header .admin-header nav ul .screen-size, #admin-header .admin-header nav ul .log-out {
+  max-width: 20px;
+}
+#admin-header .admin-header nav ul .admin-img {
+  max-width: 50px;
+  border-radius: 100%;
+}
+
+body {
+  margin-left: 250px;
+}
+body #main-side-menu {
+  position: fixed;
+  width: 250px;
+  background-color: rgb(206, 171, 240);
+  top: 0;
+  left: 0;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #main-side-menu .main-side-menu nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body #main-side-menu .main-side-menu nav ul a {
+  color: #000;
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+
+#main-content-rooms {
+  padding: 5% 0;
+}
+#main-content-rooms .main-content-rooms .col {
+  margin-bottom: 20px;
+}
+#main-content-rooms .main-content-rooms .col .img-text {
+  position: relative;
+}
+#main-content-rooms .main-content-rooms .col .img-text img {
+  max-width: 100%;
+}
+#main-content-rooms .main-content-rooms .col .img-text .price-room,
+#main-content-rooms .main-content-rooms .col .img-text .price-sale {
+  position: absolute;
+}
+#main-content-rooms .main-content-rooms .col .img-text .price-room {
+  bottom: -15px;
+  left: 37%;
+  color: #fff;
+  background-color: #000;
+  padding: 15px;
+  font-family: "Gilda Display", serif;
+  font-size: 18px;
+}
+#main-content-rooms .main-content-rooms .col .img-text .price-sale {
+  display: none;
+  padding: 15px;
+  top: 30px;
+  right: 20px;
+  color: #aa8453;
+  background-color: #fff;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Gilda Display", serif;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text .edit-delete {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text .edit-delete i {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text .edit-delete i:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text .edit-delete .edit:hover {
+  color: rgb(218, 134, 32);
+}
+#main-content-rooms .main-content-rooms .col .rooms-text .edit-delete .delete:hover {
+  color: brown;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text h3 {
+  font-size: 28px;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text span {
+  font-family: "Barlow", sans-serif;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text a {
+  color: #000;
+  font-size: 18px;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text a i {
+  position: relative;
+  left: 10px;
+}
+#main-content-rooms .main-content-rooms .col .rooms-text a:hover i {
+  animation-name: arrowLeft;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes arrowLeft {
+  0% {
+    left: 10px;
+  }
+  50% {
+    left: 20px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+#add-room .add-room form {
+  width: 700px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */

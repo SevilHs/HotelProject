@@ -1,0 +1,27 @@
+#admin-header{
+    padding: 1%;
+    background-color: rgb(159, 160, 160);
+    .admin-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            max-width: 150px;
+        }
+        nav{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 30px;
+                .dark-mode, .screen-size, .log-out{
+                    max-width: 20px;
+                }
+                .admin-img{
+                    max-width: 50px;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}

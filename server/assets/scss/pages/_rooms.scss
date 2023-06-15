@@ -1,0 +1,107 @@
+#main-content-rooms {
+  padding: 5% 0;
+  .main-content-rooms {
+    .col {
+      margin-bottom: 20px;
+      .img-text {
+        position: relative;
+        img {
+          max-width: 100%;
+        }
+        .price-room,
+        .price-sale {
+          position: absolute;
+        }
+        .price-room {
+          bottom: -15px;
+          left: 37%;
+          color: $white-color;
+          background-color: $black-color;
+          padding: 15px;
+          font-family: $secondary-font;
+          font-size: 18px;
+        }
+        .price-sale {
+          display: none;
+          padding: 15px;
+          top: 30px;
+          right: 20px;
+          color: $primary-color;
+          background-color: $white-color;
+        }
+      }
+      .rooms-text {
+        text-align: center;
+        padding: 30px;
+        @include dFlex();
+        flex-direction: column;
+        gap: 20px;
+        font-family: $secondary-font;
+        .edit-delete {
+          @include dFlex(space-around);
+          gap: 40px;
+          i {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: all 0.2s;
+            &:hover {
+              transform: scale(1.2);
+              transition: all 0.2s;
+            }
+          }
+          .edit {
+            &:hover {
+              color: rgb(218, 134, 32);
+            }
+          }
+          .delete {
+            &:hover {
+              color: brown;
+            }
+          }
+        }
+        h3 {
+          font-size: 28px;
+        }
+        span {
+          font-family: $barlow-font;
+        }
+        a {
+          color: $black-color;
+          font-size: 18px;
+          i {
+            position: relative;
+            left: 10px;
+          }
+          &:hover {
+            i {
+              animation-name: arrowLeft;
+              animation-duration: 1.2s;
+              animation-iteration-count: infinite;
+              @keyframes arrowLeft {
+                0% {
+                  left: 10px;
+                }
+                50% {
+                  left: 20px;
+                }
+                100% {
+                  left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#add-room {
+  .add-room {
+    form{
+      width: 700px;
+      margin: 0 auto;
+    }
+  }
+}

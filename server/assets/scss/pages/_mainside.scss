@@ -1,0 +1,26 @@
+body{
+  margin-left: 250px;
+  #main-side-menu {
+    position: fixed;
+    width: 250px;
+    background-color: rgb(206, 171, 240);
+    top: 0;
+    left: 0;
+    height: 90vh;
+    @include dFlex(center);
+    .main-side-menu {
+      nav {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          a{
+              color: #000;
+              font-family: $secondary-font;
+              font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

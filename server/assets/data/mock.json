@@ -1,0 +1,58 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "roomName": "Junior Suite",
+      "price": 150,
+      "sale": 20,
+      "guests": 4,
+      "bed": "Twin Bed"
+    },
+    {
+      "id": 2,
+      "roomName": "Family Room",
+      "price": 200,
+      "sale": 40,
+      "guests": 4,
+      "bed": "King Bed"
+    },
+    {
+      "id": 3,
+      "roomName": "Double Room",
+      "price": 250,
+      "guests": 4,
+      "bed": "Twin Bed"
+    },
+    {
+      "id": 4,
+      "roomName": "Deluxe Room",
+      "price": 300,
+      "sale": 30,
+      "guests": 4,
+      "bed": "Twin Bed"
+    },
+    {
+      "id": 5,
+      "roomName": "Superior Room",
+      "price": 350,
+      "guests": 4,
+      "bed": "King Bed"
+    },
+    {
+      "id": 6,
+      "roomName": " Suite Luxury",
+      "price": "50",
+      "guests": "4",
+      "bed": "King Bed",
+      "sale": "0"
+    },
+    {
+      "roomName": "Howard Montoya ",
+      "bed": "Eius et atque praese",
+      "price": "560",
+      "sale": "20",
+      "guests": "3",
+      "id": 7
+    }
+  ]
+}
