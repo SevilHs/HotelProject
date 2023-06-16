@@ -34,4 +34,11 @@
       font-weight: 600;
     }
   }
+  @media only screen and (max-width: 568px){
+    .video-about{
+      span{
+        font-size: 18px;
+      }
+    }
+  }
 }
