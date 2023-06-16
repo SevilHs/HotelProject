@@ -1,0 +1,115 @@
+#get-in-touch {
+  padding: 5% 0;
+  .get-in-touch {
+    .contact-left {
+      @include dFlex(center, start);
+      flex-direction: column;
+      gap: 30px;
+      h3 {
+        font-family: $secondary-font;
+        font-size: 24px;
+      }
+      p {
+        font-family: $barlow-font;
+        line-height: 25px;
+        color: $gray-color;
+      }
+      .contact-phone,
+      .contact-email,
+      .contact-map {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        i {
+          color: $primary-color;
+          font-size: 36px;
+        }
+        span {
+          font-size: 24px;
+          color: $primary-color;
+          font-family: $barlow-font;
+        }
+      }
+    }
+    .contact-right {
+        padding: 30px;
+      form {
+        @include dFlex(center, start);
+        flex-direction: column;
+        gap: 30px;
+        h4{
+            font-family: $secondary-font;
+            font-size: 32px;
+        }
+        input{
+            width: 45%;
+        }
+        input,
+        textarea {
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #ddd;
+          font-family: $barlow-font;
+          padding: 15px 0;  
+          &:focus{
+            border-bottom: 1px solid $primary-color
+          }
+        }
+        .name-email,
+        .number-subject,
+        textarea {
+          @include dFlex();
+          width: 100%;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .send-btn {
+            width: 10em;
+            position: relative;
+            height: 3em;
+            border: 2px solid #927d57;
+            outline: none;
+            background-color: transparent;
+            color: $primary-color;
+            transition: 1s;
+            border-radius: 0.3em;
+            font-size: 16px;
+            font-family: $barlow-font;
+          }
+          
+          .send-btn::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 3%;
+            width: 95%;
+            height: 40%;
+            background-color: $white-color;
+            transition: 0.5s;
+            transform-origin: center;
+          }
+          
+          .send-btn::before {
+            content: "";
+            transform-origin: center;
+            position: absolute;
+            top: 80%;
+            left: 3%;
+            width: 95%;
+            height: 40%;
+            background-color: $white-color;
+            transition: 0.5s;
+          }
+          
+          .send-btn:hover::before, .send-btn:hover::after {
+            transform: scale(0)
+          }
+          
+          .send-btn:hover {
+            box-shadow: inset 0px 0px 25px #9b6f27;
+          }
+      }
+    }
+  }
+}

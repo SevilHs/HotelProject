@@ -1665,7 +1665,7 @@ footer #footer-bottom {
 }
 
 #team {
-  background-color: #F8F5F0;
+  background-color: #222;
   padding: 5%;
 }
 #team .team p {
@@ -2941,6 +2941,154 @@ footer #footer-bottom {
     flex-direction: column;
     align-items: start;
   }
+}
+
+#hero-contact {
+  background: url(../images/news/news-bg.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#hero-contact .for-dark-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#hero-contact .for-dark-bg .hero-contact {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #fff;
+}
+#hero-contact .for-dark-bg .hero-contact p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+#hero-contact .for-dark-bg .hero-contact h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+
+#get-in-touch {
+  padding: 5% 0;
+}
+#get-in-touch .get-in-touch .contact-left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+}
+#get-in-touch .get-in-touch .contact-left h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+}
+#get-in-touch .get-in-touch .contact-left p {
+  font-family: "Barlow", sans-serif;
+  line-height: 25px;
+  color: #666;
+}
+#get-in-touch .get-in-touch .contact-left .contact-phone,
+#get-in-touch .get-in-touch .contact-left .contact-email,
+#get-in-touch .get-in-touch .contact-left .contact-map {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#get-in-touch .get-in-touch .contact-left .contact-phone i,
+#get-in-touch .get-in-touch .contact-left .contact-email i,
+#get-in-touch .get-in-touch .contact-left .contact-map i {
+  color: #aa8453;
+  font-size: 36px;
+}
+#get-in-touch .get-in-touch .contact-left .contact-phone span,
+#get-in-touch .get-in-touch .contact-left .contact-email span,
+#get-in-touch .get-in-touch .contact-left .contact-map span {
+  font-size: 24px;
+  color: #aa8453;
+  font-family: "Barlow", sans-serif;
+}
+#get-in-touch .get-in-touch .contact-right {
+  padding: 30px;
+}
+#get-in-touch .get-in-touch .contact-right form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+}
+#get-in-touch .get-in-touch .contact-right form h4 {
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+}
+#get-in-touch .get-in-touch .contact-right form input {
+  width: 45%;
+}
+#get-in-touch .get-in-touch .contact-right form input,
+#get-in-touch .get-in-touch .contact-right form textarea {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-family: "Barlow", sans-serif;
+  padding: 15px 0;
+}
+#get-in-touch .get-in-touch .contact-right form input:focus,
+#get-in-touch .get-in-touch .contact-right form textarea:focus {
+  border-bottom: 1px solid #aa8453;
+}
+#get-in-touch .get-in-touch .contact-right form .name-email,
+#get-in-touch .get-in-touch .contact-right form .number-subject,
+#get-in-touch .get-in-touch .contact-right form textarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#get-in-touch .get-in-touch .contact-right form textarea {
+  resize: vertical;
+}
+#get-in-touch .get-in-touch .contact-right form .send-btn {
+  width: 10em;
+  position: relative;
+  height: 3em;
+  border: 2px solid #927d57;
+  outline: none;
+  background-color: transparent;
+  color: #aa8453;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+}
+#get-in-touch .get-in-touch .contact-right form .send-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #fff;
+  transition: 0.5s;
+  transform-origin: center;
+}
+#get-in-touch .get-in-touch .contact-right form .send-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #fff;
+  transition: 0.5s;
+}
+#get-in-touch .get-in-touch .contact-right form .send-btn:hover::before, #get-in-touch .get-in-touch .contact-right form .send-btn:hover::after {
+  transform: scale(0);
+}
+#get-in-touch .get-in-touch .contact-right form .send-btn:hover {
+  box-shadow: inset 0px 0px 25px #9b6f27;
 }
 
 /*# sourceMappingURL=main.css.map */
