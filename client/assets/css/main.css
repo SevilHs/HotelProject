@@ -3091,4 +3091,12 @@ footer #footer-bottom {
   box-shadow: inset 0px 0px 25px #9b6f27;
 }
 
+#map {
+  height: 60vh;
+}
+#map iframe {
+  height: 100%;
+  width: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */
