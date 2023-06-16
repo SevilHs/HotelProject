@@ -1,0 +1,41 @@
+#testimonials-restaurant{
+    padding: 2% 0;
+    background-color: $primary-bg-color;
+    text-align: center;
+    .owl-carousel{
+        position: relative;
+        .owl-nav{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include dFlex();
+            .owl-prev, .owl-next{
+                padding: 20px;
+                font-size: 64px;
+                &:hover{
+                    background-color: transparent;
+                    color: $black-color;
+                }
+            }
+        }
+        .item{
+            padding: 70px;
+            p{
+                font-family: $barlow-font;
+                color: $gray-color;
+                margin-top: 30px;
+            }
+        }
+    }
+    @media only screen and (max-width:768px){
+        .owl-carousel{
+            .item{
+                h1{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

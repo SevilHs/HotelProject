@@ -3139,9 +3139,49 @@ footer #footer-bottom {
   line-height: 30px;
   font-weight: 600;
 }
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 576px) {
   #video-restaurant .video-about span {
     font-size: 18px;
+  }
+}
+
+#testimonials-restaurant {
+  padding: 2% 0;
+  background-color: #F8F5F0;
+  text-align: center;
+}
+#testimonials-restaurant .owl-carousel {
+  position: relative;
+}
+#testimonials-restaurant .owl-carousel .owl-nav {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#testimonials-restaurant .owl-carousel .owl-nav .owl-prev, #testimonials-restaurant .owl-carousel .owl-nav .owl-next {
+  padding: 20px;
+  font-size: 64px;
+}
+#testimonials-restaurant .owl-carousel .owl-nav .owl-prev:hover, #testimonials-restaurant .owl-carousel .owl-nav .owl-next:hover {
+  background-color: transparent;
+  color: #000;
+}
+#testimonials-restaurant .owl-carousel .item {
+  padding: 70px;
+}
+#testimonials-restaurant .owl-carousel .item p {
+  font-family: "Barlow", sans-serif;
+  color: #666;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 768px) {
+  #testimonials-restaurant .owl-carousel .item h1 {
+    font-size: 28px;
   }
 }
 
