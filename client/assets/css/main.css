@@ -166,7 +166,7 @@ body {
   background-image: url(../images/home-images/hero/slide3.jpg);
 }
 
-#news-cards .news-cards .news-left .col .read-more-btn, #new-product .new-product .new-product-right a, #hero-rest .carousel .carousel-item .carousel-caption a {
+#news-cards .news-cards .news-left .col .read-more-btn, #hero-rest .carousel .carousel-item .carousel-caption a {
   padding: 10px 30px;
   border: 1px solid #ddd;
   color: #fff;
@@ -175,7 +175,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-#news-cards .news-cards .news-left .col .read-more-btn::after, #new-product .new-product .new-product-right a::after, #hero-rest .carousel .carousel-item .carousel-caption a::after {
+#news-cards .news-cards .news-left .col .read-more-btn::after, #hero-rest .carousel .carousel-item .carousel-caption a::after {
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -188,11 +188,11 @@ body {
   transition-timing-function: ease-in;
   z-index: -1;
 }
-#news-cards .news-cards .news-left .col .read-more-btn:hover, #new-product .new-product .new-product-right a:hover, #hero-rest .carousel .carousel-item .carousel-caption a:hover {
+#news-cards .news-cards .news-left .col .read-more-btn:hover, #hero-rest .carousel .carousel-item .carousel-caption a:hover {
   color: gray;
   transition-delay: 0s;
 }
-#news-cards .news-cards .news-left .col .read-more-btn:hover::after, #new-product .new-product .new-product-right a:hover::after, #hero-rest .carousel .carousel-item .carousel-caption a:hover::after {
+#news-cards .news-cards .news-left .col .read-more-btn:hover::after, #hero-rest .carousel .carousel-item .carousel-caption a:hover::after {
   transition: 0.5s;
   transform: translateX(0);
   transition-timing-function: ease-out;
@@ -2491,9 +2491,10 @@ footer #footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
-#products .search-sort input, #products .search-sort select {
-  text-indent: 20px;
+#products .search-sort input,
+#products .search-sort select {
   border: 1px solid #ddd;
   padding: 0.5rem 0;
   outline: none;
@@ -2504,12 +2505,14 @@ footer #footer-bottom {
   letter-spacing: 1.5px;
 }
 #products .search-sort input {
+  text-indent: 20px;
   display: inline-block;
-  max-width: 700px;
+  width: 700px;
 }
 #products .search-sort select {
   display: inline-block;
-  max-width: 100px;
+  max-width: 200px;
+  text-align: center;
 }
 #products .search-sort select option {
   display: inline-block;
@@ -2609,17 +2612,55 @@ footer #footer-bottom {
   display: flex;
 }
 #products .load-more {
-  border-radius: 3px;
+  --color: #b08964;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
   font-family: "Gilda Display", serif;
-  font-size: 14px;
-  color: #aa8453;
-  border: 1px solid #e5dbd4;
-  border: none;
-  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+#products .load-more::before, #products .button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+#products .load-more::before {
+  top: -1em;
+  left: -1em;
+}
+#products .load-more::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+#products .load-more:hover::before, #products .button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+#products .load-more:hover {
+  color: rgb(90, 69, 44);
+}
+#products .load-more:active {
+  filter: brightness(0.8);
 }
 
 #new-product {
-  padding: 5% 0;
+  padding: 7% 0;
   background-color: #222;
 }
 #new-product .new-product .new-product-left {
@@ -2635,9 +2676,10 @@ footer #footer-bottom {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
-#new-product .new-product .new-product-right h3, #new-product .new-product .new-product-right span {
+#new-product .new-product .new-product-right h3,
+#new-product .new-product .new-product-right .price-new-in {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 20px;
   letter-spacing: 2px;
@@ -2647,8 +2689,43 @@ footer #footer-bottom {
   font-size: 17px;
   line-height: 25px;
 }
-#new-product .new-product .new-product-right a {
-  transition: none;
+#new-product .new-product .new-product-right .add-cart-btn {
+  margin: 0;
+  height: auto;
+  padding: 0;
+  border: none;
+}
+#new-product .new-product .new-product-right .add-cart-btn {
+  background: transparent;
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #dbe6df;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  width: 290px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+#new-product .new-product .new-product-right .hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+#new-product .new-product .new-product-right .add-cart-btn:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
 
 #per-counter {
