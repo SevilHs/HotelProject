@@ -41,6 +41,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/css/datepicker.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>The Cappa Luxury Hotel</title>
   </head>
   <body class="body-home-page">
@@ -850,19 +851,41 @@
         </span>
         <p>THE CAPPA LUXURY HOTEL</p>
         <h1>Promotional Video</h1>
-        <div type="button" class=" play-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div
+          type="button"
+          class="play-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
           <img src="./assets/images/home-images/play-button.png" alt="" />
         </div>
-        
+
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
               </div>
               <div class="modal-body">
-                  <source src="https://www.youtube.com/watch?v=SDIU8yxAr50" type="video/mp4">
+                <video autoplay muted loop id="video">
+                  <source
+                    src="https://shtheme.com/demosd/thecappa/wp-content/uploads/2022/07/video-1.mp4"
+                    type="video/mp4"
+                  />
                   Your browser does not support HTML5 video.
                 </video>
               </div>
@@ -878,7 +901,9 @@
           <span>OUR SERVICES</span>
           <h2>Hotel Facilities</h2>
           <div class="row facilities-cards">
-            <div class="col col-12 col-md-6 col-lg-4 facilities-card">
+            <div
+              class="col col-12 col-md-6 col-lg-4 facilities-card"
+            >
               <div class="facilities-card-div">
                 <img
                   src="./assets/images/home-images/facilities/world.png"
@@ -1102,13 +1127,16 @@
       <div class="container">
         <div class="services row">
           <div class="services-row-div">
-            <a href="./restaurant.html" class="col col-12 col-md-6 services-card-img">
+            <a
+              href="./restaurant.html"
+              class="col col-12 col-md-6 services-card-img" data-aos="fade-right"
+            >
               <img
                 src="./assets/images/home-images/services/services1.jpg"
                 alt="service-img"
               />
             </a>
-            <div class="col col-12 col-md-6 services-card-text">
+            <div class="col col-12 col-md-6 services-card-text " data-aos="fade-left">
               <p class="service-title">DISCOVER</p>
               <h1 class="service-name">The Restaurant</h1>
               <p class="service-description">
@@ -1487,6 +1515,7 @@
       </div>
     </footer>
     <!-- SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

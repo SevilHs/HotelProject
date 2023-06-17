@@ -3,11 +3,15 @@
   padding: 5%;
   .team {
     p {
+      color: $white-color;
       font-family: $primary-font;
       font-size: 17px;
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: 30px;
+    }
+    h1{
+      color: $white-color;
     }
     .owl-carousel1-about {
       margin: 30px 0;

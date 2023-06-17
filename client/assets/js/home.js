@@ -12,7 +12,7 @@ menuBtn.addEventListener("click", () => {
     menuItems.style.display = "block";
   }
 });
-
+AOS.init();
 $(".owl-carousel1").owlCarousel({
   loop: true,
   margin: 10,

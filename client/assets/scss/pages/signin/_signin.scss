@@ -1,0 +1,149 @@
+#sign-in {
+  background-color: #909094;
+  color: $white-color;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .sign-in-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    h4 {
+      font-family: $secondary-font;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #283334;
+    }
+    .sign-in-left {
+      padding: 30px;
+      h3 {
+        font-family: $barlow-font;
+        font-size: 20px;
+        a{
+            color: #283334
+        }
+      }
+      form {
+        @include dFlex(center, start);
+        flex-direction: column;
+        gap: 30px;
+        font-family: $barlow-font;
+        input {
+          background-color: transparent;
+          width: 100%;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #ddd;
+          padding: 15px 0;
+          color: $white-color;
+          font-size: 20px;
+          &:focus{
+            border-bottom: 1px solid #283334;
+          }
+          &::placeholder {
+            color: $white-color;
+          }
+        }
+        .password-inp {
+          position: relative;
+          width: 100%;
+          i {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+          }
+        }
+        .c-button {
+          color: white;
+          font-size: 18px;
+          text-decoration: none;
+          padding: 0.7em 2em;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          z-index: 1;
+          background-color: #283334;
+          border: none;
+          &.c-button--gooey {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0;
+            position: relative;
+            transition: all 700ms ease;
+            .c-button__blobs {
+              height: 100%;
+              filter: url(#goo);
+              overflow: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: -3px;
+              right: -1px;
+              z-index: -1;
+              div {
+                background-color: #fff;
+                width: 34%;
+                height: 100%;
+                border-radius: 100%;
+                position: absolute;
+                transform: scale(1.4) translateY(-125%) translateZ(0);
+                transition: all 700ms ease;
+                &:nth-child(1) {
+                  left: -5%;
+                }
+
+                &:nth-child(2) {
+                  left: 30%;
+                  transition-delay: 60ms;
+                }
+
+                &:nth-child(3) {
+                  left: 66%;
+                  transition-delay: 25ms;
+                }
+              }
+            }
+            &.c-button--gooey:hover {
+              color: #6f7272;
+              background-color: #ffffff;
+              .c-button__blobs div {
+                transform: scale(1.4) translateY(0) translateZ(0);
+              }
+            }
+          }
+        }
+      }
+    }
+    .sign-in-right {
+      padding: 30px;
+      @include dFlex(start, start);
+      flex-direction: column;
+      gap: 30px;
+      p {
+        font-family: $secondary-font;
+        line-height: 25px;
+        color: #283334;
+      }
+      .contact-phone,
+      .contact-email,
+      .contact-map {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        i {
+          font-size: 36px;
+          color: #283334;
+        }
+        span {
+          color: $white-color;
+          font-size: 24px;
+          font-family: $barlow-font;
+        }
+        .contact-address{
+            color: $white-color;
+        }
+      }
+    }
+  }
+}

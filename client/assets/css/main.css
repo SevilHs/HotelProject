@@ -1669,11 +1669,15 @@ footer #footer-bottom {
   padding: 5%;
 }
 #team .team p {
+  color: #fff;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 17px;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+#team .team h1 {
+  color: #fff;
 }
 #team .team .owl-carousel1-about {
   margin: 30px 0;
@@ -3215,6 +3219,164 @@ footer #footer-bottom {
   #testimonials-restaurant .owl-carousel .item h1 {
     font-size: 28px;
   }
+}
+
+#sign-in {
+  background-color: #909094;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#sign-in .sign-in-form {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#sign-in .sign-in-form h4 {
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #283334;
+}
+#sign-in .sign-in-form .sign-in-left {
+  padding: 30px;
+}
+#sign-in .sign-in-form .sign-in-left h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+}
+#sign-in .sign-in-form .sign-in-left h3 a {
+  color: #283334;
+}
+#sign-in .sign-in-form .sign-in-left form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Barlow", sans-serif;
+}
+#sign-in .sign-in-form .sign-in-left form input {
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 20px;
+}
+#sign-in .sign-in-form .sign-in-left form input:focus {
+  border-bottom: 1px solid #283334;
+}
+#sign-in .sign-in-form .sign-in-left form input::placeholder {
+  color: #fff;
+}
+#sign-in .sign-in-form .sign-in-left form .password-inp {
+  position: relative;
+  width: 100%;
+}
+#sign-in .sign-in-form .sign-in-left form .password-inp i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0.7em 2em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  background-color: #283334;
+  border: none;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey .c-button__blobs div {
+  background-color: #fff;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(-125%) translateZ(0);
+  transition: all 700ms ease;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey.c-button--gooey:hover {
+  color: #6f7272;
+  background-color: #ffffff;
+}
+#sign-in .sign-in-form .sign-in-left form .c-button.c-button--gooey.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+#sign-in .sign-in-form .sign-in-right {
+  padding: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+}
+#sign-in .sign-in-form .sign-in-right p {
+  font-family: "Gilda Display", serif;
+  line-height: 25px;
+  color: #283334;
+}
+#sign-in .sign-in-form .sign-in-right .contact-phone,
+#sign-in .sign-in-form .sign-in-right .contact-email,
+#sign-in .sign-in-form .sign-in-right .contact-map {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#sign-in .sign-in-form .sign-in-right .contact-phone i,
+#sign-in .sign-in-form .sign-in-right .contact-email i,
+#sign-in .sign-in-form .sign-in-right .contact-map i {
+  font-size: 36px;
+  color: #283334;
+}
+#sign-in .sign-in-form .sign-in-right .contact-phone span,
+#sign-in .sign-in-form .sign-in-right .contact-email span,
+#sign-in .sign-in-form .sign-in-right .contact-map span {
+  color: #fff;
+  font-size: 24px;
+  font-family: "Barlow", sans-serif;
+}
+#sign-in .sign-in-form .sign-in-right .contact-phone .contact-address,
+#sign-in .sign-in-form .sign-in-right .contact-email .contact-address,
+#sign-in .sign-in-form .sign-in-right .contact-map .contact-address {
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
