@@ -2,10 +2,9 @@ const BASE_URL = "http://localhost:8000";
 
 let row = document.querySelector(".products-row");
 let search = document.querySelector("#search");
-let sort = document.querySelectorAll(".option");
 let loadMore = document.querySelector(".load-more");
-// let option=document.querySelectorAll('option')
-// console.log(option[0]);
+let option=document.querySelectorAll('.option')
+console.log(option[0]);
 
 let allData = [];
 let filtered = [];
@@ -24,13 +23,13 @@ async function getAllData() {
     console.log(product.currPrice);
     row.innerHTML += `
             <div class="col col-12 col-md-6 col-lg-4 product-div">
-                <a href="" class="img-div">
+                <div class="img-div">
                   <img src="${product.img}" alt="${product.name}">
                   <div class="cart-fav">
                     <i class="fa-solid fa-basket-shopping" onclick=addCart(${product.id})></i>
                     <i class="fa-regular fa-heart" onclick=addFav(${product.id},this)></i>
                   </div>
-                </a>
+                </div>
                 <div class="name-price">
                   <h3>${product.name}</h3>
                   <p><span class="prev-price">${product.prevPrice ? "$" + product.prevPrice : ""}</span>$${product.currPrice}</p>
@@ -61,25 +60,30 @@ async function addFav(id, btn) {
   let checkFav = data2.find((item) => item.id == id);
   if (!checkFav) {
     await axios.post(`${BASE_URL}/favdata`, productFav);
-    btn.children[0].style.color = "red";
-  } else {
-    btn.children[0].style.color = "";
-    alert("nono");
+  }else{
+    await axios.delete(`${BASE_URL}/favdata/${id}`)
+  }
+  if(localStorage.getItem('fav')){
+    localStorage.removeItem('fav')
+    btn.style.color=""
+  }else{
+    localStorage.setItem("fav","redHeart")
+    btn.style.color="red"
   }
 }
 
 getAllData();
 
-// search.addEventListener("input", (e) => {
-//   e.preventDefault();
-//   filtered = allData.slice(0, num).filter((item) => {
-//     return item.name
-//       .toLocaleLowerCase()
-//       .includes(e.target.value.toLocaleLowerCase());
-//   });
-//   defaultArr = filtered;
-//   getAllData();
-// });
+search.addEventListener("input", (e) => {
+  e.preventDefault();
+  filtered = allData.slice(0, num).filter((item) => {
+    return item.name
+      .toLocaleLowerCase()
+      .includes(e.target.value.toLocaleLowerCase());
+  });
+  defaultArr = filtered;
+  getAllData();
+});
 
 loadMore.addEventListener("click", () => {
   num += 3;
@@ -90,9 +94,6 @@ loadMore.addEventListener("click", () => {
   });
   defaultArr = filtered;
   getAllData();
-  // if(allData.length<=num){
-  //   loadMore.disabled=true
-  // }
 });
 
 // sort.addEventListener("change", () => {
@@ -107,6 +108,39 @@ loadMore.addEventListener("click", () => {
 //   }
 //   getAllData();
 // });
+
+option[0].addEventListener('click',()=>{
+  filtered = filtered
+      .slice(0, num)
+      .sort((a, b) => a.name.localeCompare(b.name));
+      option.forEach(item=>item.style.color="")
+      option[0].style.color="white"
+      getAllData()
+})
+option[1].addEventListener('click',()=>{
+  filtered = filtered.slice(0, num).sort((a, b) => a.currPrice - b.currPrice);
+  option.forEach(item=>item.style.color="")
+  option[1].style.color="white"
+  getAllData()
+})
+option[2].addEventListener('click',()=>{
+  filtered = filtered.slice(0, num).sort((a, b) => b.currPrice - a.currPrice);
+  option.forEach(item=>item.style.color="")
+  option[2].style.color="white"
+  getAllData()
+})
+option[3].addEventListener('click',()=>{
+  filtered=filtered.slice(0,num).filter(item=>item.name.toLocaleLowerCase().includes("decor"))
+  option.forEach(item=>item.style.color="")
+  option[3].style.color="white"
+  getAllData()
+})
+option[4].addEventListener('click',()=>{
+  filtered=defaultArr
+  option.forEach(item=>item.style.color="")
+  option[4].style.color="white"
+  getAllData()
+})
 
 var a = 0;
 $(window).scroll(function () {

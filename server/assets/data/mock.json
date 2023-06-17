@@ -87,7 +87,7 @@
     {
       "id": 4,
       "img": "../client/assets/images/shop-images/p4.jpg",
-      "name": "ORIGAMI LAPMS",
+      "name": "ORIGAMI LAPMS DECOR",
       "currPrice": 32,
       "prevPrice": 45.95
     },
@@ -107,7 +107,7 @@
     {
       "id": 7,
       "img": "../client/assets/images/shop-images/p7.jpg",
-      "name": "LOBBY INTERIOR",
+      "name": "LOBBY INTERIOR DECOR",
       "currPrice": 37,
       "prevPrice": 45
     },
@@ -170,11 +170,18 @@
       "currPrice": 17
     },
     {
-      "id": 1,
-      "img": "../client/assets/images/shop-images/pro1-300x300.jpg",
-      "name": "Decor",
-      "currPrice": 17,
-      "prevPrice": 21
+      "id": 2,
+      "img": "../client/assets/images/shop-images/p2.jpg",
+      "name": "WIRE LAMP DECOR",
+      "currPrice": 13,
+      "prevPrice": 17
+    },
+    {
+      "id": 9,
+      "img": "../client/assets/images/shop-images/p9.jpg",
+      "name": "COZY CHAIR",
+      "currPrice": 37,
+      "prevPrice": 45
     }
   ]
 }
