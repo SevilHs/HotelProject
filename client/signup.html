@@ -22,17 +22,22 @@
   <body>
     <section id="sign-in">
       <div class="container">
+        <h1>The Cappa</h1>
         <div class="sign-in-form row">
           <div class="col col-12 col-md-6 sign-in-left">
-            <h4>Sign İn</h4>
+            <h4>Sign Up</h4>
             <form action="">
-              <input type="text" placeholder="Username..." />
-              <input type="email" placeholder="Your Email..." />
-              <input type="number" placeholder="Your Number..." />
+              <input type="text" class="username" placeholder="Username..." />
+              <p class="required-username required-text">This field is required!</p>
+              <input type="email" class="email" placeholder="Your Email..." />
+              <p class="required-email required-text">This field is required!</p>
+              <input type="number" class="number" placeholder="Your Number..." />
+              <p class="required-number required-text">This field is required!</p>
               <div class="password-inp">
-                <input type="password" placeholder="Your Password..." />
+                <input type="password" class="password" placeholder="Your Password..." />
                 <i class="fa-solid fa-eye"></i>
               </div>
+              <p class="required-password required-text">This field is required!</p>
               <button class="c-button c-button--gooey" type="submit">
                 Sign Up
                 <div class="c-button__blobs">
@@ -101,5 +106,12 @@
         </div>
       </div>
     </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/signup.js"></script>
   </body>
 </html>

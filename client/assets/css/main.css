@@ -3222,11 +3222,17 @@ footer #footer-bottom {
 }
 
 #sign-in {
-  background-color: #909094;
+  background-color: #e9e9ea;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 5%;
+}
+#sign-in h1 {
+  text-align: center;
+  color: #283334;
+  margin: 30px 0;
 }
 #sign-in .sign-in-form {
   max-width: 1000px;
@@ -3239,7 +3245,15 @@ footer #footer-bottom {
   color: #283334;
 }
 #sign-in .sign-in-form .sign-in-left {
+  background-color: #afafb1;
+  border-radius: 30px 0 0 30px;
   padding: 30px;
+}
+#sign-in .sign-in-form .sign-in-left .required-text {
+  padding: 5px;
+  color: rgb(227, 31, 31);
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 1.5px;
 }
 #sign-in .sign-in-form .sign-in-left h3 {
   font-family: "Barlow", sans-serif;
@@ -3253,7 +3267,7 @@ footer #footer-bottom {
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   font-family: "Barlow", sans-serif;
 }
 #sign-in .sign-in-form .sign-in-left form input {
@@ -3341,6 +3355,8 @@ footer #footer-bottom {
   transform: scale(1.4) translateY(0) translateZ(0);
 }
 #sign-in .sign-in-form .sign-in-right {
+  background-color: #989997;
+  border-radius: 0 30px 30px 0;
   padding: 30px;
   display: flex;
   justify-content: start;
@@ -3370,13 +3386,18 @@ footer #footer-bottom {
 #sign-in .sign-in-form .sign-in-right .contact-email span,
 #sign-in .sign-in-form .sign-in-right .contact-map span {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Barlow", sans-serif;
 }
 #sign-in .sign-in-form .sign-in-right .contact-phone .contact-address,
 #sign-in .sign-in-form .sign-in-right .contact-email .contact-address,
 #sign-in .sign-in-form .sign-in-right .contact-map .contact-address {
   color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  #sign-in .sign-in-form .sign-in-left, #sign-in .sign-in-form .sign-in-right {
+    border-radius: 0px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

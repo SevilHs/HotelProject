@@ -22,13 +22,14 @@
   <body>
     <section id="sign-in">
       <div class="container">
+        <h1>The Cappa</h1>
         <div class="sign-in-form row">
           <div class="col col-12 col-md-6 sign-in-left">
             <h4>Sign İn</h4>
-            <form action="">
-              <input type="text" placeholder="Username or Your Email..." />
+            <form>
+              <input type="text" class="username" placeholder="Username or Your Email..." />
               <div class="password-inp">
-                <input type="password" placeholder="Your Password..." />
+                <input type="password" class="password" placeholder="Your Password..." />
                 <i class="fa-solid fa-eye"></i>
               </div>
               <button class="c-button c-button--gooey" type="submit">
@@ -99,5 +100,12 @@
         </div>
       </div>
     </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/signin.js"></script>
   </body>
 </html>

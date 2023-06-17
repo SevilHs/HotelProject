@@ -1,9 +1,15 @@
 #sign-in {
-  background-color: #909094;
+  background-color: #e9e9ea;
   color: $white-color;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 5%;
+  h1{
+    text-align: center;
+    color: #283334;
+    margin: 30px 0;
+  }
   .sign-in-form {
     max-width: 1000px;
     margin: 0 auto;
@@ -14,7 +20,15 @@
       color: #283334;
     }
     .sign-in-left {
+      background-color: #afafb1;
+      border-radius: 30px 0 0 30px;
       padding: 30px;
+      .required-text{
+        padding: 5px;
+        color: rgb(227, 31, 31);
+        font-family: $barlow-font;
+        letter-spacing: 1.5px;
+      }
       h3 {
         font-family: $barlow-font;
         font-size: 20px;
@@ -25,7 +39,7 @@
       form {
         @include dFlex(center, start);
         flex-direction: column;
-        gap: 30px;
+        gap: 10px;
         font-family: $barlow-font;
         input {
           background-color: transparent;
@@ -116,6 +130,8 @@
       }
     }
     .sign-in-right {
+      background-color:#989997;
+      border-radius: 0 30px 30px 0;
       padding: 30px;
       @include dFlex(start, start);
       flex-direction: column;
@@ -137,12 +153,19 @@
         }
         span {
           color: $white-color;
-          font-size: 24px;
+          font-size: 20px;
           font-family: $barlow-font;
         }
         .contact-address{
             color: $white-color;
         }
+      }
+    }
+  }
+  @media only screen and (max-width:768px){
+    .sign-in-form{
+      .sign-in-left, .sign-in-right{
+        border-radius: 0px;
       }
     }
   }
