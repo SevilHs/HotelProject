@@ -11,15 +11,25 @@
     border: 1px solid $dark-bg-color;
     display: inline-block;
   }
-  .total-price {
+  .remove-notification{
+    position: fixed;
+    background-color: #464646;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    color: $white-color;
+    text-align: center;
+  }
+  .total-price-div {
     display: block;
     text-align: end;
   }
   table {
     color: $white-color;
     width: 100%;
-    margin: 30px 0;
-    background-color: $dark-bg-color;
+    margin: 8rem 0 .5rem 0;
+    background-color: #383737;
     thead {
       th {
         padding: 10px;

@@ -34,6 +34,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/css/datepicker.min.css"
     />
+    <link rel="shortcut icon" href="./assets/images/favicon/abstract-shape.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>The Cappa Luxury Hotel.</title>
   </head>
@@ -161,22 +162,24 @@
     </header>
     <!-- CART -->
     <section id="cart-products">
-        <div class="container">
-            <div class="cart-products">
-                <div class="remove-notification" role="alert">Product successfully removed.</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>PRODUCT NAME</th>
-                            <th>STOCK STATUS</th>
-                            <th>UNIT PRICE</th>
-                            <th>QUANTITY</th>
-                            <th>TOTAL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <tr>
+      <div class="container">
+        <div class="cart-products">
+          <div class="remove-notification" hidden>
+            Product successfully removed.
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>PRODUCT NAME</th>
+                <th>STOCK STATUS</th>
+                <th>UNIT PRICE</th>
+                <th>QUANTITY</th>
+                <th>TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
                             <td><i class="fa-solid fa-xmark"></i></td>
                             <td class="td-img"><img src="./assets/images/shop-images/p1.jpg" alt=""></td>
                             <td>instock</td>
@@ -184,13 +187,13 @@
                             <td>2</td>
                             <td>234</td>
                         </tr> -->
-                    </tbody>
-                </table>
-                <div class="total-price">
-                    <p>Total: 32548</p>
-                </div>
-            </div>
+            </tbody>
+          </table>
+          <div class="total-price-div">
+            <p class="total-price"></p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer>
@@ -272,5 +275,5 @@
     <script src="./assets/js/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/js/datepicker-full.min.js"></script>
     <script src="./assets/js/cart.js"></script>
-</body>
+  </body>
 </html>
