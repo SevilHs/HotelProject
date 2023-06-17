@@ -1583,6 +1583,7 @@ footer #footer-bottom {
   align-items: start;
   flex-direction: column;
   gap: 30px;
+  font-family: "Barlow", sans-serif;
 }
 #booking .booking .booking-right form .input-group {
   display: flex;

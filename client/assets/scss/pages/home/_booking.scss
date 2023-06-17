@@ -63,6 +63,7 @@
         @include dFlex(center, start);
         flex-direction: column;
         gap: 30px;
+        font-family: $barlow-font;
         .input-group{
           @include dFlex();
           .fa-calendar{

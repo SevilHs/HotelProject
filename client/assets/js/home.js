@@ -1,8 +1,12 @@
+const BASE_URL = "http://localhost:8080";
+
 let menuBtn = document.querySelector(".menu-btn");
 let menuItems = document.querySelector(".menu-items");
 let form = document.querySelector("#booking-form");
-let option1 = document.querySelector("#adults"); 
-let option2 = document.querySelector("#children"); 
+let checkIn = document.querySelector("#check-in");
+let checkOut = document.querySelector("#check-out");
+let option1 = document.querySelector("#adults");
+let option2 = document.querySelector("#children");
 let not = document.querySelector("#notification");
 
 menuBtn.addEventListener("click", () => {
@@ -91,35 +95,69 @@ $(".owl-carousel4").owlCarousel({
   },
 });
 
-function showNot(){
+let check;
+function showNot(text) {
   if (!option1.value || !option2.value) {
     not.removeAttribute("hidden");
+    not.innerHTML = text;
+  }
+  if (check) {
+    not.removeAttribute("hidden");
+    not.innerHTML = text;
   }
   setTimeout(() => {
     notification.setAttribute("hidden", "");
-  }, 2000);
+  }, 4000);
+}
+
+async function setData() {
+  let res = await axios(`${BASE_URL}/booking`);
+  let data = res.data;
+  check = data.find(
+    (item) =>
+      item.checkIn == checkIn.value &&
+      item.checkOut == checkOut.value &&
+      item.adults == option1.value &&
+      item.children == option2.value
+  );
+  if (!check) {
+    console.log(check);
+    let obj = {
+      checkIn: checkIn.value,
+      checkOut: checkOut.value,
+      adults: option1.value,
+      children: option2.value,
+    };
+    await axios.post(`${BASE_URL}/booking`, obj);
+  } else {
+    console.log("no");
+    showNot("These days have been booked. Please try again.");
+  }
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  showNot()
-  console.log(option1.value);
+  if (checkIn.value && checkOut.value && option1.value && option2.value) {
+    setData();
+  }
+  showNot("One or more fields have an error. Please check and try again.");
 });
 
-const getDatePickerTitle = elem => {
+const getDatePickerTitle = (elem) => {
   const label = elem.nextElementSibling;
-  let titleText = '';
-  if (label && label.tagName === 'LABEL') {
+  let titleText = "";
+  if (label && label.tagName === "LABEL") {
     titleText = label.textContent;
   } else {
-    titleText = elem.getAttribute('aria-label') || '';
+    titleText = elem.getAttribute("aria-label") || "";
   }
   return titleText;
-}
-const elems = document.querySelectorAll('.datepicker_input');
+};
+const elems = document.querySelectorAll(".datepicker_input");
 for (const elem of elems) {
-  const datepicker = new Datepicker(elem, {                          // ???????????????
-    'format': 'dd/mm/yyyy', // UK format
-    title: getDatePickerTitle(elem)
+  const datepicker = new Datepicker(elem, {
+    // ???????????????
+    format: "dd/mm/yyyy", // UK format
+    title: getDatePickerTitle(elem),
   });
 }

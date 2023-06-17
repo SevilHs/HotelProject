@@ -55,5 +55,42 @@
       "password": "1",
       "id": 8
     }
+  ],
+  "booking": [
+    {
+      "checkIn": "15/06/2023",
+      "checkOut": "27/06/2023",
+      "adults": "2",
+      "children": "3",
+      "id": 1
+    },
+    {
+      "checkIn": "19/06/2023",
+      "checkOut": "03/07/2023",
+      "adults": "1",
+      "children": "0",
+      "id": 2
+    },
+    {
+      "checkIn": "19/06/2023",
+      "checkOut": "29/06/2023",
+      "adults": "2",
+      "children": "1",
+      "id": 3
+    },
+    {
+      "checkIn": "05/07/2023",
+      "checkOut": "10/07/2023",
+      "adults": "3",
+      "children": "0",
+      "id": 4
+    },
+    {
+      "checkIn": "15/06/2023",
+      "checkOut": "27/06/2023",
+      "adults": "2",
+      "children": "1",
+      "id": 5
+    }
   ]
 }
