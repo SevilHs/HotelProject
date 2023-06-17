@@ -20,23 +20,30 @@ let checkShow = false;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (username.value && password.value) {
-      async function getUser() {
-        let res = await axios(`${BASE_URL}/users`);
-        let data = res.data;
-        data.filter((user) => {
-          (user.username.toLocaleLowerCase() ==
-            username.value.toLocaleLowerCase() ||
-            user.email.toLocaleLowerCase() == username.value.toLocaleLowerCase()) &&
-          user.password.toLocaleLowerCase() == password.value.toLocaleLowerCase()
-            ? console.log("true")
-            : console.log("false");
-        });
+    async function getUser() {
+      let res = await axios(`${BASE_URL}/users`);
+      let data = res.data;
+      let checkUser = data.find((user) => {
+        return (
+          (user.username == username.value || user.email == username.value) &&
+          user.password == password.value
+        );
+      });
+      if (
+        ("1" == username.value || "1@gmail.com" == username.value) &&
+        "1" == password.value
+      ) {
+        window.location = "../server/admin.html";
+      } else if (checkUser) {
+        window.location = "shop.html";
+      } else {
+        alert("Wrong information");
       }
-      getUser();
+    }
+    getUser();
   } else {
-    requiredText.forEach((item) =>(item.style.visibility = "visible"));
+    requiredText.forEach((item) => (item.style.visibility = "visible"));
   }
-  //   window.location = "shop.html";
 });
 
 showPassword.addEventListener("click", () => {

@@ -4,6 +4,8 @@ let row = document.querySelector(".products-cards");
 let search = document.querySelector("#search");
 let sort = document.querySelector("#filter-by-options");
 let loadMore = document.querySelector(".load-more");
+let option=document.querySelectorAll('option')
+console.log(option[0]);
 
 let allData = [];
 let filtered = [];
