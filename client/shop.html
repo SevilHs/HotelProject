@@ -174,37 +174,39 @@
     <!-- PRODUCTS SECTION -->
     <div id="products">
       <div class="container">
-        <div class="products">
-          <div class="search-sort">
-            <input type="search" name="" id="search" placeholder="Search..." />
-            <select name="" id="filter-by-options" class="form-select">
-              <option value="" hidden>FILTER</option>
-              <option value="product-name">PRODUCT NAME</option>
-              <option value="asc">LOW TO HIGH</option>
-              <option value="dsc">HIGH TO LOW</option>
-              <option value="newness">NEWNESS</option>
-            </select>
+        <div class="products row">
+          <div class="col col-12 col-md-4 products-left">
+            <div class="inp-div">
+              <input type="search" name="" id="" placeholder="Search...">
+            </div>
+            <div class="sort-div">
+              <h3>Sort</h3>
+              <hr>
+              <button class="option">PRODUCT NAME</button>
+              <button class="option">LOW TO HIGH</button>
+              <button class="option">HIGH TO LOW</button>
+              <button class="option">DECOR</button>
+            </div>
           </div>
-          <div class="row products-cards">
-            <!-- <div class="col col-6 col-md-4 col-lg-3 product-card">
-                        <div class="product-card-div">
-                            <div class="img-product">
-                                <img src="./assets/images/shop-images/pro2-300x300.jpg" alt="">
-                                <div class="sale-not">Sale!</div>   
-                                <div class="new-not">new</div>
-                            </div>
-                            <div class="about-product">
-                                <h3>Product 01</h3>
-                                <p class="prev-curr-price"><span class="prev-price">$21.00</span>$17.00</p>
-                                <div class="add-fav">
-                                    <button class="add-cart"><span>ADD TO CART</span></button>
-                                    <button class="fav-btn"><i class="fa-regular fa-heart"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+          <div class="col col-12 col-md-8 products-right">
+            <div class="row products-row">
+              <!-- <div class="col col-12 col-md-6 col-lg-4 product-div">
+                <a href="" class="img-div">
+                  <img src="./assets/images/shop-images/p1.jpg" alt="">
+                  <div class="cart-fav">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </a>
+                <div class="name-price">
+                  <h3>Name</h3>
+                  <p><span>currPrice</span> price</p>
+                </div>
+
+              </div> -->
+            </div>
+            <button class="load-more  ">LOAD MORE</button>
           </div>
-          <button class="load-more  ">LOAD MORE</button>
         </div>
       </div>
     </div>
@@ -240,6 +242,7 @@
     </section>
     <!-- PERCENT COUNTER  -->
     <div id="per-counter">
+      <div class="for-blur-bg"></div>
       <div class="container">
         <div class="per-counter row">
           <p>Process</p>

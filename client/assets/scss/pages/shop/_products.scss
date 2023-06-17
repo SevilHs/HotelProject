@@ -1,181 +1,156 @@
 #products {
   padding: 5% 0;
-  .search-sort {
-    @include dFlex();
-    gap: 20px;
-    input,
-    select {
-      border: 1px solid #ddd;
-      padding: 0.5rem 0;
-      outline: none;
-      background-image: none;
-      box-shadow: none;
-      border-radius: 0%;
-      font-family: $barlow-font;
-      letter-spacing: 1.5px;
+  background-color: #343333;
+  .products-left {
+    padding: 20px;
+    .inp-div,
+    .sort-div {
+      padding: 30px;
+      background-color: #bcb9b9;
+      margin-bottom: 20px;
     }
-    input {
-      text-indent: 20px;
-      display: inline-block;
-      width: 700px;
+    .inp-div {
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+        font-family: $barlow-font;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #7a7a7a;
+      }
     }
-    select {
-      display: inline-block;
-      max-width: 200px;
-      text-align: center;
-      option {
-        display: inline-block;
-        padding: 30px;
+    .sort-div {
+      @include dFlex(center, start);
+      flex-direction: column;
+      h3 {
+        font-family: $secondary-font;
+        font-size: 24px;
+        color: $gray-color;
+      }
+      hr {
+        width: 100%;
+        color: #000000;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 10px 0;
+        font-family: $barlow-font;
+        font-size: 20px;
+        color: $gray-color;
+        &:hover {
+          color: $white-color;
+        }
       }
     }
   }
-  .products-cards {
-    margin: 50px 0;
-    .product-card {
-      padding: 10px;
-      height: 370px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      .product-card-div {
-        .img-product {
-          position: relative;
-          object-fit: cover;
-
-          img {
-            object-fit: cover;
-            max-width: 100%;
-          }
+  .products-right {
+    .product-div {
+      padding: 20px;
+      margin-bottom: 50px;
+      .img-div {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 5s ease-in-out;
+        img {
+          width: 100%;
+          height: 100%;
         }
-        .sale-not,
-        .new-not {
+        .cart-fav {
+          @include dFlex(center);
+          gap: 30px;
+          color: $white-color;
+          font-size: 24px;
           position: absolute;
-          top: 10px;
-          padding: 7px;
-          background-color: #e5dbd4;
-          border-radius: 3px;
-          font-family: $secondary-font;
-          font-size: 14px;
-          color: $primary-color;
-        }
-        .new-not {
-          right: 10px;
-        }
-        .sale-not {
-          left: 10px;
-        }
-        .about-product {
-          transition: all 1s;
-          transition-timing-function: 1s ease-in;
-          transform: translateY(-30px);
-          background-color: $white-color;
-          padding: 20px;
-          h3 {
-            font-family: $secondary-font;
-            font-size: 24px;
-          }
-          .prev-curr-price {
-            font-family: $barlow-font;
-            font-size: 18px;
-            margin: 15px 0;
-            span {
-              margin-right: 30px;
-              position: relative;
-              &:after {
-                position: absolute;
-                content: "";
-                background-color: $black-color;
-                top: 12px;
-                left: 0;
-                width: 100%;
-                height: 0.5px;
-              }
-            }
-          }
-          .add-fav {
-            @include dFlex();
-            display: none;
-            button {
-              background-color: transparent;
-              border: none;
-              font-family: $barlow-font;
-              font-size: 17px;
-              background-color: #e5dbd4;
-              color: $primary-color;
-              padding: 0.5rem 1rem;
-              border-radius: 3px;
-              transition: all 0.5s;
-            }
-            button:hover {
-              color: $primary-color;
-              background-color: $white-color;
-            }
-          }
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          top: 0;
+          display: none;
+          transition: all 5s ease-in-out;
         }
         &:hover {
-          .about-product {
-            transition: all 1s;
-            transition-timing-function: 1s ease-in;
-            transform: translateY(-60%);
-            .add-fav {
-              display: flex;
-            }
+          .cart-fav {
+            transition: all 5s ease-in-out;
+            display: flex;
+          }
+        }
+      }
+      .name-price{
+        color: $white-color;
+        padding: 20px 0;
+        // background-color: #a09580;
+        h3{
+          font-family: $secondary-font;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        p,span{
+          font-family: $barlow-font;
+          font-size: 16px;
+          text-align: start;
+          margin-right: 10px;
+          span{
+            text-decoration:line-through !important;
           }
         }
       }
     }
+    .load-more {
+      margin-top: 30px;
+      margin-left: 10px;
+      --color: #b08964;
+      padding: 0.8em 1.7em;
+      background-color: transparent;
+      border-radius: 0.3em;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.5s;
+      font-weight: 400;
+      font-size: 17px;
+      border: 1px solid;
+      font-family: $secondary-font;
+      text-transform: uppercase;
+      color: var(--color);
+      z-index: 1;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: var(--color);
+        transition: 1s ease;
+      }
+      &::before {
+        top: -1em;
+        left: -1em;
+      }
+      &::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+      }
+      &:hover::before,
+      &:hover::after {
+        height: 410px;
+        width: 410px;
+      }
+      &:hover {
+        color: rgb(90, 69, 44);
+      }
+    
+      &:active {
+        filter: brightness(0.8);
+      }
+    }
   }
-  .load-more {
-    --color: #b08964;
-    padding: 0.8em 1.7em;
-    background-color: transparent;
-    border-radius: .3em;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .5s;
-    font-weight: 400;
-    font-size: 17px;
-    border: 1px solid;
-    font-family: $secondary-font;
-    text-transform: uppercase;
-    color: var(--color);
-    z-index: 1;
-   }
-   
-   .load-more::before, .button::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 50%;
-    z-index: -1;
-    background-color: var(--color);
-    transition: 1s ease;
-   }
-   
-   .load-more::before {
-    top: -1em;
-    left: -1em;
-   }
-   
-   .load-more::after {
-    left: calc(100% + 1em);
-    top: calc(100% + 1em);
-   }
-   
-   .load-more:hover::before, .button:hover::after {
-    height: 410px;
-    width: 410px;
-   }
-   
-   .load-more:hover {
-    color: rgb(90, 69, 44);
-   }
-   
-   .load-more:active {
-    filter: brightness(.8);
-   }
 }
