@@ -4,7 +4,7 @@ let row = document.querySelector(".products-row");
 let search = document.querySelector("#search");
 let loadMore = document.querySelector(".load-more");
 let option=document.querySelectorAll('.option')
-console.log(option[0]);
+// console.log(option[0]);
 
 let allData = [];
 let filtered = [];
@@ -96,18 +96,6 @@ loadMore.addEventListener("click", () => {
   getAllData();
 });
 
-// sort.addEventListener("change", () => {
-//   if (sort.value == "asc") {
-//     filtered = filtered.slice(0, num).sort((a, b) => a.currPrice - b.currPrice);
-//   } else if (sort.value == "dsc") {
-//     filtered = filtered.slice(0, num).sort((a, b) => b.currPrice - a.currPrice);
-//   } else if (sort.value == "product-name") {
-//     filtered = filtered
-//       .slice(0, num)
-//       .sort((a, b) => a.name.localeCompare(b.name));
-//   }
-//   getAllData();
-// });
 
 option[0].addEventListener('click',()=>{
   filtered = filtered

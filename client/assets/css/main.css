@@ -3414,4 +3414,62 @@ footer #footer-bottom {
   }
 }
 
+#cart-products {
+  padding: 5% 0;
+  background-color: #c4c2c2;
+}
+#cart-products .remove-notification,
+#cart-products p {
+  margin-top: 100px;
+  padding: 1rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  color: #222;
+  border: 1px solid #222;
+  display: inline-block;
+}
+#cart-products .total-price {
+  display: block;
+  text-align: end;
+}
+#cart-products table {
+  color: #fff;
+  width: 100%;
+  margin: 30px 0;
+  background-color: #222;
+}
+#cart-products table thead th {
+  padding: 10px;
+  font-family: "Gilda Display", serif;
+  font-size: 18px;
+}
+#cart-products table tbody {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  color: #dad8d8;
+}
+#cart-products table tbody tr {
+  border-top: 2px solid #fff;
+}
+#cart-products table tbody td {
+  vertical-align: middle;
+}
+#cart-products table tbody td i {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+#cart-products table tbody td input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #dad8d8;
+}
+#cart-products table tbody .td-img {
+  padding: 10px 0;
+}
+#cart-products table tbody .td-img img {
+  width: 150px;
+}
+
 /*# sourceMappingURL=main.css.map */
