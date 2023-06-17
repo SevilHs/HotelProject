@@ -66,50 +66,94 @@
   "products": [
     {
       "id": 1,
-      "img": "../client/assets/images/shop-images/pro1-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro1-300x300.jpg",
       "name": "Decor",
       "currPrice": 17,
       "prevPrice": 21
     },
     {
       "id": 2,
-      "img": "../client/assets/images/shop-images/pro2-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro2-300x300.jpg",
       "name": "Chair",
       "currPrice": 13,
       "prevPrice": 17
     },
     {
       "id": 3,
-      "img": "../client/assets/images/shop-images/pro3-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro3-300x300.jpg",
       "name": "Sofa",
       "currPrice": 17
     },
     {
       "id": 4,
-      "img": "../client/assets/images/shop-images/pro4-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro4-300x300.jpg",
       "name": "Table",
       "currPrice": 32,
       "prevPrice": 45.95
     },
     {
       "id": 5,
-      "img": "../client/assets/images/shop-images/pro5-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro5-300x300.jpg",
       "name": "Art Decor",
       "currPrice": 24.32,
       "prevPrice": 30
     },
     {
       "id": 6,
-      "img": "../client/assets/images/shop-images/pro6-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro6-300x300.jpg",
       "name": "White Sofa",
       "currPrice": 60
     },
     {
       "id": 7,
-      "img": "../client/assets/images/shop-images/pro7-150x150.jpg",
+      "img": "../client/assets/images/shop-images/pro7-300x300.jpg",
       "name": "Modern Clock",
       "currPrice": 37,
       "prevPrice": 45
+    }
+  ],
+  "cartdata": [
+    {
+      "id": 3,
+      "img": "../client/assets/images/shop-images/pro3-300x300.jpg",
+      "name": "Sofa",
+      "currPrice": 17
+    },
+    {
+      "id": 4,
+      "img": "../client/assets/images/shop-images/pro4-300x300.jpg",
+      "name": "Table",
+      "currPrice": 32,
+      "prevPrice": 45.95
+    },
+    {
+      "id": 2,
+      "img": "../client/assets/images/shop-images/pro2-300x300.jpg",
+      "name": "Chair",
+      "currPrice": 13,
+      "prevPrice": 17
+    },
+    {
+      "id": 1,
+      "img": "../client/assets/images/shop-images/pro1-300x300.jpg",
+      "name": "Decor",
+      "currPrice": 17,
+      "prevPrice": 21
+    },
+    {
+      "id": 7,
+      "img": "../client/assets/images/shop-images/pro7-300x300.jpg",
+      "name": "Modern Clock",
+      "currPrice": 37,
+      "prevPrice": 45
+    }
+  ],
+  "favdata": [
+    {
+      "id": 3,
+      "img": "../client/assets/images/shop-images/pro3-300x300.jpg",
+      "name": "Sofa",
+      "currPrice": 17
     }
   ]
 }

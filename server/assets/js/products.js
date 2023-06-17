@@ -33,7 +33,7 @@ async function getAllData() {
           ></i>
           <i
             class="fa-solid fa-trash delete"
-            onclick="deleteProduct(${product.id})"
+            onclick="deleteProduct(${product.id},this)"
           ></i>
         </td>
         `;
@@ -48,14 +48,16 @@ function emptyForm() {
   prevPrice.value = "";
 }
 
-async function deleteProduct(id) {
+async function deleteProduct(id,btn) {
   await axios.delete(`${BASE_URL}/products/${id}`);
-  filtered = alldata.filter((item) => item.id != id);
-  getAllData();
+  // console.log(btn.closest("tr"));
+  btn.closest('tr').remove()                  
 }
 
 async function addEditRoom() {
+  let date=new Date().toLocaleDateString
   let obj = {
+    date:date,
     name: productName.value,
     currPrice: currPrice.value,
     prevPrice: prevPrice.value,

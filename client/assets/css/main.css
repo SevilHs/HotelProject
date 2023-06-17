@@ -541,6 +541,10 @@ footer #footer-bottom {
   letter-spacing: 0.1em;
   transition-delay: 0.4s;
 }
+#hero .carousel-fade .carousel-inner .carousel-item .carousel-caption h4 {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
 #hero .carousel-fade .carousel-inner .carousel-item .carousel-caption a {
   padding: 0.5rem 1rem;
   border: 1px solid #aa8453;
@@ -3227,7 +3231,7 @@ footer #footer-bottom {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 5%;
+  padding: 2%;
 }
 #sign-in h1 {
   text-align: center;

@@ -72,6 +72,10 @@
             letter-spacing: 0.1em;
             transition-delay: 0.4s;
           }
+          h4{
+            font-family: $barlow-font;
+            font-size: 18px;
+          }
           a {
             padding: 0.5rem 1rem;
             border: 1px solid $primary-color;
