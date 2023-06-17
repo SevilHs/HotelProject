@@ -1,6 +1,6 @@
 #about {
   padding: 5%;
-  background-color: $white-color;
+  background-color: $dark-bg-color;
   .about {
     .about-left {
       @include dFlex(center, start);
@@ -15,6 +15,9 @@
         font-size: 17px;
         color: $gray-color;
         line-height: 25px;
+      }
+      h1{
+        color: $white-color;
       }
       .slide-phone {
         @include dFlex(center);

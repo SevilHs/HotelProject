@@ -1,17 +1,17 @@
 const BASE_URL = "http://localhost:8000";
 
-let row = document.querySelector(".products-cards");
+let row = document.querySelector(".products-row");
 let search = document.querySelector("#search");
-let sort = document.querySelector("#filter-by-options");
+let sort = document.querySelectorAll(".option");
 let loadMore = document.querySelector(".load-more");
-let option=document.querySelectorAll('option')
-console.log(option[0]);
+// let option=document.querySelectorAll('option')
+// console.log(option[0]);
 
 let allData = [];
 let filtered = [];
 let defaultArr = [];
 let favData;
-let num = 4;
+let num = 3;
 
 async function getAllData() {
   row.innerHTML = "";
@@ -20,30 +20,22 @@ async function getAllData() {
   allData = data;
   filtered = filtered.length ? filtered : data;
   filtered.slice(0, num).forEach((product) => {
+    console.log(product.prevPrice);
+    console.log(product.currPrice);
     row.innerHTML += `
-    <div class="col col-6 col-md-4 col-lg-3 product-card">
-    <div class="product-card-div">
-        <div class="img-product">
-            <img src=${product.img} alt="">
-            <div class="sale-not">Sale!</div>   
-            <div class="new-not">new</div>
-        </div>
-        <div class="about-product">
-            <h3>${product.name}</h3>
-            <p class="prev-curr-price"><span class="prev-price">${
-              product.prevPrice ? "$" + product.prevPrice : ""
-            }</span>$${product.currPrice}</p>
-            <div class="add-fav">
-                <button class="add-cart" onclick=addCart(${
-                  product.id
-                })><span>ADD TO CART</span></button>
-                <button class="fav-btn" onclick=addFav(${
-                  product.id
-                },this)><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="col col-12 col-md-6 col-lg-4 product-div">
+                <a href="" class="img-div">
+                  <img src="${product.img}" alt="${product.name}">
+                  <div class="cart-fav">
+                    <i class="fa-solid fa-basket-shopping" onclick=addCart(${product.id})></i>
+                    <i class="fa-regular fa-heart" onclick=addFav(${product.id},this)></i>
+                  </div>
+                </a>
+                <div class="name-price">
+                  <h3>${product.name}</h3>
+                  <p><span class="prev-price">${product.prevPrice ? "$" + product.prevPrice : ""}</span>$${product.currPrice}</p>
+                </div>
+              </div>
     `;
   });
 }
@@ -78,19 +70,19 @@ async function addFav(id, btn) {
 
 getAllData();
 
-search.addEventListener("input", (e) => {
-  e.preventDefault();
-  filtered = allData.slice(0, num).filter((item) => {
-    return item.name
-      .toLocaleLowerCase()
-      .includes(e.target.value.toLocaleLowerCase());
-  });
-  defaultArr = filtered;
-  getAllData();
-});
+// search.addEventListener("input", (e) => {
+//   e.preventDefault();
+//   filtered = allData.slice(0, num).filter((item) => {
+//     return item.name
+//       .toLocaleLowerCase()
+//       .includes(e.target.value.toLocaleLowerCase());
+//   });
+//   defaultArr = filtered;
+//   getAllData();
+// });
 
 loadMore.addEventListener("click", () => {
-  num += 4;
+  num += 3;
   filtered = allData.slice(0, num).filter((item) => {
     return item.name
       .toLocaleLowerCase()
@@ -98,20 +90,23 @@ loadMore.addEventListener("click", () => {
   });
   defaultArr = filtered;
   getAllData();
+  // if(allData.length<=num){
+  //   loadMore.disabled=true
+  // }
 });
 
-sort.addEventListener("change", () => {
-  if (sort.value == "asc") {
-    filtered = filtered.slice(0, num).sort((a, b) => a.currPrice - b.currPrice);
-  } else if (sort.value == "dsc") {
-    filtered = filtered.slice(0, num).sort((a, b) => b.currPrice - a.currPrice);
-  } else if (sort.value == "product-name") {
-    filtered = filtered
-      .slice(0, num)
-      .sort((a, b) => a.name.localeCompare(b.name));
-  }
-  getAllData();
-});
+// sort.addEventListener("change", () => {
+//   if (sort.value == "asc") {
+//     filtered = filtered.slice(0, num).sort((a, b) => a.currPrice - b.currPrice);
+//   } else if (sort.value == "dsc") {
+//     filtered = filtered.slice(0, num).sort((a, b) => b.currPrice - a.currPrice);
+//   } else if (sort.value == "product-name") {
+//     filtered = filtered
+//       .slice(0, num)
+//       .sort((a, b) => a.name.localeCompare(b.name));
+//   }
+//   getAllData();
+// });
 
 var a = 0;
 $(window).scroll(function () {

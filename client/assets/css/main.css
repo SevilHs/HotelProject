@@ -651,7 +651,7 @@ footer #footer-bottom {
 
 #about {
   padding: 5%;
-  background-color: #fff;
+  background-color: #222;
 }
 #about .about .about-left {
   display: flex;
@@ -667,6 +667,9 @@ footer #footer-bottom {
   font-size: 17px;
   color: #666;
   line-height: 25px;
+}
+#about .about .about-left h1 {
+  color: #fff;
 }
 #about .about .about-left .slide-phone {
   display: flex;
@@ -716,15 +719,16 @@ footer #footer-bottom {
 
 #rooms-suites {
   padding: 5% 0;
-  background-color: #f8f5f0;
+  background-color: #373535;
 }
 #rooms-suites .rooms-suites span {
   font-size: 18px;
   font-family: "Barlow Condensed", sans-serif;
-  color: #666;
+  color: #fff;
 }
 #rooms-suites .rooms-suites h1 {
   margin: 30px 0;
+  color: #fff;
 }
 #rooms-suites .rooms-suites .rooms-suites-top,
 #rooms-suites .rooms-suites .rooms-suites-bottom {
@@ -1125,10 +1129,23 @@ footer #footer-bottom {
 #facilities .facilities .facilities-cards .facilities-card {
   padding: 10px;
   margin-bottom: 20px;
+  position: relative;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-bg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#facilities .facilities .facilities-cards .facilities-card .facilities-card-bg img {
+  width: 190px;
 }
 #facilities .facilities .facilities-cards .facilities-card .facilities-card-div {
+  width: 100%;
   padding: 20px;
-  background-color: #ececec;
+  background-color: rgba(255, 255, 255, 0.5176470588);
   height: 220px;
   display: flex;
   flex-direction: column;
@@ -1136,6 +1153,7 @@ footer #footer-bottom {
   overflow: hidden;
   transition: 1s;
   transition-timing-function: ease-in;
+  border-radius: 7px;
 }
 #facilities .facilities .facilities-cards .facilities-card .facilities-card-div img {
   width: 38px;
@@ -1263,7 +1281,7 @@ footer #footer-bottom {
 }
 
 #services {
-  background-color: #fff;
+  background-color: #373535;
   padding: 7%;
 }
 #services .services .services-row-div {
@@ -1300,14 +1318,14 @@ footer #footer-bottom {
   z-index: 2;
 }
 #services .services .services-row-div .services-card-img:hover::before {
-  content: "Learn More";
+  content: "";
   background: -webkit-linear-gradient(90deg, rgba(9, 12, 15, 0.641) 0%, rgba(13, 17, 21, 0.38) 70%, rgba(14, 19, 23, 0.004) 100%);
 }
 #services .services .services-row-div .services-card-img:hover img {
   transform: scale(1.2);
 }
 #services .services .services-row-div .services-card-text {
-  background-color: #f8f5f0;
+  background-color: #c7c7c7;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -2527,132 +2545,108 @@ footer #footer-bottom {
 
 #products {
   padding: 5% 0;
+  background-color: #343333;
 }
-#products .search-sort {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-#products .search-sort input,
-#products .search-sort select {
-  border: 1px solid #ddd;
-  padding: 0.5rem 0;
-  outline: none;
-  background-image: none;
-  box-shadow: none;
-  border-radius: 0%;
-  font-family: "Barlow", sans-serif;
-  letter-spacing: 1.5px;
-}
-#products .search-sort input {
-  text-indent: 20px;
-  display: inline-block;
-  width: 700px;
-}
-#products .search-sort select {
-  display: inline-block;
-  max-width: 200px;
-  text-align: center;
-}
-#products .search-sort select option {
-  display: inline-block;
-  padding: 30px;
-}
-#products .products-cards {
-  margin: 50px 0;
-}
-#products .products-cards .product-card {
-  padding: 10px;
-  height: 370px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-#products .products-cards .product-card .product-card-div .img-product {
-  position: relative;
-  object-fit: cover;
-}
-#products .products-cards .product-card .product-card-div .img-product img {
-  object-fit: cover;
-  max-width: 100%;
-}
-#products .products-cards .product-card .product-card-div .sale-not,
-#products .products-cards .product-card .product-card-div .new-not {
-  position: absolute;
-  top: 10px;
-  padding: 7px;
-  background-color: #e5dbd4;
-  border-radius: 3px;
-  font-family: "Gilda Display", serif;
-  font-size: 14px;
-  color: #aa8453;
-}
-#products .products-cards .product-card .product-card-div .new-not {
-  right: 10px;
-}
-#products .products-cards .product-card .product-card-div .sale-not {
-  left: 10px;
-}
-#products .products-cards .product-card .product-card-div .about-product {
-  transition: all 1s;
-  transition-timing-function: 1s ease-in;
-  transform: translateY(-30px);
-  background-color: #fff;
+#products .products-left {
   padding: 20px;
 }
-#products .products-cards .product-card .product-card-div .about-product h3 {
+#products .products-left .inp-div,
+#products .products-left .sort-div {
+  padding: 30px;
+  background-color: #bcb9b9;
+  margin-bottom: 20px;
+}
+#products .products-left .inp-div input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #7a7a7a;
+}
+#products .products-left .sort-div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+#products .products-left .sort-div h3 {
   font-family: "Gilda Display", serif;
   font-size: 24px;
+  color: #666;
 }
-#products .products-cards .product-card .product-card-div .about-product .prev-curr-price {
-  font-family: "Barlow", sans-serif;
-  font-size: 18px;
-  margin: 15px 0;
-}
-#products .products-cards .product-card .product-card-div .about-product .prev-curr-price span {
-  margin-right: 30px;
-  position: relative;
-}
-#products .products-cards .product-card .product-card-div .about-product .prev-curr-price span:after {
-  position: absolute;
-  content: "";
-  background-color: #000;
-  top: 12px;
-  left: 0;
+#products .products-left .sort-div hr {
   width: 100%;
-  height: 0.5px;
+  color: #000000;
 }
-#products .products-cards .product-card .product-card-div .about-product .add-fav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  display: none;
-}
-#products .products-cards .product-card .product-card-div .about-product .add-fav button {
+#products .products-left .sort-div button {
   background-color: transparent;
   border: none;
+  padding: 10px 0;
   font-family: "Barlow", sans-serif;
-  font-size: 17px;
-  background-color: #e5dbd4;
-  color: #aa8453;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  transition: all 0.5s;
+  font-size: 20px;
+  color: #666;
 }
-#products .products-cards .product-card .product-card-div .about-product .add-fav button:hover {
-  color: #aa8453;
-  background-color: #fff;
+#products .products-left .sort-div button:hover {
+  color: #fff;
 }
-#products .products-cards .product-card .product-card-div:hover .about-product {
-  transition: all 1s;
-  transition-timing-function: 1s ease-in;
-  transform: translateY(-60%);
+#products .products-right .product-div {
+  padding: 20px;
+  margin-bottom: 50px;
 }
-#products .products-cards .product-card .product-card-div:hover .about-product .add-fav {
+#products .products-right .product-div .img-div {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 5s ease-in-out;
+}
+#products .products-right .product-div .img-div img {
+  width: 100%;
+  height: 100%;
+}
+#products .products-right .product-div .img-div .cart-fav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: none;
+  transition: all 5s ease-in-out;
+}
+#products .products-right .product-div .img-div:hover .cart-fav {
+  transition: all 5s ease-in-out;
   display: flex;
 }
-#products .load-more {
+#products .products-right .product-div .name-price {
+  color: #fff;
+  padding: 20px 0;
+}
+#products .products-right .product-div .name-price h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#products .products-right .product-div .name-price p, #products .products-right .product-div .name-price span {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  text-align: start;
+  margin-right: 10px;
+}
+#products .products-right .product-div .name-price p span, #products .products-right .product-div .name-price span span {
+  text-decoration: line-through !important;
+}
+#products .products-right .load-more {
+  margin-top: 30px;
+  margin-left: 10px;
   --color: #b08964;
   padding: 0.8em 1.7em;
   background-color: transparent;
@@ -2669,7 +2663,7 @@ footer #footer-bottom {
   color: var(--color);
   z-index: 1;
 }
-#products .load-more::before, #products .button::after {
+#products .products-right .load-more::before, #products .products-right .load-more::after {
   content: "";
   display: block;
   width: 50px;
@@ -2681,22 +2675,22 @@ footer #footer-bottom {
   background-color: var(--color);
   transition: 1s ease;
 }
-#products .load-more::before {
+#products .products-right .load-more::before {
   top: -1em;
   left: -1em;
 }
-#products .load-more::after {
+#products .products-right .load-more::after {
   left: calc(100% + 1em);
   top: calc(100% + 1em);
 }
-#products .load-more:hover::before, #products .button:hover::after {
+#products .products-right .load-more:hover::before, #products .products-right .load-more:hover::after {
   height: 410px;
   width: 410px;
 }
-#products .load-more:hover {
+#products .products-right .load-more:hover {
   color: rgb(90, 69, 44);
 }
-#products .load-more:active {
+#products .products-right .load-more:active {
   filter: brightness(0.8);
 }
 
@@ -2771,6 +2765,21 @@ footer #footer-bottom {
 
 #per-counter {
   padding: 5%;
+  position: relative;
+}
+#per-counter .for-blur-bg {
+  background: url(../images/home-images/rooms/rooms-suites5.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(5px);
+}
+#per-counter .per-counter {
+  position: relative;
+  color: #fff;
 }
 #per-counter .per-counter p {
   font-family: "Barlow Condensed", sans-serif;

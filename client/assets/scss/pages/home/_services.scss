@@ -1,5 +1,5 @@
 #services {
-  background-color: $white-color;
+  background-color: #373535;
   padding: 7%;
   .services {
     .services-row-div {
@@ -37,7 +37,7 @@
           z-index: 2;
         }
         &:hover::before {
-          content: "Learn More";
+          content: "";
           background: -webkit-linear-gradient(
             90deg,
             rgba(9, 12, 15, 0.641) 0%,
@@ -52,7 +52,7 @@
         }
       }
       .services-card-text {
-        background-color: #f8f5f0;
+        background-color: #c7c7c7;
         padding: 30px;
         display: flex;
         flex-direction: column;
