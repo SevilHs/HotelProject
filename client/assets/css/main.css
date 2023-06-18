@@ -1075,36 +1075,36 @@ footer #footer-bottom {
   background: #fff;
   border: 3px solid #aa8453;
 }
-
-.modal {
-  width: 100%;
-  height: 100vh;
+#pro-video .pro-video .modal {
+  display: none;
   position: fixed;
-  overflow: hidden;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
 }
-.modal .modal-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
+#pro-video .pro-video .modal .modal-content {
+  background-color: transparent;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
   height: 100%;
 }
-.modal .modal-dialog .modal-content {
-  background-color: transparent;
+#pro-video .pro-video .modal .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
-.modal .modal-dialog .modal-content .modal-header {
-  border: none;
-}
-.modal .modal-dialog .modal-content .modal-header button {
+#pro-video .pro-video .modal .modal-content .close:hover, #pro-video .pro-video .modal .modal-content .close:focus {
   color: #fff;
-  background: none;
-}
-.modal .modal-body {
-  padding: 0;
-  border: none;
-}
-.modal .modal-body video {
-  max-width: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #facilities {
@@ -1325,7 +1325,7 @@ footer #footer-bottom {
   transform: scale(1.2);
 }
 #services .services .services-row-div .services-card-text {
-  background-color: #c7c7c7;
+  background-color: transparent;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -1337,29 +1337,61 @@ footer #footer-bottom {
   font-size: 18px;
   letter-spacing: 3px;
   font-weight: 500;
-  color: #666;
+  color: #aa8453;
 }
 #services .services .services-row-div .services-card-text .service-name {
   font-family: "Gilda Display", serif;
   font-size: 36px;
+  color: #fff;
 }
 #services .services .services-row-div .services-card-text .service-description {
-  color: #666;
+  color: #ddd;
   line-height: 25px;
   font-family: "Barlow", sans-serif;
 }
 #services .services .services-row-div .services-card-text a {
-  position: relative;
   text-align: center;
-  width: 180px;
-  border: none;
   background-color: #ab8a62;
   letter-spacing: 2px;
-  color: #fff;
   padding: 15px;
-  font-family: "Barlow", sans-serif;
   font-size: 14px;
   line-height: 1.5em;
+  color: #fff;
+  font-family: "Barlow", sans-serif;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+#services .services .services-row-div .services-card-text a::before, #services .services .services-row-div .services-card-text a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+#services .services .services-row-div .services-card-text a::before {
+  left: -10px;
+  background: #644817;
+}
+#services .services .services-row-div .services-card-text a::after {
+  right: -10px;
+  background: #82622b;
+}
+#services .services .services-row-div .services-card-text a:hover {
+  background-color: transparent;
+}
+#services .services .services-row-div .services-card-text a:hover::after, #services .services .services-row-div .services-card-text a:hover::before {
+  width: 58%;
 }
 @media only screen and (max-width: 992px) {
   #services .services .services-row-div:nth-child(even) {
@@ -2115,7 +2147,7 @@ footer #footer-bottom {
 
 #about-rest {
   padding: 5%;
-  background-color: #F8F5F0;
+  background-color: #d1c9be;
 }
 #about-rest .about-rest .about-left {
   display: flex;
@@ -2250,13 +2282,16 @@ footer #footer-bottom {
 }
 
 #restaurant-menu {
-  background-color: #fff;
+  background-color: #222222;
   padding: 5% 0;
 }
 #restaurant-menu .restaurant-menu p {
   font-family: "Barlow", sans-serif;
   margin-bottom: 30px;
   color: #aa8453;
+}
+#restaurant-menu .restaurant-menu h1 {
+  color: #fff;
 }
 #restaurant-menu .restaurant-menu .restaurant-menu-text {
   display: none;
@@ -2280,7 +2315,7 @@ footer #footer-bottom {
 #restaurant-menu .restaurant-menu .restaurant-menu-text p {
   font-family: "Barlow", sans-serif;
   font-size: 17px;
-  color: #666;
+  color: #b3b3b3;
 }
 #restaurant-menu .restaurant-menu .default-menu {
   display: flex;
@@ -2317,6 +2352,7 @@ footer #footer-bottom {
   background-color: transparent;
   font-size: 24px;
   font-family: "Gilda Display", serif;
+  color: #fff;
 }
 
 #hero-rooms {
@@ -2343,6 +2379,7 @@ footer #footer-bottom {
 
 #rooms {
   padding: 5% 0;
+  background-color: #222;
 }
 #rooms .rooms .col {
   margin-bottom: 20px;
@@ -2383,6 +2420,7 @@ footer #footer-bottom {
   flex-direction: column;
   gap: 20px;
   font-family: "Gilda Display", serif;
+  background-color: rgba(205, 205, 205, 0.8470588235);
 }
 #rooms .rooms .col .rooms-text h3 {
   font-size: 28px;
@@ -2417,7 +2455,7 @@ footer #footer-bottom {
 
 #extra-services-rooms {
   padding: 5%;
-  background-color: #F8F5F0;
+  background-color: #e8e4db;
 }
 #extra-services-rooms .extra-services .extra-services-top {
   display: flex;
@@ -2546,7 +2584,7 @@ footer #footer-bottom {
 
 #products {
   padding: 5% 0;
-  background-color: #343333;
+  background-color: #222222;
 }
 #products .products-left {
   padding: 20px;
@@ -2697,7 +2735,7 @@ footer #footer-bottom {
 
 #new-product {
   padding: 7% 0;
-  background-color: #222;
+  background-color: #313030;
 }
 #new-product .new-product .new-product-left {
   margin-bottom: 30px;
@@ -3198,6 +3236,7 @@ footer #footer-bottom {
 #testimonials-restaurant {
   padding: 2% 0;
   background-color: #F8F5F0;
+  background-color: rgba(205, 205, 205, 0.8470588235);
   text-align: center;
 }
 #testimonials-restaurant .owl-carousel {
@@ -3480,6 +3519,162 @@ footer #footer-bottom {
 }
 #cart-products table tbody .td-img img {
   width: 150px;
+}
+
+#hero-room-d {
+  background: url(../images/news/news-bg.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#hero-room-d .for-dark-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#hero-room-d .for-dark-bg .hero-room-d {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 20px;
+  color: #fff;
+}
+#hero-room-d .for-dark-bg .hero-room-d p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+#hero-room-d .for-dark-bg .hero-room-d h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+
+#room-d {
+  padding: 5% 0;
+  background-color: rgb(48, 47, 47);
+}
+#room-d .room-d {
+  padding: 30px 0;
+  margin: 50px 0;
+  color: #fff;
+}
+#room-d .room-d .room-d-left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30xp;
+}
+#room-d .room-d .room-d-left h3 {
+  color: #aa8453;
+  font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
+}
+#room-d .room-d .room-d-left p {
+  font-family: "Barlow", sans-serif;
+  color: rgb(205, 205, 205);
+  line-height: 20px;
+}
+#room-d .room-d .room-d-left h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 20px;
+}
+#room-d .room-d .room-d-left a {
+  color: white;
+  border-radius: 2rem;
+  width: 150px;
+  height: 45px;
+  border: none;
+  background-color: #b18339;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+}
+#room-d .room-d .room-d-left a .span-mother {
+  display: flex;
+  overflow: hidden;
+}
+#room-d .room-d .room-d-left a .span-mother span:nth-child(1) {
+  transition: 0.2s;
+}
+#room-d .room-d .room-d-left a .span-mother span:nth-child(2) {
+  transition: 0.3s;
+}
+#room-d .room-d .room-d-left a .span-mother span:nth-child(3) {
+  transition: 0.4s;
+}
+#room-d .room-d .room-d-left a .span-mother span:nth-child(4) {
+  transition: 0.5s;
+}
+#room-d .room-d .room-d-left a .span-mother span:nth-child(5) {
+  transition: 0.6s;
+}
+#room-d .room-d .room-d-left a .span-mother span:nth-child(6) {
+  transition: 0.7s;
+}
+#room-d .room-d .room-d-left a .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+#room-d .room-d .room-d-left a .span-mother2 span {
+  transform: translateY(-1.2em);
+  transition: 0.2s;
+}
+#room-d .room-d .room-d-left a .span-mother2 span:nth-child(2) {
+  transition: 0.3s;
+}
+#room-d .room-d .room-d-left a .span-mother2 span:nth-child(3) {
+  transition: 0.4s;
+}
+#room-d .room-d .room-d-left a .span-mother2 span:nth-child(4) {
+  transition: 0.5s;
+}
+#room-d .room-d .room-d-left a .span-mother2 span:nth-child(5) {
+  transition: 0.6s;
+}
+#room-d .room-d .room-d-left a .span-mother2 span:nth-child(6) {
+  transition: 0.7s;
+}
+#room-d .room-d .room-d-left a:hover .span-mother {
+  position: absolute;
+}
+#room-d .room-d .room-d-left a:hover .span-mother span {
+  transform: translateY(1.2em);
+}
+#room-d .room-d .room-d-left a:hover .span-mother2 span {
+  transform: translateY(0);
+}
+#room-d .room-d .room-d-right {
+  padding: 30px;
+}
+#room-d .room-d .room-d-right img {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+#room-d .room-d .room-d-right h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+  color: #aa8453;
+}
+#room-d .room-d .room-d-right hr {
+  color: #aa8453;
+  height: 3px;
+  opacity: 1;
+}
+#room-d .room-d .room-d-right div {
+  margin-top: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+#room-d .room-d .room-d-right div p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
