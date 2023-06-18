@@ -342,9 +342,12 @@ body #main-section .info span {
 }
 #main-content-rooms .main-content-rooms .col .img-text {
   position: relative;
+  height: 350px;
 }
 #main-content-rooms .main-content-rooms .col .img-text img {
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #main-content-rooms .main-content-rooms .col .img-text .price-room,
 #main-content-rooms .main-content-rooms .col .img-text .price-sale {
@@ -368,6 +371,7 @@ body #main-section .info span {
   background-color: #fff;
 }
 #main-content-rooms .main-content-rooms .col .rooms-text {
+  max-width: 100%;
   text-align: center;
   padding: 30px;
   display: flex;

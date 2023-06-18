@@ -5,8 +5,11 @@
       margin-bottom: 20px;
       .img-text {
         position: relative;
+        height: 350px;
         img {
           max-width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         .price-room,
         .price-sale {
@@ -31,6 +34,7 @@
         }
       }
       .rooms-text {
+        max-width: 100%;
         text-align: center;
         padding: 30px;
         @include dFlex();

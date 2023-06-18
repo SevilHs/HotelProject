@@ -11,6 +11,7 @@ let filtered = [];
 let alldata = [];
 let check = false;
 let editId;
+let base64
 
 async function getAllData() {
   tBody.innerHTML = "";
@@ -61,6 +62,7 @@ async function addEditRoom() {
     name: productName.value,
     currPrice: currPrice.value,
     prevPrice: prevPrice.value,
+    img: base64
   };
   if (check) {
     await axios.patch(`${BASE_URL}/products/${editId}`, obj);
@@ -86,3 +88,31 @@ form.addEventListener("submit", (e) => {
   addEditRoom();
   emptyForm();
 });
+
+
+const convertBase64=(file)=>{
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+}
+
+const uploadImg= async(e)=>{
+  const file=e.target.files[0]
+  base64=await convertBase64(file)
+  // console.log(file);
+  // console.log(e);
+  // console.log(base64);
+}
+
+img.addEventListener('change',(e)=>{
+  uploadImg(e)
+})

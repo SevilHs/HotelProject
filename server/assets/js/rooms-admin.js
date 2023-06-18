@@ -8,11 +8,13 @@ let roomPrice = document.querySelector("#room-price");
 let roomGuests = document.querySelector("#room-guests");
 let roomSale = document.querySelector("#room-sale");
 let submitBtn = document.querySelector("#submit-btn");
+let img=document.querySelector('#room-img')
 
 let alldata = [];
 let filtered = [];
 let editId;
 let check = false;
+let base64
 
 async function getAllData() {
   row.innerHTML = "";
@@ -25,7 +27,7 @@ async function getAllData() {
     <div class="col col-12 col-md-6 col-lg-4">
     <div class="img-text">
       <img
-        src="../client/assets/images/home-images/rooms/rooms-suites1.jpg"
+        src=${room.img}
         alt=""
       />
       <div class="price-room">From $ ${room.price}</div>
@@ -53,6 +55,7 @@ function emptyForm() {
   roomPrice.value = "";
   roomSale.value = "";
   roomGuests.value = "";
+  img.value=""
 }
 
 async function deleteRoom(id) {
@@ -70,6 +73,7 @@ async function addEditRoom() {
     price: roomPrice.value,
     sale: roomSale.value,
     guests: roomGuests.value,
+    img:base64
   };
   if (check) {
     await axios.patch(`${BASE_URL}/rooms/${editId}`, obj);
@@ -96,3 +100,28 @@ form.addEventListener("submit", (e) => {
   addEditRoom();
   emptyForm();
 });
+
+
+const convertBase64=(file)=>{
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+}
+
+const uploadImg= async(e)=>{
+  const file=e.target.files[0]
+  base64=await convertBase64(file)
+}
+
+img.addEventListener('change',(e)=>{
+  uploadImg(e)
+})
