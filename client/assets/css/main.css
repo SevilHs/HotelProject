@@ -1632,16 +1632,25 @@ footer #footer-bottom {
 }
 #booking .booking .booking-right form .input-group .datepicker_input {
   width: 100%;
-  padding: 15px 10px;
+  padding: 15px 30px;
   border: none;
   box-shadow: none;
   outline: none;
 }
-#booking .booking .booking-right form .input-group .datepicker-input.in-edit:active, #booking .booking .booking-right form .input-group .datepicker-input.in-edit:focus {
+#booking .booking .booking-right form .input-group .datepicker-input.in-edit:active,
+#booking .booking .booking-right form .input-group .datepicker-input.in-edit:focus {
   box-shadow: none;
 }
-#booking .booking .booking-right form .input-group .datepicker-cell.selected, #booking .booking .booking-right form .input-group .datepicker-cell.selected:hover {
+#booking .booking .booking-right form .input-group .datepicker-cell.selected,
+#booking .booking .booking-right form .input-group .datepicker-cell.selected:hover {
   background-color: #aa8453;
+}
+#booking .booking .booking-right form select {
+  width: 100%;
+  border: none;
+  padding: 30px;
+  outline: none;
+  color: #666;
 }
 #booking .booking .booking-right form .selects {
   display: flex;
@@ -1651,9 +1660,6 @@ footer #footer-bottom {
 }
 #booking .booking .booking-right form .selects select {
   width: 49%;
-  border: none;
-  padding: 30px;
-  outline: none;
 }
 #booking .booking .booking-right form button {
   background-color: #aa8453;
@@ -2386,9 +2392,15 @@ footer #footer-bottom {
 }
 #rooms .rooms .col .img-text {
   position: relative;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #rooms .rooms .col .img-text img {
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #rooms .rooms .col .img-text .price-room,
 #rooms .rooms .col .img-text .price-sale {
@@ -2396,7 +2408,6 @@ footer #footer-bottom {
 }
 #rooms .rooms .col .img-text .price-room {
   bottom: -15px;
-  left: 37%;
   color: #fff;
   background-color: #000;
   padding: 15px;
@@ -2420,7 +2431,7 @@ footer #footer-bottom {
   flex-direction: column;
   gap: 20px;
   font-family: "Gilda Display", serif;
-  background-color: rgba(205, 205, 205, 0.8470588235);
+  background-color: rgba(220, 206, 206, 0.8470588235);
 }
 #rooms .rooms .col .rooms-text h3 {
   font-size: 28px;
@@ -2923,20 +2934,20 @@ footer #footer-bottom {
   color: #fff;
   font-family: "Gilda Display", serif;
   font-size: 32px;
-  transition: all 1s;
+  transition: all 2s;
 }
 #news-cards .news-cards .news-left .col .img-with-link img {
   max-width: 100%;
   object-fit: cover;
-  transition: all 1s;
+  transition: all 2s;
 }
 #news-cards .news-cards .news-left .col .img-with-link:hover img {
   max-width: 120%;
-  transition: all 1s;
+  transition: all 2s;
 }
 #news-cards .news-cards .news-left .col .img-with-link:hover .hidden-text {
   display: flex;
-  transition: all 1s;
+  transition: all 2s;
 }
 #news-cards .news-cards .news-left .col span {
   font-family: "Barlow", sans-serif;
@@ -3521,6 +3532,7 @@ footer #footer-bottom {
   border: none;
   outline: none;
   color: #dad8d8;
+  width: 70px;
 }
 #cart-products table tbody .td-img {
   padding: 10px 0;

@@ -11,17 +11,17 @@ async function getAlldata(){
     <div class="col col-12 col-md-6 col-lg-4">
     <div class="img-text">
       <img
-        src="./assets/images/home-images/rooms/rooms-suites1.jpg"
+        src="${room.img}"
         alt=""
       />
-      <div class="price-room">From ${room.price}</div>
+      <div class="price-room">From $ ${room.price}</div>
       <div class="price-sale">${room.sale}% off</div>
     </div>
     <div class="rooms-text">
       <h3>${room.roomName}</h3>
       <span>${room.bed}</span>
       <span>${room.guests} Guests</span>
-      <a href="./roomdetails.html?id=${room.id}">BOOK NOW <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="./roomdetails.html?id=${room.id}">DETAILS<i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
     `

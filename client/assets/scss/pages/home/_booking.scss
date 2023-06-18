@@ -15,7 +15,7 @@
       p {
         font-size: 24px;
         font-family: $secondary-font;
-        line-height: 40px
+        line-height: 40px;
       }
       .slide-phone {
         @include dFlex(center);
@@ -64,9 +64,9 @@
         flex-direction: column;
         gap: 30px;
         font-family: $barlow-font;
-        .input-group{
+        .input-group {
           @include dFlex();
-          .fa-calendar{
+          .fa-calendar {
             font-size: 30px;
             height: 100%;
             position: absolute;
@@ -74,38 +74,35 @@
             right: 15px;
             top: 10px;
           }
-          .datepicker_input{
+          .datepicker_input {
             width: 100%;
-            padding: 15px 10px;
+            padding: 15px 30px;
             border: none;
             box-shadow: none;
             outline: none;
           }
-        
-          .datepicker-input.in-edit:active, .datepicker-input.in-edit:focus{
+
+          .datepicker-input.in-edit:active,
+          .datepicker-input.in-edit:focus {
             box-shadow: none;
           }
-          .datepicker-cell.selected, .datepicker-cell.selected:hover{
+          .datepicker-cell.selected,
+          .datepicker-cell.selected:hover {
             background-color: $primary-color;
           }
+        }
+        select {
+          width: 100%;
+          border: none;
+          padding: 30px;
+          outline: none;
+          color: $gray-color;
         }
         .selects {
           @include dFlex();
           width: 100%;
           select {
             width: 49%;
-            border: none;
-            padding: 30px;
-            outline: none;
-            // option{
-            //     border: none;
-            //     box-shadow: none;
-            //     outline: none;
-            //     border-radius: 0%;
-            //     &:hover{
-            //         background-color: #b2b0b0;
-            //     }
-            // }
           }
         }
         button {

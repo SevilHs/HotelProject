@@ -6,8 +6,12 @@
       margin-bottom: 20px;
       .img-text {
         position: relative;
+        height: 350px;
+        @include dFlex(center);
         img {
           max-width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         .price-room,
         .price-sale {
@@ -15,7 +19,6 @@
         }
         .price-room {
           bottom: -15px;
-          left: 37%;
           color: $white-color;
           background-color: $black-color;
           padding: 15px;
@@ -38,7 +41,7 @@
         flex-direction: column;
         gap: 20px;
         font-family: $secondary-font;
-        background-color: #cdcdcdd8;
+        background-color: #dcceced8;
         h3 {
           font-size: 28px;
         }

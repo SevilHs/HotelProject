@@ -22,21 +22,21 @@
             color: $white-color;
             font-family: $secondary-font;
             font-size: 32px;
-            transition: all 1s;
+            transition: all 2s;
           }
           img {
             max-width: 100%;
             object-fit: cover;
-            transition: all 1s;
+            transition: all 2s;
           }
           &:hover {
             img {
               max-width: 120%;
-              transition: all 1s;
+              transition: all 2s;
             }
             .hidden-text {
               display: flex;
-              transition: all 1s;
+              transition: all 2s;
             }
           }
         }

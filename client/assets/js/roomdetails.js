@@ -3,12 +3,19 @@ const BASE_URL="http://localhost:8000"
 let id= new URLSearchParams(window.location.search).get("id")
 let roomImg=document.querySelector('.room-img')
 let roomName=document.querySelector('.room-name')
+let guests=document.querySelector('.guests')
+let price=document.querySelector('.price')
+let bed=document.querySelector('.bed')
 
 async function getRoomData(){
     let res= await axios(`${BASE_URL}/rooms/${id}`)
     let data= res.data
     console.log(data);
     roomName.innerHTML=data.roomName
+    roomImg.src=data.img
+    guests.innerHTML=`${data.guests} Persons`
+    price.innerHTML=`$ ${data.price}`
+    bed.innerHTML=data.bed
 }
 getRoomData()
 
