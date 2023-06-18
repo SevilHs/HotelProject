@@ -3179,6 +3179,14 @@ footer #footer-bottom {
 #get-in-touch .get-in-touch .contact-right form .send-btn:hover {
   box-shadow: inset 0px 0px 25px #9b6f27;
 }
+#get-in-touch .get-in-touch .contact-right #notification {
+  margin-top: 20px;
+  background-color: #e7ccab;
+  padding: 20px;
+  border: 1px solid #aa8453;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+}
 
 #map {
   height: 60vh;

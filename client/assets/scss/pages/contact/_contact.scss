@@ -110,6 +110,14 @@
             box-shadow: inset 0px 0px 25px #9b6f27;
           }
       }
+      #notification {
+        margin-top: 20px;
+        background-color: #e7ccab;
+        padding: 20px;
+        border: 1px solid $primary-color;
+        font-family: $primary-font;
+        font-weight: 600;
+      }
     }
   }
 }
