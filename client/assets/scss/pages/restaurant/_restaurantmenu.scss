@@ -1,11 +1,14 @@
 #restaurant-menu{
-    background-color: $white-color;
+    background-color: #222222;
     padding: 5% 0;
     .restaurant-menu{
         p{
             font-family: $barlow-font;
             margin-bottom: 30px;
             color: $primary-color;
+        }
+        h1{
+            color: $white-color;
         }
         .restaurant-menu-text{
             display: none;
@@ -26,7 +29,7 @@
             p{
                 font-family: $barlow-font;
                 font-size: 17px;
-                color: $gray-color;
+                color: #b3b3b3;
             }
         }
         .default-menu{
@@ -64,6 +67,7 @@
                     background-color: transparent;
                     font-size: 24px;
                     font-family: $secondary-font;
+                    color: $white-color;
                     // &:active{
                     //     border: 1px solid $primary-color;
                     // }

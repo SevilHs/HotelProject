@@ -52,7 +52,7 @@
         }
       }
       .services-card-text {
-        background-color: #c7c7c7;
+        background-color: transparent;
         padding: 30px;
         display: flex;
         flex-direction: column;
@@ -63,29 +63,64 @@
           font-size: 18px;
           letter-spacing: 3px;
           font-weight: 500;
-          color: $gray-color;
+          color: $primary-color;
         }
         .service-name {
           font-family: $secondary-font;
           font-size: 36px;
+          color: $white-color;
         }
         .service-description {
-          color: $gray-color;
+          color: #ddd;
           line-height: 25px;
           font-family: $barlow-font;
         }
         a {
-            position: relative;
           text-align: center;
-          width: 180px;
-          border: none;
           background-color: #ab8a62;
           letter-spacing: 2px;
-          color: $white-color;
           padding: 15px;
-          font-family: $barlow-font;
           font-size: 14px;
           line-height: 1.5em;
+          color: $white-color;
+          font-family: $barlow-font;
+          display: inline-block;
+          width: 150px;
+          height: 50px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.5s ease-in;
+          z-index: 1;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 100%;
+            transform: skew(15deg);
+            transition: all 0.5s;
+            overflow: hidden;
+            z-index: -1;
+          }
+          &::before {
+            left: -10px;
+            background: #644817;
+          }
+
+          &::after {
+            right: -10px;
+            background: #82622b;
+          }
+          &:hover{
+            background-color: transparent;
+            &::after, &::before{
+              width: 58%;
+
+            }
+          }
         }
       }
     }

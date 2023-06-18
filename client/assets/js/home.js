@@ -82,6 +82,7 @@ $(".owl-carousel4").owlCarousel({
   nav: true,
   items: 3,
   autoplay: true,
+  autoplayTimeout:3000,
   responsive: {
     0: {
       items: 2,
@@ -94,6 +95,48 @@ $(".owl-carousel4").owlCarousel({
     },
   },
 });
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+var iframe=document.getElementsByTagName("iframe")[0].contentWindow
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  // iframe.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+  iframe.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+const getDatePickerTitle = (elem) => {
+  const label = elem.nextElementSibling;
+  let titleText = "";
+  if (label && label.tagName === "LABEL") {
+    titleText = label.textContent;
+  } else {
+    titleText = elem.getAttribute("aria-label") || "";
+  }
+  return titleText;
+};
+const elems = document.querySelectorAll(".datepicker_input");
+for (const elem of elems) {
+  const datepicker = new Datepicker(elem, {
+    // ???????????????
+    format: "dd/mm/yyyy", 
+    title: getDatePickerTitle(elem),
+  });
+}
 
 let check;
 function showNot(text) {
@@ -142,22 +185,3 @@ form.addEventListener("submit", (e) => {
   }
   showNot("One or more fields have an error. Please check and try again.");
 });
-
-const getDatePickerTitle = (elem) => {
-  const label = elem.nextElementSibling;
-  let titleText = "";
-  if (label && label.tagName === "LABEL") {
-    titleText = label.textContent;
-  } else {
-    titleText = elem.getAttribute("aria-label") || "";
-  }
-  return titleText;
-};
-const elems = document.querySelectorAll(".datepicker_input");
-for (const elem of elems) {
-  const datepicker = new Datepicker(elem, {
-    // ???????????????
-    format: "dd/mm/yyyy", // UK format
-    title: getDatePickerTitle(elem),
-  });
-}

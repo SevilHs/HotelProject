@@ -21,7 +21,7 @@ async function getAlldata(){
       <h3>${room.roomName}</h3>
       <span>${room.bed}</span>
       <span>${room.guests} Guests</span>
-      <a href="">BOOK NOW <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="./roomdetails.html?id=${room.id}">BOOK NOW <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
     `

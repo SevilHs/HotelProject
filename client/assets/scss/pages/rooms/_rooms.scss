@@ -1,5 +1,6 @@
 #rooms {
   padding: 5% 0;
+  background-color: $dark-bg-color;
   .rooms {
     .col {
       margin-bottom: 20px;
@@ -37,6 +38,7 @@
         flex-direction: column;
         gap: 20px;
         font-family: $secondary-font;
+        background-color: #cdcdcdd8;
         h3 {
           font-size: 28px;
         }
