@@ -2299,6 +2299,22 @@ footer #footer-bottom {
 #restaurant-menu .restaurant-menu h1 {
   color: #fff;
 }
+#restaurant-menu .restaurant-menu .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+#restaurant-menu .restaurant-menu .buttons button {
+  font-family: "Gilda Display", serif;
+  font-size: 28px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+#restaurant-menu .restaurant-menu .buttons .active {
+  color: #aa8453;
+}
 #restaurant-menu .restaurant-menu .restaurant-menu-text {
   display: none;
 }
@@ -2325,40 +2341,6 @@ footer #footer-bottom {
 }
 #restaurant-menu .restaurant-menu .default-menu {
   display: flex;
-}
-#restaurant-menu .restaurant-menu .owl-carousel {
-  margin: 30px 0;
-  position: relative;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-dots {
-  display: none;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-nav .owl-prev, #restaurant-menu .restaurant-menu .owl-carousel .owl-nav .owl-next {
-  position: absolute;
-  top: 0;
-  padding: 30px;
-  font-size: 30px;
-  color: #aa8453;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-nav .owl-prev:hover, #restaurant-menu .restaurant-menu .owl-carousel .owl-nav .owl-next:hover {
-  background-color: transparent;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-nav .owl-prev {
-  left: 0;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-nav .owl-next {
-  right: 0;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-item {
-  text-align: center;
-}
-#restaurant-menu .restaurant-menu .owl-carousel .owl-item .item {
-  border: 1px solid transparent;
-  padding: 10px;
-  background-color: transparent;
-  font-size: 24px;
-  font-family: "Gilda Display", serif;
-  color: #fff;
 }
 
 #hero-rooms {
@@ -3585,6 +3567,131 @@ footer #footer-bottom {
   gap: 30px;
   padding: 30xp;
 }
+#room-d .room-d .room-d-left #myBtn {
+  cursor: pointer;
+}
+#room-d .room-d .room-d-left .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+}
+#room-d .room-d .room-d-left .modal .modal-content {
+  background-color: transparent;
+  margin: auto;
+  width: 30%;
+}
+#room-d .room-d .room-d-left .modal .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+#room-d .room-d .room-d-left .modal .modal-content .close:hover, #room-d .room-d .room-d-left .modal .modal-content .close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right {
+  margin-top: 30px;
+  background-color: #f8f5f0;
+  padding: 4%;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right p {
+  color: #666;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right h2 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+  color: #000;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right hr {
+  opacity: 0.3;
+  color: #b2b0b0;
+  height: 0.5px;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  font-family: "Barlow", sans-serif;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .fa-calendar {
+  font-size: 30px;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  right: 15px;
+  top: 10px;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .datepicker_input {
+  width: 100%;
+  padding: 15px 30px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .datepicker-input.in-edit:active,
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .datepicker-input.in-edit:focus {
+  box-shadow: none;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .datepicker-cell.selected,
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .datepicker-cell.selected:hover {
+  background-color: #aa8453;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .input-group .datepicker-cell {
+  color: #000;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form select {
+  width: 100%;
+  border: none;
+  padding: 30px;
+  outline: none;
+  color: #666;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .selects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form .selects select {
+  width: 49%;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right form button {
+  background-color: #aa8453;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+}
+#room-d .room-d .room-d-left .modal .modal-content .booking-right #notification {
+  margin-top: 20px;
+  background-color: #f1eeee;
+  padding: 20px;
+  border: 1px solid #aa8453;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+}
 #room-d .room-d .room-d-left h3 {
   color: #aa8453;
   font-size: 20px;
@@ -3695,6 +3802,10 @@ footer #footer-bottom {
 #room-d .room-d .room-d-right div p {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
+}
+
+.owl-carousel-roomd {
+  z-index: unset;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -10,6 +10,20 @@
         h1{
             color: $white-color;
         }
+        .buttons{
+            @include dFlex();
+            margin: 40px 0;
+            button{
+                font-family: $secondary-font;
+                font-size: 28px;
+                border: none;
+                background-color: transparent;
+                color: $white-color;
+            }
+            .active{
+                color: $primary-color;
+            }
+        }
         .restaurant-menu-text{
             display: none;
             .food-name{
@@ -34,45 +48,6 @@
         }
         .default-menu{
             display: flex;
-        }
-        .owl-carousel{
-            margin: 30px 0;
-            position: relative;
-            .owl-dots{
-                display: none;
-            }
-            .owl-nav{
-                .owl-prev, .owl-next{
-                    position: absolute;
-                    top: 0 ;
-                    padding: 30px;
-                    font-size: 30px;
-                    color: $primary-color;
-                    &:hover {
-                      background-color: transparent;
-                    }
-                }
-                .owl-prev{
-                    left: 0;
-                }
-                .owl-next{
-                    right: 0;
-                }
-            }
-            .owl-item{
-                text-align: center;
-                .item{
-                    border: 1px solid transparent;
-                    padding: 10px;
-                    background-color: transparent;
-                    font-size: 24px;
-                    font-family: $secondary-font;
-                    color: $white-color;
-                    // &:active{
-                    //     border: 1px solid $primary-color;
-                    // }
-                }
-            }
         }
     }
 }

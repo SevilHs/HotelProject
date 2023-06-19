@@ -234,7 +234,7 @@
               existing bedding; children may not be eligible for complimentary
               breakfast Rollaway/extra beds are available for $ 10 per day.
             </p>
-            <a href="">
+            <a id="myBtn">
               <span class="span-mother">
                 <span>C</span>
                 <span>H</span>
@@ -256,6 +256,67 @@
                 <span>W</span>
               </span>
             </a>
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="booking-right">
+                  <p>ROOMS & SUITES</p>
+                  <h2>Hotel Booking Form</h2>
+                  <hr />
+                  <form id="booking-form" action="">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="datepicker_input form-control"
+                        placeholder="Check in"
+                        id="check-in"
+                      />
+                      <i class="fa-regular fa-calendar" style="color: #aa8453"></i>
+                    </div>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="datepicker_input form-control"
+                        placeholder="Check out"
+                        id="check-out"
+                      />
+                      <i class="fa-regular fa-calendar" style="color: #aa8453"></i>
+                    </div>
+                    <select name="" id="room-name">
+                      <option value="" hidden>Rooms</option>
+                      <option value="junior-suite">Junior Suite</option>
+                      <option value="superior-room">Superior Room</option>
+                      <option value="deluxe-room">Deluxe Room</option>
+                      <option value="suite-luxury">Suite Luxury</option>
+                      <option value="double-room">Double Room</option>
+                      <option value="family-room">Family Room</option>
+                    </select>
+                    <div class="selects">
+                      <select name="" id="adults">
+                        <option value="" hidden>Adults</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                      <select name="" id="children">
+                        <option value="" hidden>Children</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                    <button type="submit">CHECK AVAILABILITY</button>
+                  </form>
+                  <div id="notification" role="alert" hidden>
+                    <!-- One or more fields have an error. Please check and try again. -->
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col col-12 col-md-4 room-d-right">
             <img
@@ -271,11 +332,11 @@
               <p>Towels</p>
               <p>Swimming Pool</p>
             </div>
-            <hr>
+            <hr />
             <div>
-            <p class="guests"></p>
-            <p class="price"></p>
-            <p class="bed"></p>
+              <p class="guests"></p>
+              <p class="price"></p>
+              <p class="bed"></p>
             </div>
           </div>
         </div>
@@ -284,7 +345,7 @@
     <!-- CLIENTS SECTION -->
     <div id="clients">
       <div class="container">
-        <div class="owl-carousel owl-carousel4 owl-theme">
+        <div class="owl-carousel owl-carousel4 owl-carousel-roomd owl-theme">
           <div class="item">
             <img
               src="./assets/images/home-images/clients/client1.png"
