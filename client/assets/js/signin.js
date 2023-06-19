@@ -17,29 +17,36 @@ password.addEventListener("input", () => {
 
 let checkShow = false;
 
+async function getUser() {
+  let res = await axios(`${BASE_URL}/users`);
+  let data = res.data;
+  let isAdmin
+  data.find((user) => {
+    return (
+      (user.username == username.value || user.email == username.value) &&
+      user.password == password.value && (isAdmin=user.isAdmin)
+    );
+  });
+  let checkUser = data.find((user) => {
+    return (
+      (user.username == username.value || user.email == username.value) &&
+      user.password == password.value
+    );
+  });
+  console.log(checkUser);
+  if (checkUser && isAdmin ){
+    window.location = `../server/admin.html?name=${checkUser.username}`;
+  } else if (checkUser && !isAdmin) {
+    localStorage.setItem("sign","true")
+    window.location = "shop.html";
+  } else {
+    alert("Wrong username or password");
+  }
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (username.value && password.value) {
-    async function getUser() {
-      let res = await axios(`${BASE_URL}/users`);
-      let data = res.data;
-      let checkUser = data.find((user) => {
-        return (
-          (user.username == username.value || user.email == username.value) &&
-          user.password == password.value
-        );
-      });
-      if (
-        ("1" == username.value || "1@gmail.com" == username.value) &&
-        "1" == password.value
-      ) {
-        window.location = "../server/admin.html";
-      } else if (checkUser) {
-        window.location = "shop.html";
-      } else {
-        alert("Wrong information");
-      }
-    }
     getUser();
   } else {
     requiredText.forEach((item) => (item.style.visibility = "visible"));

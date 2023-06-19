@@ -1,14 +1,154 @@
+#header-sign {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #fff;
+  z-index: 9999;
+  background-color: #121414;
+  .header {
+    @include dFlex();
+    .logo-img {
+      @include dFlex(center);
+      img {
+        width: 160px;
+      }
+    }
+    nav {
+      .menu-btn {
+        display: none;
+        background-color: transparent;
+        border: none;
+        i {
+          color: $primary-color;
+        }
+      }
+      ul {
+        display: flex;
+        gap: 30px;
+        li {
+          @include dFlex();
+          .dropdown {
+            position: relative;
+            overflow: hidden;
+            .dropdown-toggle {
+              padding: 15px 0;
+              transition: all 0.4s;
+              &::after {
+                display: none;
+              }
+              &:hover {
+                color: $primary-color;
+              }
+            }
+            .dropdown-menu {
+              width: 200px;
+              display: block;
+              border: none;
+              border-radius: 0;
+              position: absolute;
+              transform: translateY(50px);
+              transition: 0.5s;
+              transition-timing-function: ease-in;
+              padding: 5px 15px;
+              li {
+                padding: 10px 0;
+                a {
+                  color: #000;
+                }
+                &:hover {
+                  a {
+                    background-color: transparent;
+                    padding-left: 30px;
+                  }
+                }
+              }
+              .dropdown-item-border {
+                border-bottom: 1px solid #ddd;
+              }
+            }
+            &:hover {
+              overflow: visible;
+              .dropdown-menu {
+                transform: translateY(0);
+                transition: 0.5s;
+                transition-timing-function: ease-out;
+              }
+            }
+          }
+          a {
+            transition: all 0.4s;
+            color: $white-color;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .header {
+      nav {
+        .menu-btn {
+          display: block;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+  &.about-header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+#hero-sign-in {
+  background: url(../images/signin/soulkitchen-86.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  .for-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+  }
+  .hero-sign-in {
+    position: relative;
+    height: 90vh;
+    @include dFlex(center, start);
+    flex-direction: column;
+    row-gap: 20px;
+    color: $white-color;
+    p {
+      font-family: $primary-font;
+      font-size: 17px;
+      letter-spacing: 3px;
+    }
+    h1 {
+      letter-spacing: 5px;
+    }
+  }
+}
 #sign-in {
   background-color: #e9e9ea;
   color: $white-color;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 2%;
-  h1{
+  padding: 5%;
+  h1 {
     text-align: center;
     color: #283334;
     margin: 30px 0;
+    img{
+      width: 50px;
+    }
   }
   .sign-in-form {
     max-width: 1000px;
@@ -23,7 +163,7 @@
       background-color: #afafb1;
       border-radius: 30px 0 0 30px;
       padding: 30px;
-      .required-text{
+      .required-text {
         padding: 5px;
         color: rgb(227, 31, 31);
         font-family: $barlow-font;
@@ -32,8 +172,8 @@
       h3 {
         font-family: $barlow-font;
         font-size: 20px;
-        a{
-            color: #283334
+        a {
+          color: #283334;
         }
       }
       form {
@@ -50,7 +190,7 @@
           padding: 15px 0;
           color: $white-color;
           font-size: 20px;
-          &:focus{
+          &:focus {
             border-bottom: 1px solid #283334;
           }
           &::placeholder {
@@ -130,7 +270,7 @@
       }
     }
     .sign-in-right {
-      background-color:#989997;
+      background-color: #989997;
       border-radius: 0 30px 30px 0;
       padding: 30px;
       @include dFlex(start, start);
@@ -156,15 +296,16 @@
           font-size: 20px;
           font-family: $barlow-font;
         }
-        .contact-address{
-            color: $white-color;
+        .contact-address {
+          color: $white-color;
         }
       }
     }
   }
-  @media only screen and (max-width:768px){
-    .sign-in-form{
-      .sign-in-left, .sign-in-right{
+  @media only screen and (max-width: 768px) {
+    .sign-in-form {
+      .sign-in-left,
+      .sign-in-right {
         border-radius: 0px;
       }
     }

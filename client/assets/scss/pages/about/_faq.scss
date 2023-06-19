@@ -1,0 +1,45 @@
+#faq {
+  padding: 5% 0;
+  background: url(../images/home-images/section-bg-6-large-4.jpg) no-repeat
+    center;
+  background-size: cover;
+  h1 {
+    color: $white-color;
+  }
+  .col-left {
+    padding: 20px;
+    font-family: $primary-font;
+    font-weight: 700;
+    .accordion-button {
+      background-color: rgba(123, 124, 125, 0.5);
+      font-size: 20px;
+      border: none;
+      border-color: transparent;
+      box-shadow: none;
+      color: #ddd;
+      &:not(.collapsed) {
+        font-size: 24px;
+        background-color: #3d383823;
+        border: none;
+        box-shadow: 0 0 0 0.25rem rgb(41, 43, 44);
+      }
+      &:after {
+        background-image: url(../images/favicon/faviconn.png);
+      }
+    }
+  }
+  .col-right {
+    padding: 20px;
+    .accordion-item {
+      background-color: rgba(123, 124, 125, 0.5);
+      .accordion-body {
+        color: #ddd;
+        font-family: $secondary-font;
+        font-size: 20px;
+        padding: 30px;
+        line-height: 30px;
+        min-height: 300px;
+      }
+    }
+  }
+}

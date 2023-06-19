@@ -37,6 +37,7 @@ async function setUser() {
     email: email.value,
     number: number.value,
     password: password.value,
+    isAdmin:false
   };
   let res = await axios(`${BASE_URL}/users`);
   let data = res.data;
@@ -45,6 +46,8 @@ async function setUser() {
   if (!checkData) {
     await axios.post(`${BASE_URL}/users`, obj);
     emptyInp();
+    localStorage.setItem("sign","true")
+    window.location="./shop.html"
   } else {
     alert("this username already exists");
   }

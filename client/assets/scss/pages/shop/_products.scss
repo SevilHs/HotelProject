@@ -51,11 +51,11 @@
       padding: 20px;
       margin-bottom: 50px;
       .img-div {
+        overflow: hidden;
         position: relative;
         display: block;
         width: 100%;
         height: 100%;
-        transition: all 5s ease-in-out;
         img {
           width: 100%;
           height: 100%;
@@ -67,35 +67,44 @@
           font-size: 24px;
           position: absolute;
           width: 100%;
-          height: 100%;
+          height: 30%;
           background-color: rgba(0, 0, 0, 0.5);
-          top: 0;
-          display: none;
-          transition: all 5s ease-in-out;
+          transition: all .7s ease-in-out;
+          transform: translateY(0);
         }
         &:hover {
           .cart-fav {
-            transition: all 5s ease-in-out;
+            transition: all .7s ease-in-out;
             display: flex;
+            transform: translateY(-100%);
+            i{
+              color: #7a7a7a;
+              cursor: pointer;
+            transition: all .3s ease-in-out;
+              &:hover{
+                color: $white-color;
+                transform: scale(1.2);
+              }
+            }
           }
         }
       }
-      .name-price{
+      .name-price {
         color: $white-color;
         padding: 20px 0;
-        // background-color: #a09580;
-        h3{
+        h3 {
           font-family: $secondary-font;
           font-size: 20px;
           margin-bottom: 10px;
         }
-        p,span{
+        p,
+        span {
           font-family: $barlow-font;
           font-size: 16px;
           text-align: start;
           margin-right: 10px;
-          span{
-            text-decoration:line-through !important;
+          span {
+            text-decoration: line-through !important;
           }
         }
       }
@@ -147,7 +156,7 @@
       &:hover {
         color: rgb(90, 69, 44);
       }
-    
+
       &:active {
         filter: brightness(0.8);
       }

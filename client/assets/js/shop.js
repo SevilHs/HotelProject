@@ -42,33 +42,42 @@ async function getAllData() {
 async function addCart(id) {
   // let res=await axios( `${BASE_URL}/products/${id}`)
   // let data=res.data
-  let productCart = allData.find((item) => item.id == id);
-  let res2 = await axios(`${BASE_URL}/cartdata`);
-  let data2 = res2.data;
-  let checkCart = data2.find((item) => item.id == id);
-  if (!checkCart) {
-    await axios.post(`${BASE_URL}/cartdata`, productCart);
-  } else {
-    alert("nono");
+  console.log();
+  if (localStorage.getItem('sign')) {
+    let productCart = allData.find((item) => item.id == id);
+    let res2 = await axios(`${BASE_URL}/cartdata`);
+    let data2 = res2.data;
+    let checkCart = data2.find((item) => item.id == id);
+    if (!checkCart) {
+      await axios.post(`${BASE_URL}/cartdata`, productCart);
+    } else {
+      alert("nono");
+    }
+  }else{
+    window.location="./signup.html"
   }
 }
 
 async function addFav(id, btn) {
-  let productFav = allData.find((item) => item.id == id);
-  let res2 = await axios(`${BASE_URL}/favdata`);
-  let data2 = res2.data;
-  let checkFav = data2.find((item) => item.id == id);
-  if (!checkFav) {
-    await axios.post(`${BASE_URL}/favdata`, productFav);
+  if (localStorage.getItem('sign')) {
+    let productFav = allData.find((item) => item.id == id);
+    let res2 = await axios(`${BASE_URL}/favdata`);
+    let data2 = res2.data;
+    let checkFav = data2.find((item) => item.id == id);
+    if (!checkFav) {
+      await axios.post(`${BASE_URL}/favdata`, productFav);
+    }else{
+      await axios.delete(`${BASE_URL}/favdata/${id}`)
+    }
+    if(localStorage.getItem('fav')){
+      localStorage.removeItem('fav')
+      btn.style.color=""
+    }else{
+      localStorage.setItem("fav","redHeart")
+      btn.style.color="red"
+    }
   }else{
-    await axios.delete(`${BASE_URL}/favdata/${id}`)
-  }
-  if(localStorage.getItem('fav')){
-    localStorage.removeItem('fav')
-    btn.style.color=""
-  }else{
-    localStorage.setItem("fav","redHeart")
-    btn.style.color="red"
+    window.location="./signup.html"
   }
 }
 
