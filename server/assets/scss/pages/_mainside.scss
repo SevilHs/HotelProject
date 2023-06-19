@@ -1,15 +1,15 @@
-body{
+body {
   margin-left: 250px;
   #main-side-menu {
     position: fixed;
     width: 250px;
-    background-color: #F3F4F6;
+    background-color: transparent;
     top: 0;
     left: 0;
     height: 100vh;
     @include dFlex(center);
     .main-side-menu {
-      h1{
+      h1 {
         font-family: $primary-font;
         color: #36363c;
         font-size: 36px;
@@ -21,74 +21,138 @@ body{
           display: flex;
           flex-direction: column;
           gap: 30px;
-          a{
-              color: #000;
-              font-family: $secondary-font;
-              font-size: 20px;
-              display: flex;
-              align-items: center;
-              img{
-                width: 40px;
-              }
+          h3 {
+            font-family: $secondary-font;
+            font-size: 20px;
+          }
+          a {
+            color: #000;
+            font-family: $primary-font;
+            letter-spacing: 2px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            img {
+              width: 30px;
+              margin-right: 10px;
+            }
           }
         }
       }
     }
   }
-  #main-section{
+  #main-section {
     padding: 5% 0;
-    h3{
+    background-color: #f3f4f6;
+    h3 {
       font-family: $secondary-font;
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 10px;
     }
-    p{
+    p {
       font-family: $barlow-font;
       font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .main{
+      @include dFlex(space-between,start);
+    }
+    .main-container-right{
+      background-color: #e1e6fb;
+      border-radius: 10px;
+      padding: 20px;
+      width: 35%;
+      .members-header{
+        @include dFlex();
+        a{
+          font-family: $secondary-font;
+          font-size: 20px;
+          font-weight: 600;
+          color: $black-color;
+          @include dFlex(start);
+          img{
+            width: 40px;
+            margin-right: 10px;
+          }
+        }
+        .more{
+          margin-left: 80px;
+          width: 40px;
+          cursor: pointer
+        }
+      }
+      .member{
+        @include dFlex();
+        padding: 10px 0;
+        border-bottom: 1px solid #a5a1a1;
+        .img-text{
+          display: flex;
+          img{
+            width: 70px;
+            border-radius: 100%;
+            margin-right: 10px;
+          }
+          p,h3{
+            margin: 0;
+            font-family: $barlow-font;
+          }
+        }
+        .member-text{
+          @include dFlex();
+        }
+        .actions{
+          // visibility: hidden;
+          i{
+            font-size: 20px;
+            cursor: pointer;
+          }
+          .fa-pencil{
+            margin-right: 10px;
+            color: goldenrod;
+          }
+          .fa-trash{
+            margin-right: 10px;
+            color: rgb(99, 112, 226);
+          }
+        }
+      }
     }
     .main-container {
-
       background: #444e80;
       color: #abafc6;
       border-radius: 5px;
       padding: 20px;
-      width: 100%;
-      height: 350px;
+      width: 60%;
+      height: 550px;
     }
-    
+
     .year-stats {
       white-space: nowrap;
-      max-height: 170px;
+      max-height: 300px;
       overflow: hidden;
     }
-    
+
     .year-stats:hover {
       overflow-x: auto;
     }
-    
-    /* SCROLL BAR STYLE (ONLY WORKS IN CHROME) */
-    /* Width */
+
     ::-webkit-scrollbar {
       height: 5px;
       width: 100%;
     }
-    
-    /* Track */
     ::-webkit-scrollbar-track {
       background: #444e80;
     }
-    
-    /* Handle */
     ::-webkit-scrollbar-thumb {
       background: #abafc6;
       border-radius: 10px;
     }
-    
+
     ::-webkit-scrollbar-thumb {
       background: #5397d6;
     }
-    
+
     .month-group {
       cursor: pointer;
       max-width: 400px;
@@ -96,37 +160,24 @@ body{
       margin: 10px;
       display: inline-block;
     }
-    
+
     .bar {
       background-color: #abafc6;
       width: 20px;
       border-radius: 5px;
       margin-bottom: 10px;
     }
-    
+
     .month-group:hover .bar,
-    .selected .bar {
+    .selected {
       background: #5397d6;
     }
-    
+
     .month-group:hover p,
     .selected p {
       color: #fff;
     }
-    
-    .h-25 {
-      height: 25%;
-    }
-    .h-50 {
-      height: 50%;
-    }
-    .h-75 {
-      height: 75%;
-    }
-    .h-100 {
-      height: 100%;
-    }
-    
+
     .stats-info {
       margin-top: 15px;
       display: flex;
@@ -134,51 +185,114 @@ body{
       justify-content: space-around;
       position: relative;
     }
-    
+
     .graph-container {
       position: relative;
     }
-    
+
     .percent {
       display: block;
       width: 120px;
       height: 120px;
     }
-    
+
     .circle {
-      stroke: #915db1;
+      stroke: #72b5f3;
       fill: none;
       stroke-width: 3;
     }
-    
+
     .circle:nth-child(2) {
-      stroke: #e59f3c;
+      stroke: #f055b0;
     }
-    
+
     .circle:nth-child(3) {
       stroke: #5397d6;
     }
-    
+
     .circle:nth-child(4) {
       stroke: #4cc790;
     }
-    
+
     .graph-container p {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 12px;
+      font-size: 18px;
       color: #fff;
       text-align: center;
     }
-    
+
     .info p {
       margin-bottom: 10px;
     }
-    
+
     .info span {
       color: #fff;
+    }
+    .info .text-color-circle {
+      position: relative;
+      padding-left: 25px;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        left: 0px;
+      }
+    }
+    .text-color-restaurant {
+      &::after {
+        background-color: #f055b0;
+      }
+    }
+    .text-color-shop {
+      &::after {
+        background-color: #72b5f3;
+      }
+    }
+  }
+  .dark-mode{
+    background-color: #424549;
+    &#main-side-menu{
+      background-color: #424549;
+    .main-side-menu {
+      h1 {
+        color: $white-color;
+      }
+      nav {
+        ul {
+          h3 {
+            color: #ddd;
+          }
+          a {
+            color: #ddd;
+          }
+        }
+      }
+    }
+    }
+    &#main-section {
+      background-color: #4c4f54;
+      h3,p {
+        color: #ddd;
+      }
+      .main-container-right{
+        background-color: #686a6d;
+        .member{
+          .actions{
+            .fa-trash{
+              color: rgb(151, 154, 186);
+            }
+          }
+        }
+      }
+      .main-container {
+        background: #686a6d;
+        color: #abafc6;
+      }
     }
   }
 }
