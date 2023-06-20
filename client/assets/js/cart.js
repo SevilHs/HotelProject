@@ -6,7 +6,7 @@ let total=document.querySelector('.total-price')
 let checkStock=[]
 let quantity
 let totalPrice=0
-let productPrice
+let defaultPrice=0
 
 async function getCartData(){
     tBody.innerHTML=''
@@ -17,7 +17,9 @@ async function getCartData(){
     checkStock=data2
     data.forEach(product => {
         totalPrice= totalPrice+ +product.currPrice
-        total.innerHTML=`Total: $ ${totalPrice}`
+        defaultPrice=totalPrice
+        // total.innerHTML=(localStorage.getItem("total")) ? `$ ${+(localStorage.getItem("total"))+ totalPrice}` : `Total: $ ${totalPrice}`
+        total.innerHTML=totalPrice
         let trElem=document.createElement('tr')
         trElem.innerHTML=`
         <td><i class="fa-solid fa-xmark" onclick=deleteCart(${product.id},this)></i></td>
@@ -25,8 +27,8 @@ async function getCartData(){
         <td>${product.name}</td>
         <td>${checkStock.find(item=>item.name==product.name) ? "Instock" : "Sold Out"}</td>
         <td>$${product.currPrice}</td>
-        <td><input type="number" value="1" oninput=onInput(${product.currPrice},this)></td>
-        <td>$ ${productPrice ? productPrice : product.currPrice}</td>  
+        <td><input type="number" value="1"  oninput=onInput(${product.currPrice},this)></td>
+        <td class="price-quantity">$ ${product.currPrice}</td>  
         `
         tBody.append(trElem)
     });
@@ -43,9 +45,25 @@ async function deleteCart(id,btn){
 }
 
 function onInput(price,btn){
-    productPrice=btn.value * price
-    console.log(productPrice);
-    if(btn.value<1){
-        btn.value=1
+    let test=+btn.value ? +price* +btn.value :0
+    total.innerHTML=""
+    if(+btn.value<=0){
+        btn.value=0
     }
+    if(btn.value!=""){
+        defaultPrice=totalPrice
+        defaultPrice+= test - +price
+        // console.log(defaultPrice);
+        total.innerHTML=`Total: $ ${defaultPrice}` 
+        // test=+price* +btn.value
+    }else{
+        defaultPrice-=test
+        total.innerHTML=`Total: $ ${defaultPrice}`
+    }
+    btn.parentElement.parentElement.querySelector(".price-quantity").innerHTML=`$ ${price* +btn.value}`
+    // localStorage.setItem("total",`${price* +btn.value}`)   
 }
+
+// window.onload=()=>{
+//     localStorage.removeItem("total")
+// }
