@@ -196,6 +196,9 @@
           &::placeholder {
             color: $white-color;
           }
+          &.file{
+            padding: 15px 0 5px 0;
+          }
         }
         .password-inp {
           position: relative;

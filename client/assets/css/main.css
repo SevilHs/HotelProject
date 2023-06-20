@@ -3616,6 +3616,9 @@ footer #footer-bottom {
 #sign-in .sign-in-form .sign-in-left form input::placeholder {
   color: #fff;
 }
+#sign-in .sign-in-form .sign-in-left form input.file {
+  padding: 15px 0 5px 0;
+}
 #sign-in .sign-in-form .sign-in-left form .password-inp {
   position: relative;
   width: 100%;
