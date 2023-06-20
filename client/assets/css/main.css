@@ -2973,7 +2973,7 @@ footer #footer-bottom {
   color: #fff;
   font-family: "Gilda Display", serif;
   font-size: 32px;
-  transition: all 2s;
+  transition: all 1s;
 }
 #news-cards .news-cards .news-left .col .img-with-link img {
   max-width: 100%;
@@ -2993,19 +2993,32 @@ footer #footer-bottom {
   font-size: 15px;
   color: #aa8453;
 }
+#news-cards .news-cards .news-left .col .visible-text, #news-cards .news-cards .news-left .col .hidden-textt {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: #666;
+  line-height: 25px;
+}
 #news-cards .news-cards .news-left .col .news-title {
   font-family: "Gilda Display", serif;
   font-size: 32px;
   color: #000;
 }
-#news-cards .news-cards .news-left .col p {
-  font-family: "Barlow", sans-serif;
-  font-size: 17px;
-  color: #666;
-}
 #news-cards .news-cards .news-left .col .read-more-btn {
   background-color: #aa8453;
   font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  transition-delay: unset;
+}
+#news-cards .news-cards .news-left .col .read-more-btn i {
+  color: #fff;
+}
+#news-cards .news-cards .news-left .col .read-more-btn:hover {
+  background-color: #fff;
+  color: #aa8453;
+}
+#news-cards .news-cards .news-left .col .read-more-btn:hover i {
+  color: #aa8453;
 }
 #news-cards .news-cards .news-right {
   padding: 0 20px;

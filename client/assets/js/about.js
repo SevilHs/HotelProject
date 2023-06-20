@@ -3,18 +3,6 @@ const BASE_URL="http://localhost:8080"
 let team=document.querySelector('.owl-carousel1-about')
 let names=document.querySelectorAll('.name-surname')
 
-async function getTeamData(){
-  // team.innerHTML=''
-  let res=await axios(`${BASE_URL}/team`)
-  let data=res.data
-  // data.forEach(element => {
-  //   names.forEach(item=>{
-  //     item.innerHTML+=`${element.name}`
-  //   })
-  // });
-}
-getTeamData()
-
 $(".owl-carousel1-about").owlCarousel({
   loop: true,
   margin: 10,
@@ -33,6 +21,23 @@ $(".owl-carousel1-about").owlCarousel({
     },
   },
 });
+
+async function getTeamData(){
+  // team.innerHTML=''
+  let res=await axios(`${BASE_URL}/team`)
+  let data=res.data
+  data.forEach(element => {
+
+    names.forEach(item=>{
+      console.log(item);
+      item.innerHTML=''
+      item.innerHTML=`${element.name}`
+    })
+  });
+}
+getTeamData()
+
+
 
 
 // window.onscroll=(()=>{
