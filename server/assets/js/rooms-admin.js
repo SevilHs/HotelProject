@@ -15,6 +15,8 @@ let adminHeader=document.querySelector('#admin-header')
 let sideMenu=document.querySelector('#main-side-menu')
 let mainSection=document.querySelector('#main-content-rooms')
 let formBg=document.querySelector('#add-edit')
+let yesBtn=document.querySelector('.yes-btn')
+let cancelBtn=document.querySelector('.cancel-btn')
 
 let alldata = [];
 let filtered = [];
@@ -68,11 +70,16 @@ function emptyForm() {
 }
 
 async function deleteRoom(id) {
-  // confirm("Press a button!")
-  // console.log(confirm());
-  await axios.delete(`${BASE_URL}/rooms/${id}`);
-  filtered.filter((item) => item.id != id);
-  getAllData();
+  modal.style.display = "block";
+  yesBtn.addEventListener('click', async()=>{
+    await axios.delete(`${BASE_URL}/rooms/${id}`);
+    filtered.filter((item) => item.id != id);
+    getAllData();
+  })
+  cancelBtn.addEventListener('click',()=>{
+      modal.style.display = "none";
+      console.log("cancel");
+  })
 }
 
 async function addEditRoom() {
@@ -102,12 +109,15 @@ async function editRoom(id) {
   roomPrice.value = editData.price;
   roomSale.value = editData.sale ? editData.sale : 0;
   roomGuests.value = editData.guests;
+  submitBtn.innerHTML="EDIT"
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  addEditRoom();
-  emptyForm();
+  if(roomName.value && roomBed.value && roomPrice.value && roomGuests.value){
+    addEditRoom();
+    emptyForm();
+  }
 });
 
 
@@ -171,3 +181,19 @@ window.onload = function () {
     console.log(checkDarkMode);
   })
 };  
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+yesBtn.onclick = function() {
+  modal.style.display = "none";
+}
+cancelBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

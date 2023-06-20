@@ -1,5 +1,5 @@
 const BASE_URL = "http://localhost:8000";
-const BASE_URL2 = "http://localhost:8080";
+const TEAM = "http://localhost:8080";
 let adminName=new URLSearchParams(window.location.search).get("name")
 
 let bar = document.querySelectorAll(".bar");
@@ -63,7 +63,7 @@ getActivityData();
 
 async function getMembersData() {
   members.innerHTML = "";
-  let res = await axios(`${BASE_URL2}/team`);
+  let res = await axios(`${TEAM}/team`);
   let data = res.data;
   // console.log(data);
   data.forEach((item) => {
@@ -88,7 +88,7 @@ async function getMembersData() {
 getMembersData();
 
 async function deleteMember(id,btn){
-    await axios.delete(`${BASE_URL2}/team/${id}`)
+    await axios.delete(`${TEAM}/team/${id}`)
     btn.closest('span').remove()
 }
 

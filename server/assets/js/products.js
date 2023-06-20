@@ -12,6 +12,9 @@ let mainSection=document.querySelector('#products-admin')
 let formBg=document.querySelector('#add-edit')
 let darkMode=document.querySelector('.input')
 let screenSize=document.querySelector('.screen-size-li')
+let yesBtn=document.querySelector('.yes-btn')
+let cancelBtn=document.querySelector('.cancel-btn')
+let submitBtn = document.querySelector("#submit-btn");
 
 
 let checkFullScreen=false
@@ -59,14 +62,20 @@ function emptyForm() {
   prevPrice.value = "";
 }
 
-async function deleteProduct(id,btn) {
-  await axios.delete(`${BASE_URL}/products/${id}`);
-  // console.log(btn.closest("tr"));
-  btn.closest('tr').remove()                  
+async function deleteProduct(id,btn) {          
+  modal.style.display = "block";
+  yesBtn.addEventListener('click', async()=>{
+    await axios.delete(`${BASE_URL}/products/${id}`);
+    btn.closest('tr').remove()        
+  })
+  cancelBtn.addEventListener('click',()=>{
+      modal.style.display = "none";
+      console.log("cancel");
+  })
 }
 
 async function addEditRoom() {
-  let date=new Date().toLocaleDateString
+  let date=new Date().toLocaleDateString()
   let obj = {
     date:date,
     name: productName.value,
@@ -85,6 +94,7 @@ async function addEditRoom() {
 }
 
 async function editProduct(id) {
+  submitBtn.innerHTML="EDIT"
   editId = id;
   check = true;
   editData = alldata.find((item) => item.id == id);
@@ -95,8 +105,10 @@ async function editProduct(id) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  addEditRoom();
-  emptyForm();
+  if(productName.value && currPrice.value && prevPrice){
+    addEditRoom();
+    emptyForm();
+  }
 });
 
 
@@ -162,3 +174,12 @@ window.onload = function () {
     // console.log(checkDarkMode);
   })
 };  
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+yesBtn.onclick = function() {
+  modal.style.display = "none";
+}
+cancelBtn.onclick = function() {
+  modal.style.display = "none";
+}

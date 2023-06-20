@@ -22,8 +22,10 @@ async function addNews(){
 }
 
 form.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  if(name.value && title.value && text.value && img.value){
     addNews()
-    e.preventDefault()
+  }
 })
 
 const convertBase64=(file)=>{
