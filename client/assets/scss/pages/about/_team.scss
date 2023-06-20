@@ -10,30 +10,17 @@
       text-transform: uppercase;
       margin-bottom: 30px;
     }
-    h1{
+    h1 {
       color: $white-color;
     }
-    .owl-carousel1-about {
-      margin: 30px 0;
-      .owl-nav {
-        display: none;
-      }
-      .owl-dots {
-        margin-top: 20px;
-        .owl-dot span {
-          border: 1px solid $primary-color;
-          background-color: transparent;
-        }
-        .active {
-          span {
-            border: none;
-            background-color: $primary-color;
-          }
-        }
-      }
+    .col{
+      padding: 10px;
       .item {
+        position: relative;
+        img{
+          max-width: 100%;
+        }
         .carousel-text {
-          position: relative;
           text-align: center;
           height: 90px;
           overflow: hidden;
@@ -41,10 +28,12 @@
             background-color: $white-color;
             @include dFlex(center);
             flex-direction: column;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
+            padding: 30px;
+            // position: absolute;
+            // width: 100%;
+            // height: 100%;
+            // left: 0;
+            // height: 70px;
             h3 {
               font-family: $secondary-font;
               font-size: 24px;
@@ -58,34 +47,114 @@
           .carousel-text-hidden {
             @include dFlex(center);
             flex-direction: column;
+            gap: 30px;
             position: absolute;
-            transition: 0.5s ease-in;
-            transform: translateY(130%);
+            transition: all 2s ;
+            top: 0;
             background-color: $white-color;
+            background-color: rgb(63, 63, 63);
             width: 100%;
             height: 100%;
             left: 0;
+            display: none;
+            h3{
+              color: $primary-color;
+              font-size: 32px;
+              font-family: $primary-font;
+            }
             .sosial-icons {
               @include dFlex(center);
               gap: 20px;
-              color: $primary-color;
               margin-bottom: 10px;
+              a{
+                i{
+                  color: $primary-color;
+                  font-size: 28px;
+                }
+              }
             }
             a {
-              color: $gray-color;
+              color: #ddd;
+              font-size: 20px;
               font-family: $barlow-font;
             }
           }
         }
-        &:hover {
-          .carousel-text {
-            .carousel-text-hidden {
-              transition: 0.5s ease-out;
-              transform: translateY(0);
-            }
+      }
+      &:hover {
+        .item{
+          animation-name: minion;
+          animation-duration: .7s;
+        }
+        .carousel-text {
+          .carousel-text-hidden {
+           display: flex;
           }
         }
       }
     }
+    .load-more {
+      margin-top: 30px;
+      margin-left: 10px;
+      --color: #ddd;
+      padding: 0.8em 1.7em;
+      background-color: transparent;
+      border-radius: 0.3em;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.5s;
+      font-weight: 400;
+      font-size: 17px;
+      border: 1px solid;
+      font-family: $secondary-font;
+      text-transform: uppercase;
+      color: var(--color);
+      z-index: 1;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: var(--color);
+        transition: 1s ease;
+      }
+      &::before {
+        top: -1em;
+        left: -1em;
+      }
+      &::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+      }
+      &:hover::before,
+      &:hover::after {
+        height: 410px;
+        width: 410px;
+      }
+      &:hover {
+        color: rgb(30, 28, 28);
+      }
+
+      &:active {
+        filter: brightness(0.8);
+      }
+    }
+  }
+}
+@keyframes minion {
+  0%{
+      transform: rotateY(0);
+  }
+  50%{
+      transform: rotateY(90deg);
+  }
+  100%{
+      transform: rotateY(0deg);
   }
 }

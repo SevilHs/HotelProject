@@ -1741,79 +1741,142 @@ footer #footer-bottom {
 #team .team h1 {
   color: #fff;
 }
-#team .team .owl-carousel1-about {
-  margin: 30px 0;
+#team .team .col {
+  padding: 10px;
 }
-#team .team .owl-carousel1-about .owl-nav {
-  display: none;
-}
-#team .team .owl-carousel1-about .owl-dots {
-  margin-top: 20px;
-}
-#team .team .owl-carousel1-about .owl-dots .owl-dot span {
-  border: 1px solid #aa8453;
-  background-color: transparent;
-}
-#team .team .owl-carousel1-about .owl-dots .active span {
-  border: none;
-  background-color: #aa8453;
-}
-#team .team .owl-carousel1-about .item .carousel-text {
+#team .team .col .item {
   position: relative;
+}
+#team .team .col .item img {
+  max-width: 100%;
+}
+#team .team .col .item .carousel-text {
   text-align: center;
   height: 90px;
   overflow: hidden;
 }
-#team .team .owl-carousel1-about .item .carousel-text .carousel-text-visible {
+#team .team .col .item .carousel-text .carousel-text-visible {
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
+  padding: 30px;
 }
-#team .team .owl-carousel1-about .item .carousel-text .carousel-text-visible h3 {
+#team .team .col .item .carousel-text .carousel-text-visible h3 {
   font-family: "Gilda Display", serif;
   font-size: 24px;
 }
-#team .team .owl-carousel1-about .item .carousel-text .carousel-text-visible span {
+#team .team .col .item .carousel-text .carousel-text-visible span {
   font-family: "Barlow", sans-serif;
   color: #666;
   text-transform: none;
 }
-#team .team .owl-carousel1-about .item .carousel-text .carousel-text-hidden {
+#team .team .col .item .carousel-text .carousel-text-hidden {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 30px;
   position: absolute;
-  transition: 0.5s ease-in;
-  transform: translateY(130%);
+  transition: all 2s;
+  top: 0;
   background-color: #fff;
+  background-color: rgb(63, 63, 63);
   width: 100%;
   height: 100%;
   left: 0;
+  display: none;
 }
-#team .team .owl-carousel1-about .item .carousel-text .carousel-text-hidden .sosial-icons {
+#team .team .col .item .carousel-text .carousel-text-hidden h3 {
+  color: #aa8453;
+  font-size: 32px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+#team .team .col .item .carousel-text .carousel-text-hidden .sosial-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  color: #aa8453;
   margin-bottom: 10px;
 }
-#team .team .owl-carousel1-about .item .carousel-text .carousel-text-hidden a {
-  color: #666;
+#team .team .col .item .carousel-text .carousel-text-hidden .sosial-icons a i {
+  color: #aa8453;
+  font-size: 28px;
+}
+#team .team .col .item .carousel-text .carousel-text-hidden a {
+  color: #ddd;
+  font-size: 20px;
   font-family: "Barlow", sans-serif;
 }
-#team .team .owl-carousel1-about .item:hover .carousel-text .carousel-text-hidden {
-  transition: 0.5s ease-out;
-  transform: translateY(0);
+#team .team .col:hover .item {
+  animation-name: minion;
+  animation-duration: 0.7s;
+}
+#team .team .col:hover .carousel-text .carousel-text-hidden {
+  display: flex;
+}
+#team .team .load-more {
+  margin-top: 30px;
+  margin-left: 10px;
+  --color: #ddd;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: "Gilda Display", serif;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+#team .team .load-more::before, #team .team .load-more::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+#team .team .load-more::before {
+  top: -1em;
+  left: -1em;
+}
+#team .team .load-more::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+#team .team .load-more:hover::before, #team .team .load-more:hover::after {
+  height: 410px;
+  width: 410px;
+}
+#team .team .load-more:hover {
+  color: rgb(30, 28, 28);
+}
+#team .team .load-more:active {
+  filter: brightness(0.8);
 }
 
+@keyframes minion {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
 #facilities-about {
   background: url(../images/aboutpage/grey-color.jpg) no-repeat center;
   background-size: cover;

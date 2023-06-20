@@ -19,7 +19,7 @@ async function getCartData(){
         totalPrice= totalPrice+ +product.currPrice
         defaultPrice=totalPrice
         // total.innerHTML=(localStorage.getItem("total")) ? `$ ${+(localStorage.getItem("total"))+ totalPrice}` : `Total: $ ${totalPrice}`
-        total.innerHTML=totalPrice
+        total.innerHTML=`Total: $ ${totalPrice}`
         let trElem=document.createElement('tr')
         trElem.innerHTML=`
         <td><i class="fa-solid fa-xmark" onclick=deleteCart(${product.id},this)></i></td>
