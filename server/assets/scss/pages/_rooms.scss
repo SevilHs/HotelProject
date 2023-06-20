@@ -101,11 +101,44 @@
     }
   }
 }
-#add-room {
-  .add-room {
+#add-edit {
+  .add-edit {
     form{
       width: 700px;
+      background-image: url(../images/Noise-background\ \(1\).jpg);
       margin: 0 auto;
+      padding: 50px;
+      h1{
+        text-align: center;
+        font-family:$secondary-font ;
+        font-size: 32px;
+        margin: 20px;
+      }
+      label{
+        font-family: $primary-font;
+        font-size: 24px;
+      }
+      input{
+        background-color: #ddd;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        font-family: $barlow-font;
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  &.dark-mode{
+    background-color: #424549;
+    form{
+      background: #4C4F54;
+      color: $white-color;
+      button{
+        background-color: $white-color;
+        color: $black-color;
+      }
     }
   }
 }

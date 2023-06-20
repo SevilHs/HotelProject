@@ -13,7 +13,7 @@ let logOut=document.querySelector('.log-out')
 let adminHeader=document.querySelector('#admin-header')
 let sideMenu=document.querySelector('#main-side-menu')
 let mainSection=document.querySelector('#main-section')
-let darkMode=document.querySelector('.switch')
+let darkMode=document.querySelector('.input')
 
 let checkFullScreen=false
 let checkDarkMode=false
@@ -116,10 +116,10 @@ window.onload = function () {
       mainSection.classList.add('dark-mode'),
       checkDarkMode=true
     }else{
-      // adminHeader.classList.remove('dark-mode')
-      // sideMenu.classList.remove('dark-mode')
-      // mainSection.classList.remove('dark-mode')
-      // localStorage.removeItem("dark")
+      adminHeader.classList.remove('dark-mode')
+      sideMenu.classList.remove('dark-mode')
+      mainSection.classList.remove('dark-mode')
+      localStorage.removeItem("dark")
       checkDarkMode=false
     }
     // console.log(checkDarkMode);

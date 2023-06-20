@@ -8,7 +8,13 @@ let roomPrice = document.querySelector("#room-price");
 let roomGuests = document.querySelector("#room-guests");
 let roomSale = document.querySelector("#room-sale");
 let submitBtn = document.querySelector("#submit-btn");
+let screenSize=document.querySelector('.screen-size-li')
 let img=document.querySelector('#room-img')
+let darkMode=document.querySelector('.input')
+let adminHeader=document.querySelector('#admin-header')
+let sideMenu=document.querySelector('#main-side-menu')
+let mainSection=document.querySelector('#main-content-rooms')
+let formBg=document.querySelector('#add-edit')
 
 let alldata = [];
 let filtered = [];
@@ -16,7 +22,10 @@ let editId;
 let check = false;
 let base64
 
-async function getAllData() {
+let checkFullScreen=false
+let checkDarkMode=false
+
+async function getAllData() { 
   row.innerHTML = "";
   let res = await axios(`${BASE_URL}/rooms`);
   let data = res.data;
@@ -125,3 +134,40 @@ const uploadImg= async(e)=>{
 img.addEventListener('change',(e)=>{
   uploadImg(e)
 })
+
+screenSize.addEventListener('click',()=>{
+  if(!checkFullScreen){
+    screenSize.innerHTML='<img class="screen-size" src="./assets/images/full-screen.png" alt="">'
+    document.documentElement.requestFullscreen()
+    checkFullScreen=true
+  }else{
+    screenSize.innerHTML='<img class="screen-size" src="./assets/images/expand.png" alt="square"/>'
+    checkFullScreen=false
+    document.exitFullscreen()
+  }
+  console.log(checkFullScreen);
+})
+
+
+window.onload = function () {
+  localStorage.getItem("dark") && (adminHeader.classList.add('dark-mode'),sideMenu.classList.add('dark-mode'),mainSection.classList.add('dark-mode') )
+
+  darkMode.addEventListener('click',()=>{
+    if(!checkDarkMode){
+      localStorage.setItem("dark","mode")
+      adminHeader.classList.add('dark-mode'),
+      sideMenu.classList.add('dark-mode'),
+      mainSection.classList.add('dark-mode'),
+      formBg.classList.add('dark-mode')
+      checkDarkMode=true
+    }else{
+      adminHeader.classList.remove('dark-mode')
+      sideMenu.classList.remove('dark-mode')
+      mainSection.classList.remove('dark-mode')
+      mainSection.classList.remove('dark-mode')
+      formBg.classList.remove("dark-mode")
+      checkDarkMode=false
+    }
+    console.log(checkDarkMode);
+  })
+};  

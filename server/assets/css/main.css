@@ -566,6 +566,7 @@ body #main-section .text-color-shop::after {
 }
 body .dark-mode {
   background-color: #424549;
+  color: #ddd;
 }
 body .dark-mode#main-side-menu {
   background-color: #424549;
@@ -696,9 +697,42 @@ body .dark-mode#main-section .main-container {
   }
 }
 
-#add-room .add-room form {
+#add-edit .add-edit form {
   width: 700px;
+  background-image: url(../images/Noise-background\ \(1\).jpg);
   margin: 0 auto;
+  padding: 50px;
+}
+#add-edit .add-edit form h1 {
+  text-align: center;
+  font-family: "Gilda Display", serif;
+  font-size: 32px;
+  margin: 20px;
+}
+#add-edit .add-edit form label {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+}
+#add-edit .add-edit form input {
+  background-color: #ddd;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+#add-edit .add-edit form input:focus {
+  box-shadow: none;
+}
+#add-edit.dark-mode {
+  background-color: #424549;
+}
+#add-edit.dark-mode form {
+  background: #4C4F54;
+  color: #fff;
+}
+#add-edit.dark-mode form button {
+  background-color: #fff;
+  color: #000;
 }
 
 #products-admin .products thead th {
@@ -729,6 +763,9 @@ body .dark-mode#main-section .main-container {
 }
 #products-admin .products tbody td .delete {
   color: brown;
+}
+#products-admin.dark-mode .products tbody td {
+  color: #fff;
 }
 
 #messages .messages {
