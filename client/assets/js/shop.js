@@ -1,4 +1,5 @@
 const BASE_URL = "http://localhost:8000";
+const USERS="http://localhost:8080"
 
 let row = document.querySelector(".products-row");
 let search = document.querySelector("#search");
@@ -8,14 +9,23 @@ let newProductName = document.querySelector(".new-product-name");
 let newProductImg = document.querySelector(".new-product-left");
 let newProductPrice = document.querySelector(".price-new-in");
 let newProductAddCart = document.querySelector(".add-cart-btn");
-
-// console.log(option[0]);
+let productCount = document.querySelector(".product-count");
+let file=document.querySelector('.img')
 
 let allData = [];
 let filtered = [];
 let defaultArr = [];
 let favData;
 let num = 3;
+
+// async function getImgValue(){
+//   let res=await axios(`${USERS}/users`)
+//   let data=res.data
+// if(localStorage.getItem("sign")){
+
+// }
+// }
+// getImgValue()
 
 async function getAllData() {
   row.innerHTML = "";
@@ -78,7 +88,7 @@ async function getNewProduct() {
     let res2 = await axios(`${BASE_URL}/cartdata`);
     let data2 = res2.data;
     if (localStorage.getItem("sign")) {
-      if (!(data2.find((item) => item.id == currProduct.id))) {
+      if (!data2.find((item) => item.id == currProduct.id)) {
         await axios.post(`${BASE_URL}/cartdata`, currProduct);
       } else {
         alert("This product already exists in the cart");
@@ -90,6 +100,13 @@ async function getNewProduct() {
 }
 
 getNewProduct();
+
+async function getProductCount() {
+  let res = await axios(`${BASE_URL}/cartdata`);
+  let data = res.data;
+  productCount.innerHTML=data.length
+}
+getProductCount()
 
 async function addCart(id) {
   // let res=await axios( `${BASE_URL}/products/${id}`)
@@ -152,6 +169,11 @@ loadMore.addEventListener("click", () => {
   });
   defaultArr = filtered;
   getAllData();
+  if (allData.length <= num) {
+    loadMore.style.color = "black";
+    loadMore.disabled = true;
+    loadMore.style.opacity = "0.3";
+  }
 });
 
 option[0].addEventListener("click", () => {
