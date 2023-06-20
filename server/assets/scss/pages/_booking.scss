@@ -1,0 +1,81 @@
+table {
+  thead {
+    th {
+      font-size: 32px;
+      font-family: $primary-font;
+    }
+  }
+  td {
+    font-size: 18px;
+    font-family: $secondary-font;
+    i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .edit{
+        color: goldenrod;
+        margin-right: 20px;
+    }
+    .delete{
+        color: brown;
+    }
+  }
+  .room-name {
+    text-transform: uppercase;
+  }
+}
+.dark-mode {
+  th {
+    color: $white-color;
+  }
+  td {
+    color: #a4a3a3;
+  }
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 70px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    float: right;
+    margin-right: 50px;
+    p {
+      font-family: $barlow-font;
+      font-size: 18px;
+    }
+    .yes-btn,
+    .cancel-btn {
+      width: 100px;
+      color: #fefefe;
+      border: none;
+      font-family: $primary-font;
+      border-radius: 10px;
+      float: right;
+      font-size: 28px;
+      font-weight: 600;
+      &:hover{
+          background-color: #4f4c61;
+          color: $white-color;
+      }
+    }
+    .cancel-btn {
+      background-color: #ddd;
+      color: $black-color;
+    }
+    .yes-btn{
+      background-color: goldenrod;
+    }
+  }
+}
+

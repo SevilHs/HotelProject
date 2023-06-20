@@ -713,14 +713,28 @@ body .dark-mode#main-section .main-container {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 24px;
 }
-#add-edit .add-edit form input {
+#add-edit .add-edit form input, #add-edit .add-edit form textarea {
   background-color: #ddd;
   border: none;
   padding: 10px;
   font-size: 18px;
   font-family: "Barlow", sans-serif;
 }
-#add-edit .add-edit form input:focus {
+#add-edit .add-edit form input:focus, #add-edit .add-edit form textarea:focus {
+  box-shadow: none;
+}
+#add-edit .add-edit form button {
+  background-color: #5b5565;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  display: flex;
+  color: #ddd;
+  border: none;
+}
+#add-edit .add-edit form button:focus {
   box-shadow: none;
 }
 #add-edit.dark-mode {
@@ -735,6 +749,9 @@ body .dark-mode#main-section .main-container {
   color: #000;
 }
 
+#products-admin .products .table {
+  margin-bottom: 0;
+}
 #products-admin .products thead th {
   font-family: "Gilda Display", serif;
   font-weight: 700;
@@ -822,6 +839,138 @@ body .dark-mode#main-section .main-container {
   font-weight: 100;
   margin-top: 10px;
   color: #000;
+}
+
+table thead th {
+  font-size: 32px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+table td {
+  font-size: 18px;
+  font-family: "Gilda Display", serif;
+}
+table td i {
+  font-size: 24px;
+  cursor: pointer;
+}
+table td .edit {
+  color: goldenrod;
+  margin-right: 20px;
+}
+table td .delete {
+  color: brown;
+}
+table .room-name {
+  text-transform: uppercase;
+}
+
+.dark-mode th {
+  color: #fff;
+}
+.dark-mode td {
+  color: #a4a3a3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+  float: right;
+  margin-right: 50px;
+}
+.modal .modal-content p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+.modal .modal-content .yes-btn,
+.modal .modal-content .cancel-btn {
+  width: 100px;
+  color: #fefefe;
+  border: none;
+  font-family: "Barlow Condensed", sans-serif;
+  border-radius: 10px;
+  float: right;
+  font-size: 28px;
+  font-weight: 600;
+}
+.modal .modal-content .yes-btn:hover,
+.modal .modal-content .cancel-btn:hover {
+  background-color: #4f4c61;
+  color: #fff;
+}
+.modal .modal-content .cancel-btn {
+  background-color: #ddd;
+  color: #000;
+}
+.modal .modal-content .yes-btn {
+  background-color: goldenrod;
+}
+
+.row-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.row-news .col {
+  padding: 20px;
+  text-align: center;
+}
+.row-news .col .user {
+  height: 100%;
+}
+.row-news .col .user img {
+  max-width: 100%;
+  height: 250px;
+}
+.row-news .col .user .user-info {
+  width: 100%;
+  position: relative;
+}
+.row-news .col .user .user-info i {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: -50px;
+  right: 140px;
+  color: #000;
+  background-color: #a4cab8;
+  padding: 20px;
+  text-align: center;
+  border-radius: 100%;
+}
+.row-news .col .user .user-info .text-visible {
+  background-color: #ddd;
+  padding: 20px;
+}
+.row-news .col .user .user-info .text-visible h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.row-news .col .user .user-info .text-visible span {
+  font-family: "Gilda Display", serif;
+  font-size: 18px;
+}
+.row-news .col .user .user-info .text-hidden {
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,8 @@
 #products-admin {
   .products {
+    .table{
+      margin-bottom: 0;
+    }
     thead {
       th {
         font-family: $secondary-font;

@@ -118,12 +118,26 @@
         font-family: $primary-font;
         font-size: 24px;
       }
-      input{
+      input , textarea{
         background-color: #ddd;
         border: none;
         padding: 10px;
         font-size: 18px;
         font-family: $barlow-font;
+        &:focus{
+          box-shadow: none;
+        }
+      }
+      button{
+        background-color: #5b5565;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: $barlow-font;
+        font-size: 20px;
+        margin: 0 auto;
+        display: flex;
+        color: #ddd;
+        border: none;
         &:focus{
           box-shadow: none;
         }
