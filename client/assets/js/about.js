@@ -1,7 +1,11 @@
 const BASE_URL = "http://localhost:8080";
 
+
 let team = document.querySelector(".team-row");
 let loadMore = document.querySelector(".load-more");
+let menuBtn = document.querySelector(".menu-btn");
+let menuItems = document.querySelector(".menu-items");
+let arrowUp = document.querySelector(".arrow-up-btn");
 
 let num=3
 let hidden=false
@@ -53,35 +57,6 @@ loadMore.addEventListener("click", () => {
 
 
 
-// $(".owl-carousel1-about").owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: true,
-//   // items: 3,
-//   // autoplayTimeOut:2000,
-//   // smartSpeed:800,
-//   autoplay:true,
-//   rewind:true,
-//   animateOut:"fadeOut",
-//   animateIn:"fadeIn",
-//   responsiveClass:true,
-//   dots:true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 2,
-//     },
-//     1000: {
-//       items: 3,
-//     },
-//     1366:{
-//       items:3,
-//     }
-//   },
-// });
-
 var a = 0;
 $(window).scroll(function () {
   var oTop = $("#counter").offset().top - window.innerHeight;
@@ -106,3 +81,45 @@ $(window).scroll(function () {
 $("input").on("change", function () {
   $("#testimonials-about").toggleClass("change-bgcolor");
 });
+
+
+let checkMenu = false;
+
+arrowUp.style.display="none"
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 110 ||
+    document.documentElement.scrollTop > 110
+  ) {
+    header.style.position = "fixed";
+    header.style.backgroundColor = "#222";
+    header.style.padding = "30px 0";
+    arrowUp.style.display = "block";
+  } else {
+    header.style.position = "absolute";
+    header.style.backgroundColor = "transparent";
+    header.style.padding = "40px 0";
+    arrowUp.style.display = "none";
+  }
+}
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+menuBtn.addEventListener("click", () => {
+  if (!checkMenu) {
+    menuItems.style.visibility = "visible";
+    checkMenu = true;
+  } else {
+    checkMenu = false;
+    menuItems.style.visibility = "hidden";
+  }
+});
+
+
+arrowUp.onclick = function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};

@@ -1,5 +1,5 @@
 const BASE_URL = "http://localhost:8000";
-const USERS="http://localhost:8080"
+const USERS = "http://localhost:8080";
 
 let row = document.querySelector(".products-row");
 let search = document.querySelector("#search");
@@ -10,22 +10,13 @@ let newProductImg = document.querySelector(".new-product-left");
 let newProductPrice = document.querySelector(".price-new-in");
 let newProductAddCart = document.querySelector(".add-cart-btn");
 let productCount = document.querySelector(".product-count");
-let file=document.querySelector('.img')
+let file = document.querySelector(".img");
 
 let allData = [];
 let filtered = [];
 let defaultArr = [];
 let favData;
 let num = 3;
-
-// async function getImgValue(){
-//   let res=await axios(`${USERS}/users`)
-//   let data=res.data
-// if(localStorage.getItem("sign")){
-
-// }
-// }
-// getImgValue()
 
 async function getAllData() {
   row.innerHTML = "";
@@ -104,9 +95,9 @@ getNewProduct();
 async function getProductCount() {
   let res = await axios(`${BASE_URL}/cartdata`);
   let data = res.data;
-  productCount.innerHTML=data.length
+  productCount.innerHTML = data.length;
 }
-getProductCount()
+getProductCount();
 
 async function addCart(id) {
   // let res=await axios( `${BASE_URL}/products/${id}`)

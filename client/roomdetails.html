@@ -55,8 +55,8 @@
           </div>
           <nav>
             <ul>
-              <li><a href="home.html">HOME</a></li>
-              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="./home.html">HOME</a></li>
+              <li><a href="./about.html">ABOUT</a></li>
               <li>
                 <div class="dropdown">
                   <div
@@ -73,9 +73,13 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="rooms.html">Rooms</a>
+                      <a class="dropdown-item" href="./rooms.html">Rooms</a>
                     </li>
-                    <li><a class="dropdown-item" href="#">Room Details</a></li>
+                    <li>
+                      <a class="dropdown-item" href="./roomdetails.html"
+                        >Room Details</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -94,15 +98,18 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="restaurant.html"
+                      <a class="dropdown-item" href="./restaurant.html"
                         >Restaurant</a
                       >
                     </li>
                     <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="#">Spa</a>
+                      <a class="dropdown-item" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="dropdown-item-border">
+                      <a class="dropdown-item" href="./signin.html">Sign In</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="gallery.html">Gallery</a>
+                      <a class="dropdown-item" href="./signup.html">Sign Up</a>
                     </li>
                   </ul>
                 </div>
@@ -122,19 +129,10 @@
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="shop.html">Shop</a>
-                    </li>
-                    <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="#">Shop Sidebar</a>
+                      <a class="dropdown-item" href="./shop.html">Shop</a>
                     </li>
                     <li class="dropdown-item-border">
                       <a class="dropdown-item" href="./cart.html">Cart</a>
-                    </li>
-                    <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="#">Checkout</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Product Detail</a>
                     </li>
                   </ul>
                 </div>
@@ -156,7 +154,6 @@
                     <li class="dropdown-item-border">
                       <a class="dropdown-item" href="news.html">News</a>
                     </li>
-                    <li><a class="dropdown-item" href="#">Single Post</a></li>
                   </ul>
                 </div>
               </li>
@@ -272,7 +269,10 @@
                         placeholder="Check in"
                         id="check-in"
                       />
-                      <i class="fa-regular fa-calendar" style="color: #aa8453"></i>
+                      <i
+                        class="fa-regular fa-calendar"
+                        style="color: #aa8453"
+                      ></i>
                     </div>
                     <div class="input-group">
                       <input
@@ -281,7 +281,10 @@
                         placeholder="Check out"
                         id="check-out"
                       />
-                      <i class="fa-regular fa-calendar" style="color: #aa8453"></i>
+                      <i
+                        class="fa-regular fa-calendar"
+                        style="color: #aa8453"
+                      ></i>
                     </div>
                     <select name="" id="room-name">
                       <option value="" hidden>Rooms</option>
@@ -438,9 +441,6 @@
         <span> &copy; 2023 THE CAPPA. ALL RIGHTS RESERVED.</span>
       </div>
     </footer>
-    <!-- ARROW UP -->
-    <i class="fa-solid fa-arrow-up arrow-up-btn"></i>
-    <!-- SCRIPT -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -466,6 +466,5 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/js/datepicker-full.min.js"></script>
     <script src="./assets/js/roomdetails.js"></script>
-    <script src="./assets/js/common.js"></script>
   </body>
 </html>
