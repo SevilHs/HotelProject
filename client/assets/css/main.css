@@ -306,56 +306,6 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.menu-items {
-  display: none;
-  height: 370px;
-  padding: 30px;
-  margin-top: 118px;
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
-  letter-spacing: 3px;
-  position: absolute;
-  z-index: 150;
-  background-color: #fff;
-  width: 100%;
-  left: 0;
-}
-.menu-items ul {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.menu-items li .dropdown {
-  transition: all 0.4s;
-}
-.menu-items li .dropdown .dropdown-toggle::after {
-  display: none;
-}
-.menu-items li .dropdown .dropdown-menu {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 0;
-  font-weight: 100;
-  display: none;
-  border: none;
-  border-radius: 0;
-}
-.menu-items li .dropdown .dropdown-menu li .dropdown-item-border {
-  border-bottom: 1px solid #ddd;
-}
-.menu-items li .dropdown .dropdown-menu li a {
-  color: gray;
-}
-.menu-items li .dropdown .dropdown-menu li:hover a {
-  background-color: transparent;
-  padding-left: 30px;
-}
-.menu-items li .dropdown:hover .dropdown-menu {
-  display: block;
-}
-.menu-items li a {
-  color: #000;
-}
-
 footer #footer-top {
   padding: 5%;
   background-color: #222;
@@ -4086,6 +4036,69 @@ footer #footer-bottom {
 
 .owl-carousel-roomd {
   z-index: unset;
+}
+
+.arrow-up-btn {
+  padding: 20px;
+  background-color: #aa8453;
+  color: #fff;
+  font-size: 20px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.menu-items {
+  height: 100%;
+  padding: 30px;
+  margin-top: 80px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  position: fixed;
+  z-index: 150;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  visibility: hidden;
+}
+.menu-items ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 200px;
+}
+.menu-items li .dropdown {
+  transition: all 0.4s;
+}
+.menu-items li .dropdown .dropdown-toggle::after {
+  display: none;
+}
+.menu-items li .dropdown .dropdown-menu {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0;
+  font-weight: 100;
+  display: none;
+  border: none;
+  border-radius: 0;
+}
+.menu-items li .dropdown .dropdown-menu li .dropdown-item-border {
+  border-bottom: 1px solid #ddd;
+}
+.menu-items li .dropdown .dropdown-menu li a {
+  color: gray;
+}
+.menu-items li .dropdown .dropdown-menu li:hover a {
+  background-color: transparent;
+  padding-left: 30px;
+}
+.menu-items li .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.menu-items li a {
+  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */

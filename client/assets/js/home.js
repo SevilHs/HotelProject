@@ -1,7 +1,5 @@
 const BASE_URL = "http://localhost:8080";
 
-let menuBtn = document.querySelector(".menu-btn");
-let menuItems = document.querySelector(".menu-items");
 let form = document.querySelector("#booking-form");
 let checkIn = document.querySelector("#check-in");
 let checkOut = document.querySelector("#check-out");
@@ -10,13 +8,6 @@ let option2 = document.querySelector("#children");
 let option3=document.querySelector('#room-name')
 let not = document.querySelector("#notification");
 
-menuBtn.addEventListener("click", () => {
-  if (menuItems.style.display == "block") {
-    menuItems.style.display = "none";
-  } else {
-    menuItems.style.display = "block";
-  }
-});
 AOS.init();
 $(".owl-carousel1").owlCarousel({
   loop: true,
