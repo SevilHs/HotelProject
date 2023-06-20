@@ -2818,6 +2818,7 @@ footer #footer-bottom {
   height: auto;
   padding: 0;
   border: none;
+  cursor: pointer;
 }
 #new-product .new-product .new-product-right .add-cart-btn {
   background: transparent;
