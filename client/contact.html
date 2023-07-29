@@ -35,6 +35,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/css/datepicker.min.css"
     />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon/valknut.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>The Cappa Luxury Hotel</title>
   </head>
@@ -96,9 +101,6 @@
                       >
                     </li>
                     <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="./gallery.html">Gallery</a>
-                    </li>
-                    <li class="dropdown-item-border">
                       <a class="dropdown-item" href="./signin.html">Sign In</a>
                     </li>
                     <li>
@@ -157,6 +159,121 @@
         </div>
       </div>
     </header>
+    <!-- BURGER MENU -->
+    <div class="container">
+      <div class="menu-items">
+        <ul>
+          <li><a href="./home.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                ROOMS & SUITES <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./rooms.html"
+                    >Rooms</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./roomdetails.html"
+                    >Room Details</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                PAGES <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./restaurant.html"
+                    >Restaurant</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./gallery.html">Gallery</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                SHOP <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./shop.html"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./cart.html"
+                    >Cart</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                NEWS <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./news.html"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contact.html">CONTACT</a></li>
+          <li>
+            <a href="./cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+              ><sup class="product-count"></sup
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- HERO SECTION -->
     <section id="hero-contact">
       <div class="for-dark-bg">
@@ -247,6 +364,34 @@
         </div>
       </div>
     </section>
+    <!-- VISIT US -->
+    <section id="visit-us">
+      <div class="visit-us row">
+        <div class="col col-12 col-md-6">
+          <div class="for-bg"></div>
+          <img src="./assets/images/contact/soulkitchen-88 (1).jpg" alt="" />
+          <h3>Laguna Beach</h3>
+          <a
+            href="https://www.google.at/maps/place/317+E+Pacific+Coast+Hwy,+Huntington+Beach,+CA+92648,+USA/@33.656781,-118.001704,16z/data=!4m6!3m5!1s0x80dd21423b3e5e35:0xed8c2d6e81412308!8m2!3d33.6565841!4d-118.0019217!16s%2Fg%2F11c5j9lv5v?hl=de&entry=ttu"
+            target="_blank"
+            >LOCATION-INFO</a
+          >
+        </div>
+        <div class="col col-12 col-md-6">
+          <div class="for-bg"></div>
+          <img
+            src="./assets/images/contact/soulkitchen-279-1600x1600.jpg"
+            alt=""
+          />
+          <h3>San Francisco</h3>
+          <a
+            href="https://www.google.at/maps/place/317+E+Pacific+Coast+Hwy,+Huntington+Beach,+CA+92648,+USA/@33.656781,-118.001704,16z/data=!4m6!3m5!1s0x80dd21423b3e5e35:0xed8c2d6e81412308!8m2!3d33.6565841!4d-118.0019217!16s%2Fg%2F11c5j9lv5v?hl=de&entry=ttu"
+            target="_blank"
+            >LOCATION-INFO</a
+          >
+        </div>
+      </div>
+    </section>
     <!-- MAP SECTION -->
     <section id="map">
       <iframe
@@ -310,6 +455,8 @@
         <span> &copy; 2023 THE CAPPA. ALL RIGHTS RESERVED.</span>
       </div>
     </footer>
+    <!-- ARROW UP -->
+    <i class="fa-solid fa-arrow-up arrow-up-btn"></i>
     <!-- SCRIPT -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -335,6 +482,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/js/datepicker-full.min.js"></script>
+    <script src="./assets/js/common.js"></script>
     <script src="./assets/js/contact.js"></script>
   </body>
 </html>

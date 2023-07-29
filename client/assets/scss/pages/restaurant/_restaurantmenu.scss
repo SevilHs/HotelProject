@@ -50,4 +50,14 @@
             display: flex;
         }
     }
+    @media only screen and (max-width:768px){
+        .restaurant-menu{
+            .buttons{
+                display: block;
+                button{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
 }

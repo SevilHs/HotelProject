@@ -7,6 +7,12 @@ let option1 = document.querySelector("#adults");
 let option2 = document.querySelector("#children");
 let option3=document.querySelector('#room-name')
 let not = document.querySelector("#notification");
+let modal=document.querySelector('#myModal')
+let btn=document.querySelector('#myBtn')
+let span=document.querySelector('.close')
+let iframe=document.querySelector('iframe')
+
+let check;
 
 AOS.init();
 $(".owl-carousel1").owlCarousel({
@@ -88,24 +94,19 @@ $(".owl-carousel4").owlCarousel({
   },
 });
 
-let modal=document.querySelector('#myModal')
-let btn=document.querySelector('#myBtn')
-let span=document.querySelector('.close')
-
-var iframe=document.getElementsByTagName("iframe")[0].contentWindow
-
 btn.onclick = function() {
   modal.style.display = "block";
+  iframe.src=" https://www.youtube.com/embed/rgRn7hXjwQI"
 }
 
 span.onclick = function() {
   modal.style.display = "none";
-  // iframe.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-  iframe.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+  iframe.src=""
 }
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  iframe.src=""
   }
 }
 
@@ -126,8 +127,6 @@ for (const elem of elems) {
     title: getDatePickerTitle(elem),
   });
 }
-
-let check;
 
 function showNot(text) {
   if (!option1.value || !option2.value || !option3.value || !checkIn.value || !checkOut.value ) {

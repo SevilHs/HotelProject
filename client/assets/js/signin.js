@@ -6,6 +6,8 @@ let password = document.querySelector(".password");
 let showPassword = document.querySelector(".fa-eye");
 let requiredText = document.querySelectorAll(".required-text");
 
+let checkShow = false;
+
 requiredText.forEach((item) => (item.style.visibility = "hidden"));
 
 username.addEventListener("input", () => {
@@ -14,8 +16,6 @@ username.addEventListener("input", () => {
 password.addEventListener("input", () => {
   requiredText[1].style.visibility = "hidden";
 });
-
-let checkShow = false;
 
 async function getUser() {
   let res = await axios(`${BASE_URL}/users`);

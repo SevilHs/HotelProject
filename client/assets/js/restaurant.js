@@ -4,11 +4,9 @@ let menu = document.querySelectorAll(".restaurant-menu-text");
 let menuName = document.querySelectorAll(".item");
 let { top: position } = aboutRestSec.getBoundingClientRect();
 
-// console.log(position);
 arrowDown.addEventListener("click", () => {
   document.documentElement.scrollTop = position;
 });
-
 
 menuName.forEach((item) => {
   item.addEventListener('click',()=>{

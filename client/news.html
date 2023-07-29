@@ -101,9 +101,6 @@
                       >
                     </li>
                     <li class="dropdown-item-border">
-                      <a class="dropdown-item" href="./gallery.html">Gallery</a>
-                    </li>
-                    <li class="dropdown-item-border">
                       <a class="dropdown-item" href="./signin.html">Sign In</a>
                     </li>
                     <li>
@@ -162,6 +159,121 @@
         </div>
       </div>
     </header>
+    <!-- BURGER MENU -->
+    <div class="container">
+      <div class="menu-items">
+        <ul>
+          <li><a href="./home.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                ROOMS & SUITES <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./rooms.html"
+                    >Rooms</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./roomdetails.html"
+                    >Room Details</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                PAGES <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./restaurant.html"
+                    >Restaurant</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./gallery.html">Gallery</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                SHOP <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./shop.html"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./cart.html"
+                    >Cart</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                aria-expanded="false"
+              >
+                NEWS <i class="fa-solid fa-chevron-down fa-2xs"></i>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-border"
+                    href="./news.html"
+                    >News</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./contact.html">CONTACT</a></li>
+          <li>
+            <a href="./cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+              ><sup class="product-count"></sup
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- HERO SECTION -->
     <section id="hero-news">
       <div class="for-dark-bg">
@@ -178,31 +290,9 @@
       <div class="container">
         <div class="news-cards row">
           <div class="col col-12 col-md-8 news-left">
-            <div class="row news-row">
-              <!-- <div class="col col-12">
-                <a href="" class="img-with-link">
-                  <div class="hidden-text"><i class="fa-solid fa-link" style="color: #ffffff;"></i></div>
-                  <img src="./assets/images/news/news2.jpg" alt="" />
-                </a>
-                <span>ADMIN / APRIL 25, 2022</span>
-                <a href="" class="news-title"
-                  >Retro Lighting Design in The Hotels</a
-                >
-                <p>
-                  Quisque pretium fermentum quam, sit amet cursus ante
-                  sollicitudin vel. Morbi consequat risus consequat, porttitor
-                  orci sit amet, iaculis nisl. Integer quis sapien neceli
-                  ultrices euismod sit amet id lacus. Sed a imperdiet erat. Duis
-                  eu est dignissim lacus...
-                </p>
-                <a href="" class="read-more-btn">READ MORE</a>
-              </div> -->
-            </div>
+            <div class="row news-row"></div>
           </div>
           <div class="col col-12 col-md-4 news-right">
-            <div class="input-div">
-              <input type="search" name="" id="" placeholder="Type Here..." />
-            </div>
             <div class="recent-post">
               <h3>Recent Post</h3>
               <hr />
@@ -294,6 +384,8 @@
         <span> &copy; 2023 THE CAPPA. ALL RIGHTS RESERVED.</span>
       </div>
     </footer>
+    <!-- ARROW UP -->
+    <i class="fa-solid fa-arrow-up arrow-up-btn"></i>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -318,6 +410,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.3/dist/js/datepicker-full.min.js"></script>
+    <script src="./assets/js/common.js"></script>
     <script src="./assets/js/news.js"></script>
   </body>
 </html>

@@ -1,15 +1,20 @@
-const BASE_URL = "http://localhost:8000";
-
 let header = document.querySelector("header");
+let arrowUp = document.querySelector(".arrow-up-btn");
 let menuBtn = document.querySelector(".menu-btn");
 let menuItems = document.querySelector(".menu-items");
-let arrowUp = document.querySelector(".arrow-up-btn");
-let productCount = document.querySelector(".product-count");
-
 
 let checkMenu = false;
-
 arrowUp.style.display="none"
+
+menuBtn.addEventListener("click", () => {
+  if (!checkMenu) {
+    menuItems.style.visibility = "visible";
+    checkMenu = true;
+  } else {
+    checkMenu = false;
+    menuItems.style.visibility = "hidden";
+  }
+});
 
 function scrollFunction() {
   if (
@@ -32,25 +37,7 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-menuBtn.addEventListener("click", () => {
-  if (!checkMenu) {
-    menuItems.style.visibility = "visible";
-    checkMenu = true;
-  } else {
-    checkMenu = false;
-    menuItems.style.visibility = "hidden";
-  }
-});
-
-
 arrowUp.onclick = function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
-
-async function getProductCount() {
-    let res = await axios(`${BASE_URL}/cartdata`);
-    let data = res.data;
-    productCount.innerHTML=data.length
-  }
-getProductCount()

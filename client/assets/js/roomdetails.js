@@ -13,6 +13,11 @@ let option1 = document.querySelector("#adults");
 let option2 = document.querySelector("#children");
 let option3=document.querySelector('#room-name')
 let not = document.querySelector("#notification");
+let modal = document.querySelector("#myModal");
+let btn = document.querySelector("#myBtn");
+let span = document.querySelector(".close");
+
+let check;
 
 async function getRoomData() {
   let res = await axios(`${BASE_URL}/rooms/${id}`);
@@ -46,10 +51,6 @@ $(".owl-carousel4").owlCarousel({
   },
 });
 
-let modal = document.querySelector("#myModal");
-let btn = document.querySelector("#myBtn");
-let span = document.querySelector(".close");
-
 btn.onclick = function () {
   modal.style.display = "block";
 };
@@ -82,8 +83,6 @@ for (const elem of elems) {
   });
 }
 
-let check;
-
 function showNot(text) {
   if (!option1.value || !option2.value || !option3.value || !checkIn.value || !checkOut.value ) {
     not.removeAttribute("hidden");
@@ -108,7 +107,7 @@ async function setData() {
       item.roomName == option3.value
   );
   if (!check) {
-    console.log(check);
+    // console.log(check);
     let obj = {
       checkIn: checkIn.value,
       checkOut: checkOut.value,
@@ -118,7 +117,7 @@ async function setData() {
     };
     await axios.post(`${BASE_URL}/booking`, obj);
   } else {
-    console.log("no");
+    // console.log("no");
     showNot("These days have been booked. Please try again.");
   }
 }

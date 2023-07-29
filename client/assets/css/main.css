@@ -12,10 +12,6 @@
   margin: 0 auto;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html,
 body,
 div,
@@ -157,12 +153,10 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
-.body-home-page {
+body.body-home-page {
   background-image: url(../images/home-images/hero/slide1.jpg);
 }
-
-.body-about-page {
+body.body-restaurant-page {
   background-image: url(../images/home-images/hero/slide3.jpg);
 }
 
@@ -293,6 +287,10 @@ body {
 #header .header nav ul li a:hover {
   color: #aa8453;
 }
+#header.about-header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 @media only screen and (max-width: 992px) {
   #header .header nav .menu-btn {
     display: block;
@@ -300,10 +298,6 @@ body {
   #header .header nav ul {
     display: none;
   }
-}
-#header.about-header {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 footer #footer-top {
@@ -2401,6 +2395,14 @@ footer #footer-bottom {
 #restaurant-menu .restaurant-menu .default-menu {
   display: flex;
 }
+@media only screen and (max-width: 768px) {
+  #restaurant-menu .restaurant-menu .buttons {
+    display: block;
+  }
+  #restaurant-menu .restaurant-menu .buttons button {
+    margin-bottom: 10px;
+  }
+}
 
 #hero-rooms {
   background: url(../images/home-images/rooms/rooms-suites4.jpg) no-repeat center;
@@ -3110,7 +3112,7 @@ footer #footer-bottom {
 }
 
 #hero-contact {
-  background: url(../images/news/news-bg.jpg) no-repeat center;
+  background: url(../images/signin/soulkitchen-86.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -3271,6 +3273,54 @@ footer #footer-bottom {
 #map iframe {
   height: 100%;
   width: 100%;
+}
+
+#visit-us h1 {
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+#visit-us .visit-us {
+  max-width: 100%;
+  padding: 0;
+  --bs-gutter-x: 0rem;
+}
+#visit-us .visit-us .col {
+  padding: 0;
+  position: relative;
+}
+#visit-us .visit-us .col .for-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.434);
+}
+#visit-us .visit-us .col img {
+  max-width: 100%;
+  height: 100%;
+}
+#visit-us .visit-us .col h3 {
+  font-family: "Gilda Display", serif;
+  color: #fff;
+  font-size: 38px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+}
+#visit-us .visit-us .col a {
+  position: absolute;
+  top: 62%;
+  left: 40px;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+}
+#visit-us .visit-us .col a:hover {
+  background-color: rgb(165, 138, 143);
+  color: #fff;
 }
 
 #video-restaurant {
@@ -3669,7 +3719,7 @@ footer #footer-bottom {
 #sign-in .sign-in-form .sign-in-right .contact-email span,
 #sign-in .sign-in-form .sign-in-right .contact-map span {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Barlow", sans-serif;
 }
 #sign-in .sign-in-form .sign-in-right .contact-phone .contact-address,
@@ -3753,6 +3803,67 @@ footer #footer-bottom {
   width: 150px;
 }
 
+#cart-responsive {
+  padding: 5% 0;
+  background-color: #ddd;
+  display: none;
+}
+#cart-responsive .cart-responsive {
+  padding: 40px;
+}
+#cart-responsive .cart-responsive h1 {
+  margin-top: 30px;
+}
+#cart-responsive .cart-responsive .col {
+  padding: 40px 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 24px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cart-responsive .cart-responsive .col img {
+  max-width: 150px;
+  margin-right: 30px;
+}
+#cart-responsive .cart-responsive .col .cart-text-responsive {
+  width: 100%;
+}
+#cart-responsive .cart-responsive .col .cart-text-responsive h3 {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+#cart-responsive .cart-responsive .col .cart-text-responsive h4 {
+  margin: 20px 0;
+}
+#cart-responsive .cart-responsive .col .cart-text-responsive input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 20px;
+}
+#cart-responsive .cart-responsive .col .cart-text-responsive .total-price-cart {
+  margin-top: 20px;
+}
+#cart-responsive .total-price-div .total-price {
+  background-color: #464646;
+  width: 150px;
+  padding: 30px;
+  color: #fff;
+  font-family: "Gilda Display", serif;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  #cart-products {
+    display: none;
+  }
+  #cart-responsive {
+    display: block;
+  }
+}
 #hero-room-d {
   background: url(../images/news/news-bg.jpg) no-repeat center;
   background-attachment: fixed;
@@ -4056,10 +4167,11 @@ footer #footer-bottom {
   margin-top: 80px;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
+  font-size: 24px;
   letter-spacing: 3px;
   position: fixed;
   z-index: 150;
-  background-color: #fff;
+  background-color: #ddd;
   width: 100%;
   left: 0;
   visibility: hidden;

@@ -5,7 +5,6 @@ let row=document.querySelector('.row')
 async function getAlldata(){
   let res=await axios(`${BASE_URL}/rooms`)
   let data= res.data
-  // console.log(data);
   data.forEach(room => {
     row.innerHTML+=`
     <div class="col col-12 col-md-6 col-lg-4">
@@ -28,8 +27,6 @@ async function getAlldata(){
   });
 }
 getAlldata()
-
-
 
 $(".owl-carousel1").owlCarousel({
     loop: true,

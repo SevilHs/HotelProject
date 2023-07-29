@@ -10,6 +10,7 @@ let requiredText = document.querySelectorAll(".required-text");
 let file=document.querySelector('.file')
 
 let base64
+let checkShow = false;
 
 requiredText.forEach((item) => (item.style.visibility = "hidden"));
 username.addEventListener('input',()=>{
@@ -25,8 +26,6 @@ password.addEventListener('input',()=>{
     requiredText[3].style.visibility="hidden"
 })
 
-let checkShow = false;
-
 function emptyInp() {
   username.value = "";
   email.value = "";
@@ -41,7 +40,7 @@ async function setUser() {
     email: email.value,
     number: number.value,
     password: password.value,
-    file:base64 ? base64 : './assets/images/home-images/user.png',
+    file:base64 ? base64 : './assets/images/user.png',
     isAdmin:false
   };
   // userData.push(obj)
@@ -50,7 +49,7 @@ async function setUser() {
   let checkData = data.find((item) => item.username == username.value);
   console.log(checkData);
   if (!checkData) {
-    // localStorage.setItem("sign", JSON.stringify(userData))
+    localStorage.setItem("sign", "true")
     await axios.post(`${BASE_URL}/users`, obj);
     emptyInp();
     window.location="./shop.html"
@@ -64,7 +63,11 @@ form.addEventListener("submit", (e) => {
   if (username.value && email.value && password.value && number.value) {
     setUser();
   }else{
-    requiredText.forEach(item=>item.style.visibility="visible")
+    // requiredText.forEach(item=>item.style.visibility="visible")
+    requiredText[0].style.visibility="visible"
+    requiredText[1].style.visibility="visible"
+    requiredText[2].style.visibility="visible"
+    requiredText[3].style.visibility="visible"
   }
 });
 

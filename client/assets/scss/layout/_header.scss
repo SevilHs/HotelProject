@@ -90,6 +90,10 @@
       }
     }
   }
+  &.about-header{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
   @media only screen and (max-width: 992px) {
     .header {
       nav {
@@ -101,9 +105,5 @@
         }
       }
     }
-  }
-  &.about-header{
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
   }
 }

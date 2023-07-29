@@ -3,6 +3,7 @@ const BASE_URL="http://localhost:8000"
 let tBody=document.querySelector('tbody')
 let not=document.querySelector('.remove-notification')
 let total=document.querySelector('.total-price')
+let cartR=document.querySelector('.cart-responsive')
 let checkStock=[]
 let quantity
 let totalPrice=0
@@ -31,6 +32,16 @@ async function getCartData(){
         <td class="price-quantity">$ ${product.currPrice}</td>  
         `
         tBody.append(trElem)
+        cartR.innerHTML+=`
+        <div class="col col-12">
+        <img src=${product.img} alt="" />
+        <div class="cart-text-responsive">
+          <h3>${product.name}</h3>
+          <input type="number" name="" id="" value="1" />
+          <h4>$${product.currPrice}</h4>
+        </div>
+      </div>
+        `
     });
 }
 getCartData()

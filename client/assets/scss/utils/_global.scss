@@ -1,10 +1,10 @@
 body{
   background-attachment: fixed;
   background-size: cover;
-}
-.body-home-page{
-  background-image: url(../images/home-images/hero/slide1.jpg);
-}
-.body-about-page{
-  background-image: url(../images/home-images/hero/slide3.jpg);
+  &.body-home-page{
+    background-image: url(../images/home-images/hero/slide1.jpg);
+  }
+  &.body-restaurant-page{
+    background-image: url(../images/home-images/hero/slide3.jpg);
+  }
 }

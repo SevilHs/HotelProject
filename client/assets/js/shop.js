@@ -11,6 +11,7 @@ let newProductPrice = document.querySelector(".price-new-in");
 let newProductAddCart = document.querySelector(".add-cart-btn");
 let productCount = document.querySelector(".product-count");
 let file = document.querySelector(".img");
+let logout=document.querySelector('.logout-btn')
 
 let allData = [];
 let filtered = [];
@@ -93,11 +94,20 @@ async function getNewProduct() {
 getNewProduct();
 
 async function getProductCount() {
-  let res = await axios(`${BASE_URL}/cartdata`);
-  let data = res.data;
-  productCount.innerHTML = data.length;
+  if(localStorage.getItem('sign')){
+    let res = await axios(`${BASE_URL}/cartdata`);
+    let data = res.data;
+    productCount.innerHTML = data.length;
+  }else{
+    productCount.innerHTML=""
+  }
 }
 getProductCount();
+
+logout.addEventListener('click',()=>{
+  localStorage.removeItem('sign')
+  getProductCount()
+})
 
 async function addCart(id) {
   // let res=await axios( `${BASE_URL}/products/${id}`)

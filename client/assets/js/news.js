@@ -1,8 +1,8 @@
 const BASE_URL = "http://localhost:8000";
 
 let row = document.querySelector(".news-row");
-let textLength=200
 
+let textLength=200
 let hidden=false
 
 async function getNewsData() {

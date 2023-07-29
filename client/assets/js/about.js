@@ -1,12 +1,7 @@
 const BASE_URL = "http://localhost:8080";
 
-
 let team = document.querySelector(".team-row");
 let loadMore = document.querySelector(".load-more");
-let menuBtn = document.querySelector(".menu-btn");
-let menuItems = document.querySelector(".menu-items");
-let arrowUp = document.querySelector(".arrow-up-btn");
-
 let num=3
 let hidden=false
 
@@ -14,7 +9,6 @@ async function getTeamData() {
   team.innerHTML=''
   let res = await axios(`${BASE_URL}/team`);
   let data = res.data;
-  console.log(data);
   data.slice(0,num).forEach((element) => {
     team.innerHTML += `
     <div class="col col-12 col-md-6 col-lg-4">
@@ -55,8 +49,6 @@ loadMore.addEventListener("click", () => {
   getTeamData();
 });
 
-
-
 var a = 0;
 $(window).scroll(function () {
   var oTop = $("#counter").offset().top - window.innerHeight;
@@ -81,45 +73,3 @@ $(window).scroll(function () {
 $("input").on("change", function () {
   $("#testimonials-about").toggleClass("change-bgcolor");
 });
-
-
-let checkMenu = false;
-
-arrowUp.style.display="none"
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 110 ||
-    document.documentElement.scrollTop > 110
-  ) {
-    header.style.position = "fixed";
-    header.style.backgroundColor = "#222";
-    header.style.padding = "30px 0";
-    arrowUp.style.display = "block";
-  } else {
-    header.style.position = "absolute";
-    header.style.backgroundColor = "transparent";
-    header.style.padding = "40px 0";
-    arrowUp.style.display = "none";
-  }
-}
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
-menuBtn.addEventListener("click", () => {
-  if (!checkMenu) {
-    menuItems.style.visibility = "visible";
-    checkMenu = true;
-  } else {
-    checkMenu = false;
-    menuItems.style.visibility = "hidden";
-  }
-});
-
-
-arrowUp.onclick = function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};

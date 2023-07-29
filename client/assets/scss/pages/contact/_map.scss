@@ -5,3 +5,52 @@
         width: 100%;
     }
 }
+#visit-us{
+    h1{
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+    .visit-us{
+        max-width: 100%;
+        padding: 0;
+        --bs-gutter-x: 0rem;
+        .col{
+            padding: 0;
+            position: relative;
+            .for-bg{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.434);
+            }
+           img{
+            max-width: 100%;
+            height: 100%;
+           }
+           h3{
+            font-family: $secondary-font;
+            color: $white-color;
+            font-size: 38px;
+            position: absolute;
+            top: 50%;
+            left: 40px;
+           }
+           a{
+            position: absolute;
+            top: 62%;
+            left: 40px;
+            padding: 15px;
+            background-color: $white-color;
+            color: $black-color;
+            font-family: $barlow-font;
+            font-size: 20px;
+            &:hover{
+                background-color: rgb(165, 138, 143);
+                color: $white-color;
+            }
+           }
+        }
+    }
+}
