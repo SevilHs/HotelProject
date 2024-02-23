@@ -1,4 +1,4 @@
-# Hotel Project
+# Hotel Project 📌
 
 ## Purpose
 The system aims to provide comprehensive room details, efficient shopping cart management, robust product filtering and sorting options, a user-friendly admin panel with dark mode functionality, and streamlined admin dashboard management.
@@ -10,8 +10,6 @@ The system aims to provide comprehensive room details, efficient shopping cart m
 - Mock API Development: Utilized JSON-server to create mock APIs during development, facilitating testing and development processes.
 
 ## Technologies Used
-
-# Technologies Used
 
 | #   | Name          | Why Needed?                                                |
 | --- | ------------- | ---------------------------------------------------------- |
