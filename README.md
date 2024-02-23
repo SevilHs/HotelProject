@@ -17,8 +17,8 @@ The system aims to provide comprehensive room details, efficient shopping cart m
 | 02  | Bootstrap	                                    | Facilitates rapid development of responsive and       |
 |     |                                               | visually appealing interfaces.                        |
 | 03  | BASE64	                                      | For loading images efficiently.                       |
-| 04  | Owl Carousel	                                | Provides a customizable carousel plugin for displaying|
-|     |                                               | images or content.                                    |
+| 04  | Owl Carousel	                                | Provides a customizable carousel plugin for displaying|                                                     
+                                                        images or content.                                    
 | 05  | jQuery                                        | Simplifies DOM manipulation and event handling        |
 | 06  | JSON-server                                   | Creates mock APIs during development for simulating   |
 |     |                                               | server responses and testing application functionality|
