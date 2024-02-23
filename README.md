@@ -11,17 +11,16 @@ The system aims to provide comprehensive room details, efficient shopping cart m
 
 ## Technologies Used
 
-|  #  | Name                                          |     Why needed?                                       |
-| :-: | ----------------------------------------------| ----------------------------------------------------- |
-| 01  | Axios                                         | For making API requests                               |
-| 02  | Bootstrap	                                    | Facilitates rapid development of responsive and       |
-|     |                                               | visually appealing interfaces.                        |
-| 03  | BASE64	                                      | For loading images efficiently.                       |
-| 04  | Owl Carousel	                                | Provides a customizable carousel plugin for displaying|                                                     
-                                                        images or content.                                    
-| 05  | jQuery                                        | Simplifies DOM manipulation and event handling        |
-| 06  | JSON-server                                   | Creates mock APIs during development for simulating   |
-|     |                                               | server responses and testing application functionality|
+# Technologies Used
+
+| #   | Name          | Why Needed?                                                |
+| --- | ------------- | ---------------------------------------------------------- |
+| 01  | Axios         | For making API requests                                    |
+| 02  | Bootstrap     | Facilitates rapid development of responsive interfaces     |
+| 03  | BASE64        | For loading images efficiently                             |
+| 04  | Owl Carousel  | Provides a customizable carousel plugin for displaying images or content |
+| 05  | jQuery        | Simplifies DOM manipulation and event handling             |
+| 06  | JSON-server   | Creates mock APIs during development for simulating server responses and testing application functionality |
 
 ## Key Features
 - Room Details: Users can view detailed information about available rooms, including amenities, pricing, and availability.
